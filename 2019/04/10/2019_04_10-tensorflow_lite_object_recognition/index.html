@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.0.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Android TensorFlow Lite 辨識物品 - Nick Blog</title>
+
+
+    <meta name="description" content="由於最近需要去研究人臉辨識的實作方式，雖然目前網路上提供很多SDK，不過大多數都是要付費使用，畢竟一個Machine Learning的資料庫也需要維護，所以大部分不會有免費使用的SDK。 在網路上搜尋後，找到了一個輕量化的開源資料庫 - TensorFlow Lite 本篇先以辨識圖像的例子來解說，往後再介紹人臉辨識的方式。">
+<meta name="keywords" content="android, tensorflow lite, object recognition">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android TensorFlow Lite 辨識物品">
+<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;2019&#x2F;04&#x2F;10&#x2F;2019_04_10-tensorflow_lite_object_recognition&#x2F;index.html">
+<meta property="og:site_name" content="Nick Blog">
+<meta property="og:description" content="由於最近需要去研究人臉辨識的實作方式，雖然目前網路上提供很多SDK，不過大多數都是要付費使用，畢竟一個Machine Learning的資料庫也需要維護，所以大部分不會有免費使用的SDK。 在網路上搜尋後，找到了一個輕量化的開源資料庫 - TensorFlow Lite 本篇先以辨識圖像的例子來解說，往後再介紹人臉辨識的方式。">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2019-11-15T03:00:41.697Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/androidstudio.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+    <script data-ad-client="ca-pub-5418524234209657" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="google-site-verification" content="wONvV1Oo51k5DsvNnSpe6EEwpaYJTbWAyVvQGdIJHa0" />
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Android TensorFlow Lite 辨識物品" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="搜尋" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article "> 
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <i class="far fa-calendar-alt">&nbsp;</i>
+                <span class="level-item has-text-grey" >
+                    2019/04/10
+                </span>
+
+                
+                    <i class="fas fa-calendar-check">&nbsp</i>
+                    <time class="has-text-grey" datetime="2019-11-15T03:00:41.697Z" >2019-11-15</time>
+                    <span class="level-item has-text-grey">
+                    更新
+                    </span>
+                
+
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 分鐘 閱讀文 (大約 1069 個字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span> visits
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Android TensorFlow Lite 辨識物品
+            
+        </h1>
+        <div class="content">
+            <p>由於最近需要去研究人臉辨識的實作方式，雖然目前網路上提供很多SDK，不過大多數都是要付費使用，畢竟一個Machine Learning的資料庫也需要維護，所以大部分不會有免費使用的SDK。</p>
+<p>在網路上搜尋後，找到了一個輕量化的開源資料庫 - TensorFlow Lite</p>
+<p>本篇先以辨識圖像的例子來解說，往後再介紹人臉辨識的方式。</p>
+<a id="more"></a>
+
+<p><a href="https://blog.csdn.net/qq_33200967/article/details/82773677" target="_blank" rel="noopener">參考文章</a> </p>
+<blockquote class="stepquote step1"><p>下載TensorFlow模型</p>
+</blockquote>
+
+<p>使用MobileNet_v1_1.0_224的模型 <a href="https://github.com/tensorflow/models/tree/master/research/slim#pre-trained-models" target="_blank" rel="noopener">下載點</a> </p>
+<p>解壓縮之後可以找到 mobilenet_v1_1.0_224.tflite這個檔案</p>
+<blockquote class="stepquote step2"><p>下載模型Label</p>
+</blockquote>
+
+<p>上述的模型共有1001個分類，不過壓縮檔內沒有包含分類好的標籤，<br>已分類好的標籤可由此下載 <a href="https://github.com/amitshekhariitbhu/Android-TensorFlow-Lite-Example/blob/master/app/src/main/assets/labels.txt" target="_blank" rel="noopener">下載點</a> </p>
+<blockquote class="stepquote step3"><p>引用TensorFlow Lite</p>
+</blockquote>
+
+<p>在build.gradle的dependencies中加入libraries</p>
+<figure class="highlight clean hljs"><figcaption><span>build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">dependencies &#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="hljs-keyword">implementation</span> <span class="hljs-string">'com.github.bumptech.glide:glide:4.3.1'</span></span><br><span class="line">    <span class="hljs-keyword">implementation</span> <span class="hljs-string">'org.tensorflow:tensorflow-lite:0.0.0-nightly'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然後在android的項目中加入以下代碼，主要是避免壓縮tensor lite的模型</p>
+<figure class="highlight dts hljs"><figcaption><span>build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class">android </span>&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="hljs-class">aaptOptions </span>&#123;</span><br><span class="line">        noCompress <span class="hljs-string">"tflite"</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote class="stepquote step4"><p>添加模型</p>
+</blockquote>
+
+<p>在main目錄下創建assets，將剛剛.tflite和label .txt檔案放到此處。</p>
+<p>在畫面中使用兩個按鈕: 引用模型和分析圖片</p>
+<p>點擊引用模型的代碼如下</p>
+<blockquote class="colorquote info"><p>loadModeFile : 把模型文件讀取成ByteBuffer，並交給Interpreter初始化。<br>load_mode : 取得Interpreter後，使用這個物件來分析圖像，並設置使用的Thread 數量 (tflite.setNumThreads)</p>
+</blockquote>
+
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> String MODEL_NAME = <span class="hljs-string">"mobilenet_v1_1.0_224"</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">private</span> Interpreter tflite = <span class="hljs-keyword">null</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Override</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onClick</span><span class="hljs-params">(View v)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">switch</span>(v.getId()) &#123;</span><br><span class="line">		<span class="hljs-keyword">case</span> R.id.load_model:</span><br><span class="line">			 load_model(MODEL_NAME);</span><br><span class="line">		<span class="hljs-keyword">break</span>;</span><br><span class="line">                ...</span><br><span class="line">	 &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">load_model</span><span class="hljs-params">(String model)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">try</span> &#123;</span><br><span class="line">		tflite = <span class="hljs-keyword">new</span> Interpreter(loadModelFile(model));</span><br><span class="line">		Toast.makeText(MainActivity.<span class="hljs-keyword">this</span>, model + <span class="hljs-string">" model load success"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">		Log.d(TAG, model + <span class="hljs-string">" model load success"</span>);</span><br><span class="line">		tflite.setNumThreads(<span class="hljs-number">4</span>);</span><br><span class="line">		load_result = <span class="hljs-keyword">true</span>;</span><br><span class="line">	&#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;</span><br><span class="line">		Toast.makeText(MainActivity.<span class="hljs-keyword">this</span>, model + <span class="hljs-string">" model load fail"</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">		Log.d(TAG, model + <span class="hljs-string">" model load fail"</span>);</span><br><span class="line">		load_result = <span class="hljs-keyword">false</span>;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> ByteBuffer <span class="hljs-title">loadModelFile</span><span class="hljs-params">(String model)</span> <span class="hljs-keyword">throws</span> IOException </span>&#123;</span><br><span class="line">	AssetFileDescriptor fileDescriptor = getApplicationContext().getAssets().openFd(model + <span class="hljs-string">".tflite"</span>);</span><br><span class="line">	FileInputStream inputStream = <span class="hljs-keyword">new</span> FileInputStream(fileDescriptor.getFileDescriptor());</span><br><span class="line">	FileChannel fileChannel = inputStream.getChannel();</span><br><span class="line">	<span class="hljs-keyword">long</span> startOffset = fileDescriptor.getStartOffset();</span><br><span class="line">	<span class="hljs-keyword">long</span> declaredLength = fileDescriptor.getDeclaredLength();</span><br><span class="line">	<span class="hljs-keyword">return</span> fileChannel.map(FileChannel.MapMode.READ_ONLY, startOffset, declaredLength);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote class="stepquote step5"><p>添加Label</p>
+</blockquote>
+
+<p>在程式開始時，先讀入Label文件</p>
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Override</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">	...</span><br><span class="line">	readCacheLabelFromLocalFile();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">readCacheLabelFromLocalFile</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">try</span> &#123;</span><br><span class="line">		AssetManager assetManager = getApplicationContext().getAssets();</span><br><span class="line">		BufferedReader reader = <span class="hljs-keyword">new</span> BufferedReader(<span class="hljs-keyword">new</span> InputStreamReader(assetManager.open(LABEL_NAME + <span class="hljs-string">".txt"</span>)));</span><br><span class="line">		String readLine = <span class="hljs-keyword">null</span>;</span><br><span class="line">		<span class="hljs-keyword">while</span> ((readLine = reader.readLine()) != <span class="hljs-keyword">null</span>) &#123;</span><br><span class="line">			resultLabel.add(readLine);</span><br><span class="line">		&#125;</span><br><span class="line">		reader.close();</span><br><span class="line">	&#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;</span><br><span class="line">		Log.e(<span class="hljs-string">"labelCache"</span>, <span class="hljs-string">"error "</span> + e);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<blockquote class="stepquote step6"><p>分析圖片</p>
+</blockquote>
+
+<blockquote class="colorquote info"><p>predict_image ：先取得圖片後，對圖片進行壓縮，之後把圖片轉成ByteBuffer格式後，再調用Interpreter.run()進行分析。<br>get_max_result : 取得分析之後，機率最高的Label</p>
+</blockquote>
+
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">private</span> List&lt;String&gt; resultLabel = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"><span class="hljs-keyword">private</span> ImageView mImage;</span><br><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span>[] ddims = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">3</span>, <span class="hljs-number">224</span>, <span class="hljs-number">224</span>&#125;;</span><br><span class="line"><span class="hljs-keyword">private</span> TextView mResult;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Override</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onClick</span><span class="hljs-params">(View v)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">switch</span>(v.getId()) &#123;</span><br><span class="line">		...</span><br><span class="line">		<span class="hljs-keyword">case</span> R.id.use_photo:</span><br><span class="line">                </span><br><span class="line">			RequestOptions options = <span class="hljs-keyword">new</span> RequestOptions().skipMemoryCache(<span class="hljs-keyword">true</span>).diskCacheStrategy(DiskCacheStrategy.NONE);</span><br><span class="line">			File file = <span class="hljs-keyword">new</span> File(<span class="hljs-string">"/storage/sdcard1/mouse.jpeg"</span>);</span><br><span class="line">			Uri photoUri = Uri.fromFile(file);</span><br><span class="line">			Glide.with(MainActivity.<span class="hljs-keyword">this</span>).load(photoUri).apply(options).into(mImage);</span><br><span class="line">			predict_image(file.getAbsolutePath());</span><br><span class="line">			<span class="hljs-keyword">break</span>;</span><br><span class="line">		<span class="hljs-keyword">default</span>:</span><br><span class="line">			<span class="hljs-keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">predict_image</span><span class="hljs-params">(String image_path)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-comment">// picture to float array</span></span><br><span class="line">	Bitmap bmp = getScaleBitmap(image_path);</span><br><span class="line">	ByteBuffer inputData = getScaledMatrix(bmp, ddims);</span><br><span class="line">	<span class="hljs-keyword">try</span> &#123;</span><br><span class="line">		<span class="hljs-keyword">float</span>[][] labelProbArray = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[<span class="hljs-number">1</span>][<span class="hljs-number">1001</span>];</span><br><span class="line">		<span class="hljs-keyword">long</span> start = System.currentTimeMillis();</span><br><span class="line">		<span class="hljs-comment">// get predict result</span></span><br><span class="line">		tflite.run(inputData, labelProbArray);</span><br><span class="line">		<span class="hljs-keyword">long</span> end = System.currentTimeMillis();	</span><br><span class="line">		<span class="hljs-keyword">long</span> time = end - start;</span><br><span class="line"></span><br><span class="line">		<span class="hljs-keyword">float</span>[] results = <span class="hljs-keyword">new</span> <span class="hljs-keyword">float</span>[labelProbArray[<span class="hljs-number">0</span>].length];</span><br><span class="line">		System.arraycopy(labelProbArray[<span class="hljs-number">0</span>], <span class="hljs-number">0</span>, results, <span class="hljs-number">0</span>, labelProbArray[<span class="hljs-number">0</span>].length);</span><br><span class="line">		<span class="hljs-comment">// show predict result and time</span></span><br><span class="line">		<span class="hljs-keyword">int</span> r = get_max_result(results);</span><br><span class="line">            </span><br><span class="line">		String show_text = <span class="hljs-string">"result："</span> + r + <span class="hljs-string">"\nname："</span> + resultLabel.get(r) + <span class="hljs-string">"\nprobability："</span> + results[r] + <span class="hljs-string">"\ntime："</span> + time + <span class="hljs-string">"ms"</span>;</span><br><span class="line">		mResult.setText(show_text);</span><br><span class="line">	&#125; <span class="hljs-keyword">catch</span> (Exception e) &#123;</span><br><span class="line">		e.printStackTrace();</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> Bitmap <span class="hljs-title">getScaleBitmap</span><span class="hljs-params">(String filePath)</span> </span>&#123;</span><br><span class="line">	BitmapFactory.Options opt = <span class="hljs-keyword">new</span> BitmapFactory.Options();</span><br><span class="line">	opt.inJustDecodeBounds = <span class="hljs-keyword">true</span>;</span><br><span class="line">	BitmapFactory.decodeFile(filePath, opt);</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">int</span> bmpWidth = opt.outWidth;</span><br><span class="line">	<span class="hljs-keyword">int</span> bmpHeight = opt.outHeight;</span><br><span class="line">	<span class="hljs-keyword">int</span> maxSize = <span class="hljs-number">500</span>;</span><br><span class="line">	<span class="hljs-comment">// compress picture with inSampleSize</span></span><br><span class="line">	opt.inSampleSize = <span class="hljs-number">1</span>;</span><br><span class="line">	<span class="hljs-keyword">while</span> (<span class="hljs-keyword">true</span>) &#123;</span><br><span class="line">		<span class="hljs-keyword">if</span> (bmpWidth / opt.inSampleSize &lt; maxSize || bmpHeight / opt.inSampleSize &lt; maxSize) &#123;</span><br><span class="line">		<span class="hljs-keyword">break</span>;</span><br><span class="line">		&#125;</span><br><span class="line">		opt.inSampleSize *= <span class="hljs-number">2</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	opt.inJustDecodeBounds = <span class="hljs-keyword">false</span>;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">return</span> BitmapFactory.decodeFile(filePath, opt);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> ByteBuffer <span class="hljs-title">getScaledMatrix</span><span class="hljs-params">(Bitmap bitmap, <span class="hljs-keyword">int</span>[] ddims)</span> </span>&#123;</span><br><span class="line">	ByteBuffer imgData = ByteBuffer.allocateDirect(ddims[<span class="hljs-number">0</span>] * ddims[<span class="hljs-number">1</span>] * ddims[<span class="hljs-number">2</span>] * ddims[<span class="hljs-number">3</span>] * <span class="hljs-number">4</span>);</span><br><span class="line">	imgData.order(ByteOrder.nativeOrder());</span><br><span class="line">	<span class="hljs-comment">// get image pixel</span></span><br><span class="line">	<span class="hljs-keyword">int</span>[] pixels = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[ddims[<span class="hljs-number">2</span>] * ddims[<span class="hljs-number">3</span>]];</span><br><span class="line">	Bitmap bm = Bitmap.createScaledBitmap(bitmap, ddims[<span class="hljs-number">2</span>], ddims[<span class="hljs-number">3</span>], <span class="hljs-keyword">false</span>);</span><br><span class="line">	bm.getPixels(pixels, <span class="hljs-number">0</span>, bm.getWidth(), <span class="hljs-number">0</span>, <span class="hljs-number">0</span>, ddims[<span class="hljs-number">2</span>], ddims[<span class="hljs-number">3</span>]);</span><br><span class="line">	<span class="hljs-keyword">int</span> pixel = <span class="hljs-number">0</span>;</span><br><span class="line">	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; ddims[<span class="hljs-number">2</span>]; ++i) &#123;</span><br><span class="line">		<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> j = <span class="hljs-number">0</span>; j &lt; ddims[<span class="hljs-number">3</span>]; ++j) &#123;</span><br><span class="line">			<span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> val = pixels[pixel++];</span><br><span class="line">			imgData.putFloat(((((val &gt;&gt; <span class="hljs-number">16</span>) &amp; <span class="hljs-number">0xFF</span>) - <span class="hljs-number">128f</span>) / <span class="hljs-number">128f</span>));</span><br><span class="line">			imgData.putFloat(((((val &gt;&gt; <span class="hljs-number">8</span>) &amp; <span class="hljs-number">0xFF</span>) - <span class="hljs-number">128f</span>) / <span class="hljs-number">128f</span>));</span><br><span class="line">			imgData.putFloat((((val &amp; <span class="hljs-number">0xFF</span>) - <span class="hljs-number">128f</span>) / <span class="hljs-number">128f</span>));</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">if</span> (bm.isRecycled()) &#123;</span><br><span class="line">		bm.recycle();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-keyword">return</span> imgData;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> <span class="hljs-title">get_max_result</span><span class="hljs-params">(<span class="hljs-keyword">float</span>[] result)</span> </span>&#123;</span><br><span class="line">	<span class="hljs-keyword">float</span> probability = result[<span class="hljs-number">0</span>];</span><br><span class="line">	<span class="hljs-keyword">int</span> r = <span class="hljs-number">0</span>;</span><br><span class="line">	<span class="hljs-keyword">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; result.length; i++) &#123;</span><br><span class="line">		<span class="hljs-keyword">if</span> (probability &lt; result[i]) &#123;</span><br><span class="line">			probability = result[i];</span><br><span class="line">			r = i;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="hljs-keyword">return</span> r;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote exec"><p>執行結果</p>
+</blockquote>
+
+<p><img src="/images/2019/0/mouse_recognition.png" alt title="Object Recognition"></p>
+
+        </div>
+        
+        <ul class="post-copyright">
+        <li><strong>本文標題：</strong><a href="https://nickcarter9.github.io/2019/04/10/2019_04_10-tensorflow_lite_object_recognition/">Android TensorFlow Lite 辨識物品</a></li>
+        <li><strong>本文作者：</strong><a href="https://nickcarter9.github.io">Nick Lin</a></li>
+        <li><strong>本文連接：</strong><a href="https://nickcarter9.github.io/2019/04/10/2019_04_10-tensorflow_lite_object_recognition/">https://nickcarter9.github.io/2019/04/10/2019_04_10-tensorflow_lite_object_recognition/</a></li>
+        <li><strong>發布時間：</strong>2019-04-10</li>
+        <li><strong>版權聲明：</strong>本Blog所有文章除特別聲明外，皆可轉載，轉載請註明出處！
+        </li>
+        </ul>
+    
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/android-tensorflow-lite-object-recognition/" rel="tag">android, tensorflow lite, object recognition</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2019/04/11/2019_04_11-tensorflow_lite_face_recognition/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Android TensorFlow Lite 人臉辨識</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2019/04/09/2019_04_09-jcifs_ng/">
+                <span class="level-item">Android 區域網路 - Jcifs-ng</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">評論</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://nickcarter9.github.io/2019/04/10/2019_04_10-tensorflow_lite_object_recognition/';
+        this.page.identifier = '2019/04/10/2019_04_10-tensorflow_lite_object_recognition/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'nick-code-cars' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/avatar.png" alt="">
+                    </figure>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Programming is like sex. One mistake and you have to support it for the rest of your life.
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Taiwan</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        74
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分類
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        標籤
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        164
+                    </p>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://www.facebook.com/nick.carter.52459" target="_blank">
+                追蹤</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/NickCarter9">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Facebook" href="https://www.facebook.com/nick.carter.52459">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Email" href="/nickthomas55@gmail.com">
+                
+                <i class="far fa-envelope"></i>
+                
+            </a>
+            
+        </div>
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 方形廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5418524234209657"
+     data-ad-slot="6117614777"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+
+                
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Android TensorFlow Lite 辨識物品" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Nick Lin&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Github" href="https://github.com/NickCarter9">
+                        
+                        <i class="fab fa-github"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Facebook" href="https://www.facebook.com/nick.carter.52459">
+                        
+                        <i class="fab fa-facebook"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Email" href="/nickthomas55@gmail.com">
+                        
+                        <i class="far fa-envelope"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 橫式廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5418524234209657"
+     data-ad-slot="7917781608"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-TW");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+<script src="/js/animation.js"></script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+    
+    
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+    
+    
+<a id="back-to-top" title="回到頁首" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="請輸入關鍵字..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '頁面',
+                CATEGORIES: '分類',
+                TAGS: '標籤',
+                UNTITLED: '(無標題)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>

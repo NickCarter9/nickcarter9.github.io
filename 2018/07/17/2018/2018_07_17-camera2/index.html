@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.0.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Android Camera2 - Nick Blog</title>
+
+
+    <meta name="description" content="Android 5 (API 21, L) 新增加了Camera2，和之前的Camera使用起來較複雜，但是多了許多功能，支援RAW輸出、調整對焦模式、曝光模式等。">
+<meta name="keywords" content="android,camera2,camera">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android Camera2">
+<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;2018&#x2F;07&#x2F;17&#x2F;2018&#x2F;2018_07_17-camera2&#x2F;index.html">
+<meta property="og:site_name" content="Nick Blog">
+<meta property="og:description" content="Android 5 (API 21, L) 新增加了Camera2，和之前的Camera使用起來較複雜，但是多了許多功能，支援RAW輸出、調整對焦模式、曝光模式等。">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2019-11-15T03:00:37.761Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.svg">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/androidstudio.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+    <script data-ad-client="ca-pub-5418524234209657" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="google-site-verification" content="wONvV1Oo51k5DsvNnSpe6EEwpaYJTbWAyVvQGdIJHa0" />
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Android Camera2" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="搜尋" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+</nav>
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article "> 
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <i class="far fa-calendar-alt">&nbsp;</i>
+                <span class="level-item has-text-grey" >
+                    2018/07/17
+                </span>
+
+                
+                    <i class="fas fa-calendar-check">&nbsp</i>
+                    <time class="has-text-grey" datetime="2019-11-15T03:00:37.761Z" >2019-11-15</time>
+                    <span class="level-item has-text-grey">
+                    更新
+                    </span>
+                
+
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 分鐘 閱讀文 (大約 997 個字)
+                </span>
+                
+                
+                <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-eye"></i>
+                    <span id="busuanzi_value_page_pv">0</span> visits
+                </span>
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                Android Camera2
+            
+        </h1>
+        <div class="content">
+            <p>Android 5 (API 21, L) 新增加了Camera2，和之前的Camera使用起來較複雜，但是多了許多功能，支援RAW輸出、調整對焦模式、曝光模式等。</p>
+<a id="more"></a>
+
+<h1 id="Camera2"><a href="#Camera2" class="headerlink" title="Camera2"></a>Camera2</h1><p>首先先了解幾個重要的Class</p>
+<blockquote class="colorquote info"><ul>
+<li>CameraManager : 管理攝影設備，主要功用是獲取所有攝影設備和打開指定的攝影鏡頭。</li>
+<li>CameraDevice : 攝影設備，可透過CameraManager.openCamera()來取得。</li>
+<li>CameraCaptureSession : 用於處理拍照及預覽工作。</li>
+<li>CaptureRequest ：捕捉畫面請求，用來定義輸出緩衝區及顯示 (TextureView or SurfaceView)</li>
+</ul>
+</blockquote>
+
+<p>我們在畫面中加入一個TextureView，用來預覽攝影鏡頭目前捕捉到的畫面。<br>並設定Listener監聽TextureView是否已設置好。</p>
+<p><strong>程式參數</strong></p>
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">private</span> TextureView mTextureView;</span><br><span class="line"><span class="hljs-keyword">private</span> Size mPreviewSize;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">private</span> CameraDevice mCameraDevice;</span><br><span class="line"><span class="hljs-keyword">private</span> String mCameraId;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">private</span> ImageReader mImageReader;</span><br><span class="line"><span class="hljs-keyword">private</span> CaptureRequest.Builder mCaptureRequestBuilder;</span><br><span class="line"><span class="hljs-keyword">private</span> CaptureRequest mCaptureRequest;</span><br><span class="line"><span class="hljs-keyword">private</span> CameraCaptureSession mPreviewSession;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String[] PERMISSIONS_STORAGE = &#123;</span><br><span class="line">     Manifest.permission.READ_EXTERNAL_STORAGE,</span><br><span class="line">     Manifest.permission.WRITE_EXTERNAL_STORAGE,</span><br><span class="line">     Manifest.permission.CAMERA</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> RC_HANDLE_CAMERA_PERM = <span class="hljs-number">2</span>;</span><br></pre></td></tr></table></figure>
+
+
+<figure class="highlight java hljs"><figcaption><span>MainActivity: onCreate</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mTextureView = findViewById(R.id.textureView);</span><br><span class="line">mTextureView.setSurfaceTextureListener(textureListener);</span><br></pre></td></tr></table></figure>
+
+<p>當TextureView設置好之後，再來設置並打開攝影鏡頭。</p>
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">TextureView.SurfaceTextureListener textureListener = <span class="hljs-keyword">new</span> TextureView.SurfaceTextureListener() &#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onSurfaceTextureAvailable</span><span class="hljs-params">(SurfaceTexture surface, <span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-comment">//設置攝影鏡頭</span></span><br><span class="line">        setupCamera(width, height);</span><br><span class="line">        <span class="hljs-comment">//打開攝影鏡頭。</span></span><br><span class="line">        openCamera();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>利用CamaraManager取得所有攝影鏡頭的資訊，此例子使用後置鏡頭，我們可根據CameraCharacteristics屬性略過前置鏡頭並開啟後置鏡頭。</p>
+<p>由於攝影鏡頭支援眾多格式和大小，可由StreamConfigurationMap取得這些屬性。根據TextureView的長寬，設定攝影鏡頭的格式與大小。</p>
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setupCamera</span><span class="hljs-params">(<span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height)</span> </span>&#123;</span><br><span class="line">    CameraManager manager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);</span><br><span class="line">    <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">        <span class="hljs-comment">//獲取所有攝影設備</span></span><br><span class="line">        String[] cameraList = manager.getCameraIdList();</span><br><span class="line">        <span class="hljs-keyword">for</span> (String cameraId: cameraList) &#123;</span><br><span class="line">            <span class="hljs-comment">//取得攝影設備屬性</span></span><br><span class="line">            CameraCharacteristics characteristics = manager.getCameraCharacteristics(cameraId);</span><br><span class="line">            <span class="hljs-comment">//不擷取前置鏡頭的畫面</span></span><br><span class="line">            <span class="hljs-keyword">if</span> (characteristics.get(CameraCharacteristics.LENS_FACING) == CameraCharacteristics.LENS_FACING_FRONT)</span><br><span class="line">                <span class="hljs-keyword">continue</span>;</span><br><span class="line">            <span class="hljs-comment">//取得StreamConfigurationMap，取得攝影鏡頭支持的所有輸出格式和尺寸</span></span><br><span class="line">            StreamConfigurationMap map = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);</span><br><span class="line">            <span class="hljs-comment">//根據TextureView的尺寸設置預覽尺寸</span></span><br><span class="line">            mPreviewSize = getOptimalSize(map.getOutputSizes(SurfaceTexture.class), width, height);</span><br><span class="line">            mCameraId = cameraId;</span><br><span class="line">            <span class="hljs-keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125; <span class="hljs-keyword">catch</span> (CameraAccessException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//選擇sizeMap中最接近width和height的尺寸</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> Size <span class="hljs-title">getOptimalSize</span><span class="hljs-params">(Size[] sizeMap, <span class="hljs-keyword">int</span> width, <span class="hljs-keyword">int</span> height)</span> </span>&#123;</span><br><span class="line">    List&lt;Size&gt; sizeList = <span class="hljs-keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    <span class="hljs-keyword">for</span> (Size option : sizeMap) &#123;</span><br><span class="line">         <span class="hljs-keyword">if</span> (width &gt; height) &#123;</span><br><span class="line">             <span class="hljs-keyword">if</span> (option.getWidth() &gt; width &amp;&amp; option.getHeight() &gt; height) &#123;</span><br><span class="line">                sizeList.add(option);</span><br><span class="line">	     &#125;</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            <span class="hljs-keyword">if</span> (option.getWidth() &gt; height &amp;&amp; option.getHeight() &gt; width) &#123;</span><br><span class="line">                sizeList.add(option);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">if</span> (sizeList.size() &gt; <span class="hljs-number">0</span>) &#123;</span><br><span class="line">         <span class="hljs-keyword">return</span> Collections.min(sizeList, <span class="hljs-keyword">new</span> Comparator&lt;Size&gt;() &#123;</span><br><span class="line">             <span class="hljs-meta">@Override</span></span><br><span class="line">             <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">compare</span><span class="hljs-params">(Size lhs, Size rhs)</span> </span>&#123;</span><br><span class="line">                 <span class="hljs-keyword">return</span> Long.signum(lhs.getWidth() * lhs.getHeight() - rhs.getWidth() * rhs.getHeight());</span><br><span class="line">             &#125;</span><br><span class="line">         &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> sizeMap[<span class="hljs-number">0</span>];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>根據mCameraId來決定要開啟的鏡頭，並設置CameraDevice.StateCallback監聽狀態。</p>
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">openCamera</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">    CameraManager manager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);</span><br><span class="line">    <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">        <span class="hljs-comment">//檢查權限</span></span><br><span class="line">        <span class="hljs-keyword">if</span> (ActivityCompat.checkSelfPermission(<span class="hljs-keyword">this</span>, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED) &#123;</span><br><span class="line">             <span class="hljs-comment">//請求權限</span></span><br><span class="line">             ActivityCompat.requestPermissions(<span class="hljs-keyword">this</span>, PERMISSIONS_STORAGE, RC_HANDLE_CAMERA_PERM);</span><br><span class="line">             <span class="hljs-keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="hljs-comment">//根據mCameraId來決定要開啟的鏡頭</span></span><br><span class="line">        manager.openCamera(mCameraId, mStateCallback, <span class="hljs-keyword">null</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">catch</span> (CameraAccessException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> CameraDevice.StateCallback mStateCallback = <span class="hljs-keyword">new</span> CameraDevice.StateCallback() &#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onOpened</span><span class="hljs-params">(CameraDevice camera)</span> </span>&#123;</span><br><span class="line">        mCameraDevice = camera;</span><br><span class="line">        <span class="hljs-comment">//預覽畫面</span></span><br><span class="line">        startPreview();</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onDisconnected</span><span class="hljs-params">(@NonNull CameraDevice camera)</span> </span>&#123;</span><br><span class="line">        Log.e(TAG, <span class="hljs-string">"onDisconnected"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">	</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onError</span><span class="hljs-params">(@NonNull CameraDevice camera, <span class="hljs-keyword">int</span> error)</span> </span>&#123;</span><br><span class="line">        Log.e(TAG, <span class="hljs-string">"onError: "</span> + error);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<p>設置預覽畫面，將捕捉到的畫面顯示於TextureView中。</p>
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">private</span> <span class="hljs-keyword">void</span> <span class="hljs-title">startPreview</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">    SurfaceTexture mSurfaceTexture = mTextureView.getSurfaceTexture();</span><br><span class="line">    <span class="hljs-comment">//設置TextureView的緩衝區大小</span></span><br><span class="line">    mSurfaceTexture.setDefaultBufferSize(mPreviewSize.getWidth(), mPreviewSize.getHeight());</span><br><span class="line">    <span class="hljs-comment">//獲取Surface顯示預覽數據</span></span><br><span class="line">    Surface mSurface = <span class="hljs-keyword">new</span> Surface(mSurfaceTexture);</span><br><span class="line">    <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">        <span class="hljs-comment">//創建預覽請求CaptureRequestBuilder，TEMPLATE_PREVIEW</span></span><br><span class="line">        mCaptureRequestBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);</span><br><span class="line">        <span class="hljs-comment">//設置Surface作為預覽顯示界面</span></span><br><span class="line">        mCaptureRequestBuilder.addTarget(mSurface);</span><br><span class="line">        <span class="hljs-comment">//創建捕捉畫面，並設置callback</span></span><br><span class="line">        mCameraDevice.createCaptureSession(Arrays.asList(mSurface),mCaptureCallback, <span class="hljs-keyword">null</span>);</span><br><span class="line">    &#125; <span class="hljs-keyword">catch</span> (CameraAccessException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>當預覽請求設置好之後，設定Repeat，讓畫面持續更新。</p>
+<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-keyword">final</span> CameraCaptureSession.StateCallback mCaptureCallback  = <span class="hljs-keyword">new</span> CameraCaptureSession.StateCallback() &#123;</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConfigured</span><span class="hljs-params">(CameraCaptureSession session)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">            <span class="hljs-comment">//創建捕獲請求</span></span><br><span class="line">            mCaptureRequest = mCaptureRequestBuilder.build();</span><br><span class="line">            mPreviewSession = session;</span><br><span class="line">            <span class="hljs-comment">//設置反覆捕獲數據，持續畫面更新</span></span><br><span class="line">            mPreviewSession.setRepeatingRequest(mCaptureRequest, <span class="hljs-keyword">null</span>, <span class="hljs-keyword">null</span>);</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (CameraAccessException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">&#125;</span><br><span class="line">	</span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onConfigureFailed</span><span class="hljs-params">(CameraCaptureSession session)</span> </span>&#123;</span><br><span class="line">	</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote exec"><p>執行結果</p>
+</blockquote>
+<p><img src="/images/2018/07_17/camera2_nodame.png" alt=" " title="Android Camera2"></p>
+
+        </div>
+        
+        <ul class="post-copyright">
+        <li><strong>本文標題：</strong><a href="https://nickcarter9.github.io/2018/07/17/2018/2018_07_17-camera2/">Android Camera2</a></li>
+        <li><strong>本文作者：</strong><a href="https://nickcarter9.github.io">Nick Lin</a></li>
+        <li><strong>本文連接：</strong><a href="https://nickcarter9.github.io/2018/07/17/2018/2018_07_17-camera2/">https://nickcarter9.github.io/2018/07/17/2018/2018_07_17-camera2/</a></li>
+        <li><strong>發布時間：</strong>2018-07-17</li>
+        <li><strong>版權聲明：</strong>本Blog所有文章除特別聲明外，皆可轉載，轉載請註明出處！
+        </li>
+        </ul>
+    
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/android/" rel="tag">android</a>,&nbsp;<a class="has-link-grey -link" href="/tags/camera/" rel="tag">camera</a>,&nbsp;<a class="has-link-grey -link" href="/tags/camera2/" rel="tag">camera2</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2018/07/24/2018/2018_07_24-adb_no_permissions/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Android adb no permission</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2018/07/12/2018/2018_07_12-permission/">
+                <span class="level-item">Android Permissions Request</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">評論</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://nickcarter9.github.io/2018/07/17/2018/2018_07_17-camera2/';
+        this.page.identifier = '2018/07/17/2018/2018_07_17-camera2/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'nick-code-cars' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/avatar.png" alt="">
+                    </figure>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Programming is like sex. One mistake and you have to support it for the rest of your life.
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Taiwan</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        74
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分類
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        4
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        標籤
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        164
+                    </p>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://www.facebook.com/nick.carter.52459" target="_blank">
+                追蹤</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/NickCarter9">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Facebook" href="https://www.facebook.com/nick.carter.52459">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Email" href="/nickthomas55@gmail.com">
+                
+                <i class="far fa-envelope"></i>
+                
+            </a>
+            
+        </div>
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 方形廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5418524234209657"
+     data-ad-slot="6117614777"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+
+                
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Android Camera2" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Nick Lin&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Github" href="https://github.com/NickCarter9">
+                        
+                        <i class="fab fa-github"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Facebook" href="https://www.facebook.com/nick.carter.52459">
+                        
+                        <i class="fab fa-facebook"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Email" href="/nickthomas55@gmail.com">
+                        
+                        <i class="far fa-envelope"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 橫式廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5418524234209657"
+     data-ad-slot="7917781608"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-TW");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+<script src="/js/animation.js"></script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+    
+    
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+    
+    
+<a id="back-to-top" title="回到頁首" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="請輸入關鍵字..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '頁面',
+                CATEGORIES: '分類',
+                TAGS: '標籤',
+                UNTITLED: '(無標題)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
+</body>
+</html>
