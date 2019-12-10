@@ -188,6 +188,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>先前為了不影響UI Thread的執行，等到程式都Ready時，才執行CursorLoader的初始化。</p>
 <p>執行程式時都很正常也能收到onLoadFinished callback event，但旋轉屏幕時卻無法再次收到onLoadFinished callback event。</p>
 <p>按照網路所使用的方式，先destroyLoader在restartLoader也是無法收到event。</p>

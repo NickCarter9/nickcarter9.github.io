@@ -188,6 +188,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>對於Android 單元測試來說, 若滿足以下測試條件, 可選用 SingleActivityTestCase 來測試</p>
 <p>(1) 針對單一Activity 測試, 不涉及其他Activity交互作用.<br>       如startActivityForResult 的返回結果做測試.<br>(2) 對UI進行自動化測試<br>(3) 只需要一次初始化 (setUp()) 與結束 (tearDown()), 亦即每個測試項目不會重複執行 setUp() 與 tearDown()</p>
 <p>此測試類別和 ActivityUnitTestCase 相似, 只差在 ActivityUnitTestCase的每個測試項目會重複執行 setUp() 與 tearDown()</p>

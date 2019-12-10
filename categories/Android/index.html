@@ -182,6 +182,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>針對訪問Https網站，必須具有認可的證書，經過驗證後才能訪問該網站。</p>
 <p>通常需要機構所發行的證書，但在開發階段還未申請到核可的證書時，我們可透過繞過證書的方式，來訪問Https網站。</p>
         </div>
@@ -275,6 +277,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>當螢幕方向改變時，我們通常會在Activity中Override function : onConfigurationChanged 的方式來接收變化。</p>
 <p>但目前只有當 Landscape 與 Portrait 之間互轉時才會收到event.<br>所以landscape轉成reverse landscape並不會由onConfigurationChanged收到變化.</p>
         </div>
@@ -360,6 +364,8 @@
         
         
         <div class="content">
+            
+              <hr style="height:0px;margin:0.3rem 0"/>
             
             <p>若想要在程式啟動時，將檔案預載至SD卡中，該如何實做呢？</p>
 <blockquote class="stepquote step1"><p>建立assets資料夾</p>
@@ -457,6 +463,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>在SQLlite語法中，NULL表示一個缺失數值的值，與空白不同。空白是不佔用空間的，而NULL值是佔用空間的。</p>
 <p>在Android的寫法中，若DB欄位值為NULL，使用以下的方式是無法查詢到的。</p>
 <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver resolver = myContext.getContentResolver();</span><br><span class="line"><span class="hljs-keyword">int</span> count = resolver.delete(getDataUri(), Contract.DataColumns.TIME + <span class="hljs-string">"=? "</span>, <span class="hljs-keyword">new</span> String[] &#123; <span class="hljs-keyword">null</span> &#125;);</span><br><span class="line"></span><br><span class="line">Log.e(TAG, <span class="hljs-string">"count of Null Item: "</span> + count);</span><br></pre></td></tr></table></figure>
@@ -538,6 +546,8 @@
         
         
         <div class="content">
+            
+              <hr style="height:0px;margin:0.3rem 0"/>
             
             <p>當使用RecyclerView，針對點擊項目後，要將背景Highlight，可依照以下步驟實現此功能。</p>
 <p><img src="/images/2019/11/item_highlight.png" alt title="Item Highlight"></p>
@@ -632,6 +642,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>在一個UI 設計中，我們要在Button的左邊設計icon<br><img src="/images/2019/10/over_1.png" alt title="Design"></p>
 <p>原本使用Button的屬性android:drawableLeft來設計，但是相對位置上非常難調整成UI 設計人員所制定的位置。</p>
         </div>
@@ -724,6 +736,8 @@
         
         
         <div class="content">
+            
+              <hr style="height:0px;margin:0.3rem 0"/>
             
             <p>當點擊Button時，想要改變Button上文字的顏色，我們可使用resource xml的方式來實現。</p>
 <p>步驟如下</p>
@@ -819,6 +833,8 @@
         
         
         <div class="content">
+            
+              <hr style="height:0px;margin:0.3rem 0"/>
             
             <p>首先必須先具備以下條件</p>
 <blockquote class="colorquote warning"><ul>
@@ -917,6 +933,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>本篇要來探討如何將圖片轉成JSON格式做傳輸的方式。</p>
 <p>我們可利用Base64 encode的方式將圖片轉成字串，再放置到JSON格式中做傳輸。</p>
         </div>
@@ -1009,6 +1027,8 @@
         
         
         <div class="content">
+            
+              <hr style="height:0px;margin:0.3rem 0"/>
             
             <p>先前為了不影響UI Thread的執行，等到程式都Ready時，才執行CursorLoader的初始化。</p>
 <p>執行程式時都很正常也能收到onLoadFinished callback event，但旋轉屏幕時卻無法再次收到onLoadFinished callback event。</p>

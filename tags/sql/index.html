@@ -188,6 +188,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>在SQLlite語法中，NULL表示一個缺失數值的值，與空白不同。空白是不佔用空間的，而NULL值是佔用空間的。</p>
 <p>在Android的寫法中，若DB欄位值為NULL，使用以下的方式是無法查詢到的。</p>
 <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver resolver = myContext.getContentResolver();</span><br><span class="line"><span class="hljs-keyword">int</span> count = resolver.delete(getDataUri(), Contract.DataColumns.TIME + <span class="hljs-string">"=? "</span>, <span class="hljs-keyword">new</span> String[] &#123; <span class="hljs-keyword">null</span> &#125;);</span><br><span class="line"></span><br><span class="line">Log.e(TAG, <span class="hljs-string">"count of Null Item: "</span> + count);</span><br></pre></td></tr></table></figure>

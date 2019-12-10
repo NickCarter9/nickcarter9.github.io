@@ -171,6 +171,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>針對訪問Https網站，必須具有認可的證書，經過驗證後才能訪問該網站。</p>
 <p>通常需要機構所發行的證書，但在開發階段還未申請到核可的證書時，我們可透過繞過證書的方式，來訪問Https網站。</p>
         </div>
@@ -264,6 +266,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>當螢幕方向改變時，我們通常會在Activity中Override function : onConfigurationChanged 的方式來接收變化。</p>
 <p>但目前只有當 Landscape 與 Portrait 之間互轉時才會收到event.<br>所以landscape轉成reverse landscape並不會由onConfigurationChanged收到變化.</p>
         </div>
@@ -349,6 +353,8 @@
         
         
         <div class="content">
+            
+              <hr style="height:0px;margin:0.3rem 0"/>
             
             <p>若想要在程式啟動時，將檔案預載至SD卡中，該如何實做呢？</p>
 <blockquote class="stepquote step1"><p>建立assets資料夾</p>
@@ -446,6 +452,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>當時安裝Ubuntu的時候，切給boot的空間為200MB，要更新Kernel時，系統告知boot 空間不足的問題。</p>
 <p>原因是Ubuntu更新系統後，並不會將舊的Kernel package移除所導致。</p>
 <p>以下為解決方式。</p>
@@ -540,6 +548,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>在SQLlite語法中，NULL表示一個缺失數值的值，與空白不同。空白是不佔用空間的，而NULL值是佔用空間的。</p>
 <p>在Android的寫法中，若DB欄位值為NULL，使用以下的方式是無法查詢到的。</p>
 <figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ContentResolver resolver = myContext.getContentResolver();</span><br><span class="line"><span class="hljs-keyword">int</span> count = resolver.delete(getDataUri(), Contract.DataColumns.TIME + <span class="hljs-string">"=? "</span>, <span class="hljs-keyword">new</span> String[] &#123; <span class="hljs-keyword">null</span> &#125;);</span><br><span class="line"></span><br><span class="line">Log.e(TAG, <span class="hljs-string">"count of Null Item: "</span> + count);</span><br></pre></td></tr></table></figure>
@@ -621,6 +631,8 @@
         
         
         <div class="content">
+            
+              <hr style="height:0px;margin:0.3rem 0"/>
             
             <p>當使用RecyclerView，針對點擊項目後，要將背景Highlight，可依照以下步驟實現此功能。</p>
 <p><img src="/images/2019/11/item_highlight.png" alt title="Item Highlight"></p>
@@ -715,6 +727,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>在一個UI 設計中，我們要在Button的左邊設計icon<br><img src="/images/2019/10/over_1.png" alt title="Design"></p>
 <p>原本使用Button的屬性android:drawableLeft來設計，但是相對位置上非常難調整成UI 設計人員所制定的位置。</p>
         </div>
@@ -807,6 +821,8 @@
         
         
         <div class="content">
+            
+              <hr style="height:0px;margin:0.3rem 0"/>
             
             <p>當點擊Button時，想要改變Button上文字的顏色，我們可使用resource xml的方式來實現。</p>
 <p>步驟如下</p>
@@ -903,6 +919,8 @@
         
         <div class="content">
             
+              <hr style="height:0px;margin:0.3rem 0"/>
+            
             <p>我們想讓自己的Blog也能讓Google搜尋的到，該如何做呢？</p>
 <p> Google Search Console提供了Sitemap的方式，讓我們的Blog也能被搜尋到囉。<br> 步驟如下:</p>
 <blockquote class="stepquote step1"><p>安裝Hexo sitemap</p>
@@ -997,6 +1015,8 @@
         
         
         <div class="content">
+            
+              <hr style="height:0px;margin:0.3rem 0"/>
             
             <p>使用Hexo主題Icarus來架設網站，想要使用Google AdSense來增加廣告收益時，<br>搜尋網站資料，大多是使用Hexo的Next主題來架設。</p>
 <p>經過一番研究之後，終於在自己的網站上嵌入Google AdSense了。<br>以下為嵌入Google AsSense的步驟。</p>
