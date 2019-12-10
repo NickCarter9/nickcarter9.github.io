@@ -135,7 +135,14 @@
     
     <div class="card-content article "> 
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal">  
+                <a class="has-link-black-ter" href="/2019/11/21/2019_11_21-reverselandscape-event/">Android onConfigurationChanged not called for Landscape and Reverselandscape</a>
+                </h1>
+            
+        
+
+        
+            <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
                 <i class="far fa-calendar-alt">&nbsp;</i>
                 <span class="level-item has-text-grey" >
@@ -160,15 +167,14 @@
                 </span>
                 
                 
+                </div>
             </div>
-        </div>
         
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/11/21/2019_11_21-reverselandscape-event/">Android onConfigurationChanged not called for Landscape and Reverselandscape</a>
-            
-        </h1>
+
+        
+        
         <div class="content">
+            
             <p>當螢幕方向改變時，我們通常會在Activity中Override function : onConfigurationChanged 的方式來接收變化。</p>
 <p>但目前只有當 Landscape 與 Portrait 之間互轉時才會收到event.<br>所以landscape轉成reverse landscape並不會由onConfigurationChanged收到變化.</p>
         </div>

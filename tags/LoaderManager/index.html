@@ -135,7 +135,14 @@
     
     <div class="card-content article "> 
         
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+                <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal">  
+                <a class="has-link-black-ter" href="/2019/05/16/2019_05_16-cursorloader_onloadfinished/">Android CursorLoader  - onLoadFinished not called</a>
+                </h1>
+            
+        
+
+        
+            <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
                 <i class="far fa-calendar-alt">&nbsp;</i>
                 <span class="level-item has-text-grey" >
@@ -160,15 +167,14 @@
                 </span>
                 
                 
+                </div>
             </div>
-        </div>
         
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2019/05/16/2019_05_16-cursorloader_onloadfinished/">Android CursorLoader  - onLoadFinished not called</a>
-            
-        </h1>
+
+        
+        
         <div class="content">
+            
             <p>先前為了不影響UI Thread的執行，等到程式都Ready時，才執行CursorLoader的初始化。</p>
 <p>執行程式時都很正常也能收到onLoadFinished callback event，但旋轉屏幕時卻無法再次收到onLoadFinished callback event。</p>
 <p>按照網路所使用的方式，先destroyLoader在restartLoader也是無法收到event。</p>
