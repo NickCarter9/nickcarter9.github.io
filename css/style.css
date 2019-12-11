@@ -192,7 +192,7 @@ img.thumbnail {
   margin-left: 1rem;
   padding-left: 1.5rem;
   padding-top: 1rem;
-  border-left: 1px solid #dbdbdb;
+  border-left: 1px solid #ef6c33;
 }
 .timeline .media {
   position: relative;
@@ -208,7 +208,7 @@ img.thumbnail {
   width: 9px;
   height: 9px;
   top: 1.3rem;
-  background: #dbdbdb;
+  background: #ef6c33;
   border-radius: 50%;
 }
 .timeline .media:first-child:before {
@@ -469,6 +469,9 @@ position: static footer cite:before {
 }
 .has-link-black-ter {
   color: #242424 !important;
+}
+.has-link-blue-ter {
+  color: #0359ae !important;
 }
 @media screen and (max-width: 768px) {
   .has-text-centered-mobile {
