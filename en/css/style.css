@@ -129,9 +129,27 @@ img.thumbnail {
 .navbar-main .navbar-item-search {
   display: flex;
   align-items: center;
-  padding: 1.25rem 8.5rem;
+  padding: 0.5rem 0rem;
 }
 .navbar-main .navbar-item-search.is-active {
+  color: #742561;
+  background-color: transparent;
+}
+.navbar-main .navbar-item-lang-2 {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 2rem;
+}
+.navbar-main .navbar-item-lang-2.is-active {
+  color: #742561;
+  background-color: transparent;
+}
+.navbar-main .navbar-item-lang-3 {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+}
+.navbar-main .navbar-item-lang-3.is-active {
   color: #742561;
   background-color: transparent;
 }
