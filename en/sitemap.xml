@@ -191,13 +191,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2019/04/03/2019_04_03-build_gstreamer/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/en/2019/04/08/2019_04_08-jcifs/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -206,6 +199,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/en/2019/04/09/2019_04_09-jcifs_ng/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/en/2019/04/03/2019_04_03-build_gstreamer/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -226,6 +226,13 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/en/2019/05/23/2019_05_23-image_base64_tostring/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/en/2019/05/16/2019_05_16-cursorloader_onloadfinished/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -234,13 +241,6 @@
   
   <url>
     <loc>https://nickcarter9.github.io/en/2019/10/16/2019_10_16-bootanimation/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/en/2019/05/23/2019_05_23-image_base64_tostring/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -282,14 +282,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/05/25/2016/2016_05_25-android-elevation_shadows/</loc>
+    <loc>https://nickcarter9.github.io/en/2016/05/26/2016/2016_05_26-android-button_design/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/05/26/2016/2016_05_26-android-button_design/</loc>
+    <loc>https://nickcarter9.github.io/en/2016/05/25/2016/2016_05_25-android-elevation_shadows/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -317,13 +317,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/06/23/2016/2016_06_23-custom_listview/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/en/2016/06/24/2016/2016_06_24-listview_footview/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -331,7 +324,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/07/05/2016/2016_07_05-ios-open_bluetooth/</loc>
+    <loc>https://nickcarter9.github.io/en/2016/06/23/2016/2016_06_23-custom_listview/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -345,7 +338,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/07/07/2016/2016_07_07-ios-tableview_diff_group/</loc>
+    <loc>https://nickcarter9.github.io/en/2016/07/05/2016/2016_07_05-ios-open_bluetooth/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -359,7 +352,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/07/27/2016/2016_07_27-android-app_instrumentation_test/</loc>
+    <loc>https://nickcarter9.github.io/en/2016/07/07/2016/2016_07_07-ios-tableview_diff_group/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -380,14 +373,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/07/27/2016/2016_07_27-android-unit_test/</loc>
+    <loc>https://nickcarter9.github.io/en/2016/07/27/2016/2016_07_27-android-app_instrumentation_test/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/07/28/2016/2016_07_28-android-activity_unit_test/</loc>
+    <loc>https://nickcarter9.github.io/en/2016/07/27/2016/2016_07_27-android-unit_test/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -401,13 +394,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/08/01/2016/2016_08_01-android-app_instrumentation_test_2/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/en/2016/07/28/2016/2016_07_28-android-single_launch_activity_unit_test/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -415,7 +401,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/08/16/2016/2016_08_16-android-provider-test/</loc>
+    <loc>https://nickcarter9.github.io/en/2016/07/28/2016/2016_07_28-android-activity_unit_test/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/en/2016/08/01/2016/2016_08_01-android-app_instrumentation_test_2/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -436,6 +429,13 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/en/2016/08/16/2016/2016_08_16-android-provider-test/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/en/2016/08/25/2016/2016_08_25-ios-search_bluetooth_devices_2/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -443,14 +443,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/08/25/2016/2016_08_25-ios-show_bluetooth_devices/</loc>
+    <loc>https://nickcarter9.github.io/en/2016/10/13/2016/2016_10_13-ios-next_textfield/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2016/10/13/2016/2016_10_13-ios-next_textfield/</loc>
+    <loc>https://nickcarter9.github.io/en/2016/08/25/2016/2016_08_25-ios-show_bluetooth_devices/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -471,14 +471,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2017/04/19/2017/2017_04_19-android-firebase-register/</loc>
+    <loc>https://nickcarter9.github.io/en/2017/04/19/2017/2017_04_19-android-firebase-install/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2017/04/19/2017/2017_04_19-android-firebase-install/</loc>
+    <loc>https://nickcarter9.github.io/en/2017/04/19/2017/2017_04_19-android-firebase-register/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -506,13 +506,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2017/04/20/2017/2017_04_20-android-firebase-database-auth/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/en/2018/07/24/2018/2018_07_24-adb_no_permissions/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -534,7 +527,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/en/2018/08/07/2018/2018_08_07-gradientdrawable/</loc>
+    <loc>https://nickcarter9.github.io/en/2017/04/20/2017/2017_04_20-android-firebase-database-auth/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -542,6 +535,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/en/2018/08/31/2018/2018_08_31-non_zero_exit_value_2/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/en/2018/08/07/2018/2018_08_07-gradientdrawable/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
