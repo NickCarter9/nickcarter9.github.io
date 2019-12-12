@@ -7,12 +7,12 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Tag: android - Nick Blog</title>
+<title>Tag: UnsatisfiedLinkError - Nick Blog</title>
 
 
     <meta property="og:type" content="website">
 <meta property="og:title" content="Nick Blog">
-<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;tags&#x2F;android&#x2F;index.html">
+<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;tags&#x2F;UnsatisfiedLinkError&#x2F;index.html">
 <meta property="og:site_name" content="Nick Blog">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
@@ -128,7 +128,7 @@
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
             <li><a href="/en/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">android</a></li>
+            <li class="is-active"><a href="#" aria-current="page">UnsatisfiedLinkError</a></li>
         </ul>
         </nav>
     </div>
@@ -140,7 +140,7 @@
     <div class="card-content article "> 
         
                 <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal">  
-                <a class="has-link-black-ter" href="/en/2019/04/12/2019_04_12-baidu_tts/">Android Baidu Text To Speech</a>
+                <a class="has-link-black-ter" href="/en/2019/03/27/2019_03_27-system_loadlibrary_linkerror/">Android loadLibrary - dlopen failed</a>
                 </h1>
             
         
@@ -150,14 +150,14 @@
             <div class="level-left">
                 <i class="far fa-calendar-alt">&nbsp;</i>
                 <span class="level-item has-text-grey" >
-                    2019/04/12
+                    2019/03/27
                 </span>
 
                 <span class="level-item" >&#9474;</span>
 
                 
                     <i class="fas fa-edit">&nbsp</i>
-                    <time class="has-text-grey" datetime="2019-12-12T05:50:15.168Z" >2019-12-12</time>
+                    <time class="has-text-grey" datetime="2019-12-12T07:42:34.006Z" >2019-12-12</time>
                     <span class="level-item has-text-grey">
                     update
                     </span>
@@ -170,7 +170,7 @@
                     <i class="far fa-clock">&nbsp;</i>
                     
                     
-                    read&nbsp;&asymp;&nbsp;6 minutes
+                    read&nbsp;&asymp;&nbsp;a minute
                   </span>
                 
 
@@ -180,7 +180,7 @@
                   <span class="level-item has-text-grey">
                     <i class="far fa-file-word">&nbsp;</i>
                     
-                    words&nbsp;873
+                    words&nbsp;193
                   </span>
                 
   
@@ -194,7 +194,12 @@
             
               <hr style="height:0px;margin:0.3rem 0"/>
             
-            <p>Text To Speech (TTS) converts text into human-like speech. Baidu TTS is a free TTS SDK，we use this sdk to develop TTS app.</p>
+            <p>The library: libcutils.so was working fine till Android Marshmallow (Android 6 (SDK 23)). </p>
+<p>But my application run on the device with Android  Oreo (Android 8 (SDK 26)), get the crash as follow. </p>
+<blockquote class="colorquote danger"><p>java.lang.UnsatisfiedLinkError: dlopen failed: library “/system/lib/libcutils.so”<br>    is not accessible for the namespace “classloader-namespace”</p>
+</blockquote>
+
+<p>Because Android Nougat (Anroid 7 (SDK 24)) is not currently supported by the Creative SDK.</p>
         </div>
         
         
@@ -205,13 +210,13 @@
                     
                     <div class="level-item is-size-7 is-uppercase">
                         <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                        <a class="has-link-grey -link" href="/en/tags/android/" rel="tag">android</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/baidu-tts/" rel="tag">baidu tts</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/tts/" rel="tag">tts</a>
+                        <a class="has-link-grey -link" href="/en/tags/System-loadLibrary/" rel="tag">System.loadLibrary</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/UnsatisfiedLinkError/" rel="tag">UnsatisfiedLinkError</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/dlopen-failed/" rel="tag">dlopen failed</a>
                      </div>
                      
             </div>
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/en/2019/04/12/2019_04_12-baidu_tts/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/en/2019/03/27/2019_03_27-system_loadlibrary_linkerror/#more">Read More</a>
                 </div>
             </div>
         </div>
