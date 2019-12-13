@@ -19,7 +19,7 @@
 <meta property="og:description" content="NanoHttp is a light-weight HTTP server designed for embedding system, released under a BSD licence.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-13T01:27:19.349Z">
+<meta property="og:updated_time" content="2019-12-13T01:32:09.709Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
 
@@ -146,7 +146,7 @@
 
                 
                     <i class="fas fa-edit">&nbsp</i>
-                    <time class="has-text-grey" datetime="2019-12-13T01:27:19.349Z" >2019-12-13</time>
+                    <time class="has-text-grey" datetime="2019-12-13T01:32:09.709Z" >2019-12-13</time>
                     <span class="level-item has-text-grey">
                       update
                     </span>
@@ -224,7 +224,7 @@
 <p>When client is connected, we can receive the message and return response to client. </p>
 <figure class="highlight java hljs"><figcaption><span>NanoHttpServer.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> Response <span class="hljs-title">serve</span><span class="hljs-params">(IHTTPSession session)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        String uri = session.getUri();</span><br><span class="line">        String method = session.getMethod().name();</span><br><span class="line">        String remoteIp = session.getRemoteIpAddress();</span><br><span class="line"></span><br><span class="line">        NxLog.e(TAG, <span class="hljs-string">"uri: "</span> + uri);</span><br><span class="line">        NxLog.e(TAG, <span class="hljs-string">"method: "</span> + method);</span><br><span class="line">        NxLog.e(TAG, <span class="hljs-string">"remoteIp: "</span> + remoteIp);</span><br><span class="line">        </span><br><span class="line">        InputStream is = session.getInputStream();</span><br><span class="line">        ...</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        String msg = <span class="hljs-string">"Send response to client"</span>;</span><br><span class="line">        <span class="hljs-keyword">return</span> newFixedLengthResponse(msg);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<blockquote class="colorquote warring"><p>It should be noted that IHTTPSession.getInputStream will never return -1 as end of stream. </p>
+<blockquote class="colorquote warning"><p>It should be noted that IHTTPSession.getInputStream will never return -1 as end of stream. </p>
 </blockquote>
 
 <p>But we could use a buffer to control loop. When the length of reading stream less than buffer size, than we break this loop.</p>
