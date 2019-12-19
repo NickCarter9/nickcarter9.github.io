@@ -19,7 +19,7 @@
 <meta property="og:description" content="先前具有系統權限下，使用System.loadLibrary可正常的讀取到system&#x2F;lib底下的.so檔但在Android 8 (SDK 26, M) 卻得到以下訊息而Crash java.lang.UnsatisfiedLinkError: dlopen failed: library “&#x2F;system&#x2F;lib&#x2F;libcutils.so”    is not accessible for t">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-11-01T01:02:48.680Z">
+<meta property="og:updated_time" content="2019-12-12T07:18:10.358Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -147,7 +147,7 @@
 
                 
                     <i class="fas fa-edit">&nbsp</i>
-                    <time class="has-text-grey" datetime="2019-11-01T01:02:48.680Z" >2019-11-01</time>
+                    <time class="has-text-grey" datetime="2019-12-12T07:18:10.358Z" >2019-12-12</time>
                     <span class="level-item has-text-grey">
                       更新
                     </span>
@@ -169,7 +169,7 @@
                   <span class="level-item has-text-grey">
                     <i class="far fa-file-word">&nbsp;</i>
                     
-                    本文字數:&nbsp;289
+                    本文字數:&nbsp;292
                   </span>
                 
 
@@ -214,7 +214,10 @@
 <p>在Android 9提供了device manufactures 機制，依然可將library放到system/lib之中，但是必須將library命名為<font color="#4682B4"> lib*COMPANYNAME.so</font> 如 libgstreamer.qisda.so</p>
 <p>並在system/etc/中增加<font color="#4682B4"> public.libraries-COMPANYNAME.txt</font> </p>
 <p>由於手上無Android 9 的機器，此方式還未測試過。</p>
-<p><a href="https://source.android.com/devices/tech/config/namespaces_libraries#adding-additional-native-libraries" target="_blank" rel="noopener">Reference: source.android.com</a> </p>
+<blockquote class="colorquote infotitle"><p>Reference</p>
+</blockquote>
+
+<p><a href="https://source.android.com/devices/tech/config/namespaces_libraries#adding-additional-native-libraries" target="_blank" rel="noopener">source.android.com</a> </p>
 
         </div>
         
