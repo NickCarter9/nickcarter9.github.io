@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.0.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>iOS - Spinner - Nick Blog</title>
+
+
+    <meta name="description" content="iOS doesn’t support spinner widget.Some website use TextField to simulate spinner widget, but it occurs a problem that can’t hide virtual keyboard. Therefore I choose Button widget to implement it.">
+<meta name="keywords" content="iOS,spinner">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS - Spinner">
+<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;2016&#x2F;10&#x2F;13&#x2F;2016&#x2F;2016_10_13-spinner&#x2F;index.html">
+<meta property="og:site_name" content="Nick Blog">
+<meta property="og:description" content="iOS doesn’t support spinner widget.Some website use TextField to simulate spinner widget, but it occurs a problem that can’t hide virtual keyboard. Therefore I choose Button widget to implement it.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2019-12-23T03:08:17.528Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/en/images/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/androidstudio.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/en/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/en/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+<link rel="stylesheet" href="/en/css/style.css">
+    <script data-ad-client="ca-pub-5418524234209657" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="google-site-verification" content="wONvV1Oo51k5DsvNnSpe6EEwpaYJTbWAyVvQGdIJHa0" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/en/">
+            
+                <img src="/en/images/logo.png" alt="iOS - Spinner" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/en/">Home</a>
+                
+                <a class="navbar-item"
+                href="/en/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/en/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/en/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/en/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                
+                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/2016/10/13/2016/2016_10_13-spinner/">Chinese</a>
+                   
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article "> 
+        
+                <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal" align="center">
+                iOS - Spinner
+                </h1>
+            
+        
+
+        
+            <div class="level-item has-text-centered article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto" style="flex-shrink: 1">
+            <div class="level-left">
+                <i class="far fa-calendar-alt">&nbsp;</i>
+                <span class="level-item has-text-grey" >
+                    2016/10/13
+                </span>
+
+                <span class="level-item" >&#9474;</span>
+
+                
+                    <i class="fas fa-edit">&nbsp</i>
+                    <time class="has-text-grey" datetime="2019-12-23T03:08:17.528Z" >2019-12-23&nbsp;</time>
+                    <span class="level-item has-text-grey">&nbsp;
+                       update
+                    </span>
+                    <span class="level-item" >&#9474;</span>
+                
+                
+                
+                  <span class="level-item has-text-grey">
+                    <i class="far fa-clock">&nbsp;</i>
+                    
+                    
+                    read&nbsp;&asymp;&nbsp;4 minutes
+                  </span>
+                
+
+                <span class="level-item" >&#9474;</span>
+
+                
+                  <span class="level-item has-text-grey">
+                    <i class="far fa-file-word">&nbsp;</i>
+                    
+                    words&nbsp;553
+                  </span>
+                
+
+                <span class="level-item" >&#9474;</span>
+
+                
+                  <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-user">&nbsp;</i>
+                    <span id="busuanzi_value_page_pv"> 0 </span> visits
+                  </span>
+                
+                </div>
+            </div>
+        
+
+        
+        
+        <div class="content">
+            
+              <hr style="height:0px;margin:1.5rem 0"/>
+            
+            <p>iOS doesn’t support spinner widget.<br>Some website use TextField to simulate spinner widget, but it occurs a problem that can’t hide virtual keyboard.</p>
+<p>Therefore I choose Button widget to implement it.</p>
+<a id="more"></a>
+
+<blockquote class="stepquote step1"><p>Init Button Widget</p>
+</blockquote>
+<p><img src="/images/2016/10/button_spinner_init.png" alt=" " title="Init"></p>
+<blockquote class="colorquote info"><p>Change text color to block, and add a icon.</p>
+</blockquote>
+<p><img src="/images/2016/10/button_spinner.png" alt=" " title="Button Spinner"></p>
+<blockquote class="stepquote step2"><p>Create PickerView</p>
+</blockquote>
+
+<p>Setup the content of spinner.</p>
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@IBAction</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">openMenu</span><span class="hljs-params">(sender: AnyObject)</span></span> &#123;</span><br><span class="line">     showPicker()</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="hljs-keyword">internal</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">showPicker</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">     <span class="hljs-keyword">let</span> pickerView = <span class="hljs-type">UIPickerView</span>(frame:<span class="hljs-type">CGRectMake</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>))</span><br><span class="line">     pickerView.showsSelectionIndicator = <span class="hljs-literal">true</span></span><br><span class="line">     pickerView.dataSource = <span class="hljs-keyword">self</span></span><br><span class="line">     pickerView.delegate = <span class="hljs-keyword">self</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Setup count of cloumns and rows.</p>
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">ViewController</span> : <span class="hljs-title">UIPickerViewDataSource</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">pickerView</span><span class="hljs-params">(pickerView: UIPickerView, numberOfRowsInComponent component: Int)</span></span> -&gt; <span class="hljs-type">Int</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.dataArray.<span class="hljs-built_in">count</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">numberOfComponentsInPickerView</span><span class="hljs-params">(pickerView: UIPickerView)</span></span> -&gt; <span class="hljs-type">Int</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Setup content and update ui when picking an item.</p>
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">ViewController</span> : <span class="hljs-title">UIPickerViewDelegate</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">pickerView</span><span class="hljs-params">(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int)</span></span> -&gt; <span class="hljs-type">String?</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.dataArray[row]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">pickerView</span><span class="hljs-params">(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)</span></span> &#123;</span><br><span class="line">        <span class="hljs-comment">//update UI</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote class="stepquote step3"><p>Create ToolBar</p>
+</blockquote>
+
+<p>Setup the position of picker view.</p>
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">self</span>.sortView = <span class="hljs-type">UIToolbar</span>(frame:<span class="hljs-type">CGRectMake</span>(menuField.frame.origin.x, menuField.frame.origin.y + menuField.frame.height, <span class="hljs-number">200</span>, <span class="hljs-number">130</span>))</span><br><span class="line"> <span class="hljs-keyword">self</span>.sortView!.barStyle = <span class="hljs-type">UIBarStyle</span>.<span class="hljs-type">Default</span></span><br><span class="line"><span class="hljs-keyword">self</span>.sortView!.backgroundColor = <span class="hljs-type">UIColor</span>.blackColor();</span><br></pre></td></tr></table></figure>
+
+<p>Setup the done button.</p>
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"> <span class="hljs-keyword">let</span> doneButton = <span class="hljs-type">UIBarButtonItem</span>(title: <span class="hljs-string">"Done"</span>, style: <span class="hljs-type">UIBarButtonItemStyle</span>.<span class="hljs-type">Done</span>, target: <span class="hljs-keyword">self</span>, action: #selector(<span class="hljs-type">ViewController</span>.doneClicked))</span><br><span class="line"></span><br><span class="line"><span class="hljs-comment">//Using flexibleSpace to setup the position of Done button</span></span><br><span class="line"><span class="hljs-keyword">let</span> flexibleSpace = <span class="hljs-type">UIBarButtonItem</span>(barButtonSystemItem: <span class="hljs-type">UIBarButtonSystemItem</span>.<span class="hljs-type">FlexibleSpace</span>, target: <span class="hljs-literal">nil</span>, action: <span class="hljs-literal">nil</span>)</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">self</span>.sortView!.setItems([flexibleSpace, doneButton, flexibleSpace], animated: <span class="hljs-literal">true</span>)</span><br></pre></td></tr></table></figure>
+
+<p>We hide picker view after choosing an item.</p>
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">doneClicked</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (<span class="hljs-literal">nil</span> != <span class="hljs-keyword">self</span>.sortView) &#123;</span><br><span class="line">            <span class="hljs-keyword">self</span>.sortView!.removeFromSuperview()</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            <span class="hljs-comment">//nothing else</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote class="stepquote step4"><p>Add PickerView into spinner.</p>
+</blockquote>
+
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">//add pickerview into Pull-Down Menu</span></span><br><span class="line"><span class="hljs-keyword">self</span>.sortView!.addSubview(pickerView);</span><br><span class="line"><span class="hljs-comment">//show Pull-Down Menu</span></span><br><span class="line"><span class="hljs-keyword">self</span>.view.addSubview(<span class="hljs-keyword">self</span>.sortView!)</span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote exec"><p>Result</p>
+</blockquote>
+
+<p><img src="/images/2016/10/result_spinner.jpg" alt=" " title="Spinner"></p>
+<blockquote class="colorquote infotitle"><p>Source Code</p>
+</blockquote>
+
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span> </span>&#123;</span><br><span class="line">    <span class="hljs-meta">@IBOutlet</span> <span class="hljs-keyword">weak</span> <span class="hljs-keyword">var</span> menuField: <span class="hljs-type">UIButton!</span></span><br><span class="line">    <span class="hljs-keyword">var</span> sortView : <span class="hljs-type">UIToolbar?</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">let</span> dataArray = [<span class="hljs-string">"綠茶"</span>, <span class="hljs-string">"紅茶"</span>, <span class="hljs-string">"烏龍茶"</span>]</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">viewDidLoad</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>.viewDidLoad()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">didReceiveMemoryWarning</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>.didReceiveMemoryWarning()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@IBAction</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">openMenu</span><span class="hljs-params">(sender: AnyObject)</span></span> &#123;</span><br><span class="line">        showPicker()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">internal</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">showPicker</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-comment">//Create PickerView</span></span><br><span class="line">        <span class="hljs-keyword">let</span> pickerView = <span class="hljs-type">UIPickerView</span>(frame:<span class="hljs-type">CGRectMake</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>, <span class="hljs-number">200</span>, <span class="hljs-number">100</span>))</span><br><span class="line">        pickerView.showsSelectionIndicator = <span class="hljs-literal">true</span></span><br><span class="line">        pickerView.dataSource = <span class="hljs-keyword">self</span></span><br><span class="line">        pickerView.delegate = <span class="hljs-keyword">self</span></span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">//Create Pull-Down Menu, and adjust position</span></span><br><span class="line">        <span class="hljs-keyword">self</span>.sortView = <span class="hljs-type">UIToolbar</span>(frame:<span class="hljs-type">CGRectMake</span>(menuField.frame.origin.x, menuField.frame.origin.y + menuField.frame.height, <span class="hljs-number">200</span>, <span class="hljs-number">130</span>))</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">self</span>.sortView!.barStyle = <span class="hljs-type">UIBarStyle</span>.<span class="hljs-type">Default</span></span><br><span class="line">        <span class="hljs-keyword">self</span>.sortView!.backgroundColor = <span class="hljs-type">UIColor</span>.blackColor();</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">//Create Done Button</span></span><br><span class="line">        <span class="hljs-keyword">let</span> doneButton = <span class="hljs-type">UIBarButtonItem</span>(title: <span class="hljs-string">"Done"</span>, style: <span class="hljs-type">UIBarButtonItemStyle</span>.<span class="hljs-type">Done</span>, target: <span class="hljs-keyword">self</span>, action: #selector(<span class="hljs-type">ViewController</span>.doneClicked))</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">//Using flexibleSpace to setup the position of Done button</span></span><br><span class="line">        <span class="hljs-keyword">let</span> flexibleSpace = <span class="hljs-type">UIBarButtonItem</span>(barButtonSystemItem: <span class="hljs-type">UIBarButtonSystemItem</span>.<span class="hljs-type">FlexibleSpace</span>, target: <span class="hljs-literal">nil</span>, action: <span class="hljs-literal">nil</span>)</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">self</span>.sortView!.setItems([flexibleSpace, doneButton, flexibleSpace], animated: <span class="hljs-literal">true</span>)</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">//add pickerview into Pull-Down Menu</span></span><br><span class="line">        <span class="hljs-keyword">self</span>.sortView!.addSubview(pickerView);</span><br><span class="line"></span><br><span class="line">        <span class="hljs-comment">//show Pull-Down Menu</span></span><br><span class="line">        <span class="hljs-keyword">self</span>.view.addSubview(<span class="hljs-keyword">self</span>.sortView!)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">doneClicked</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-keyword">if</span> (<span class="hljs-literal">nil</span> != <span class="hljs-keyword">self</span>.sortView) &#123;</span><br><span class="line">            <span class="hljs-keyword">self</span>.sortView!.removeFromSuperview()</span><br><span class="line">        &#125; <span class="hljs-keyword">else</span> &#123;</span><br><span class="line">            <span class="hljs-comment">//nothing else</span></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">ViewController</span> : <span class="hljs-title">UIPickerViewDataSource</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">pickerView</span><span class="hljs-params">(pickerView: UIPickerView, numberOfRowsInComponent component: Int)</span></span> -&gt; <span class="hljs-type">Int</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.dataArray.<span class="hljs-built_in">count</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">numberOfComponentsInPickerView</span><span class="hljs-params">(pickerView: UIPickerView)</span></span> -&gt; <span class="hljs-type">Int</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">extension</span> <span class="hljs-title">ViewController</span> : <span class="hljs-title">UIPickerViewDelegate</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">pickerView</span><span class="hljs-params">(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int)</span></span> -&gt; <span class="hljs-type">String?</span> &#123;</span><br><span class="line">        <span class="hljs-keyword">return</span> <span class="hljs-keyword">self</span>.dataArray[row]</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">pickerView</span><span class="hljs-params">(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)</span></span> &#123;</span><br><span class="line">        <span class="hljs-comment">//update UI</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div>
+        
+        <ul class="post-copyright">
+        <li><strong>Title：</strong><a href="https://nickcarter9.github.io/en/2016/10/13/2016/2016_10_13-spinner/">iOS - Spinner</a></li>
+        <li><strong>Post Author：</strong><a href="https://nickcarter9.github.io/en">Nick Lin</a></li>
+        <li><strong>Post Link：</strong><a href="https://nickcarter9.github.io/en/2016/10/13/2016/2016_10_13-spinner/">https://nickcarter9.github.io/en/2016/10/13/2016/2016_10_13-spinner/</a></li>
+        <li><strong>Publish Time：</strong>2016-10-13</li>
+        <li><strong>Copyright Notice：</strong>All articles in this blog are licened inless stating additionally.
+        </li>
+        </ul>
+    
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/en/tags/iOS/" rel="tag">iOS</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/spinner/" rel="tag">spinner</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/en/2018/08/07/2018/2018_08_07-gradientdrawable/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Android GradientDrawable</span>
+            </a>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://nickcarter9.github.io/en/2016/10/13/2016/2016_10_13-spinner/';
+        this.page.identifier = '2016/10/13/2016/2016_10_13-spinner/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'nick-code-cars' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/en/images/avatar.jpg" alt="">
+                    </figure>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Programming is like sex. One mistake and you have to support it for the rest of your life.
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Taiwan</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        8
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        3
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        27
+                    </p>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://www.facebook.com/nick.carter.52459" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/NickCarter9">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Facebook" href="https://www.facebook.com/nick.carter.52459">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Email" href="/en/nickthomas55@gmail.com">
+                
+                <i class="far fa-envelope"></i>
+                
+            </a>
+            
+        </div>
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 方形廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5418524234209657"
+     data-ad-slot="6117614777"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+
+                
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/en/">
+                
+                    <img src="/en/images/og_image.png" alt="iOS - Spinner" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Nick Lin&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Github" href="https://github.com/NickCarter9">
+                        
+                        <i class="fab fa-github"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Facebook" href="https://www.facebook.com/nick.carter.52459">
+                        
+                        <i class="fab fa-facebook"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Email" href="/en/nickthomas55@gmail.com">
+                        
+                        <i class="far fa-envelope"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 橫式廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5418524234209657"
+     data-ad-slot="7917781608"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+<script src="/en/js/animation.js"></script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/en/js/gallery.js" defer></script>
+
+    
+    
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+    
+    
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/en/js/back-to-top.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<script src="/en/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <!-- 橫式廣告 -->
+
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-5418524234209657"
+            data-ad-slot="7917781608"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/en/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/en/js/insight.js" defer></script>
+<link rel="stylesheet" href="/en/css/search.css">
+<link rel="stylesheet" href="/en/css/insight.css">
+
+    
+</body>
+</html>
