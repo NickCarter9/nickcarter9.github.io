@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Android Network Neighborhood - Jcifs-ng - Nick Blog</title>
+<title>Android GradientDrawable - Nick Blog</title>
 
 
-    <meta name="description" content="Uploading or downloading file at local network between Android and Windows by using smb socket. Android app can use Jcifs library to access file which is in the Windows system. But  Jcifs only support">
-<meta name="keywords" content="smb,jcifs-ng,Network Neighborhood,local network,smb2,smb3">
+    <meta name="description" content="We will use .9.png to set up background  in general.Besides using png, we can use shape tag to set up background.">
+<meta name="keywords" content="android,GradientDrawable,shape,gradient,fillet,radial">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Network Neighborhood - Jcifs-ng">
-<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;2019&#x2F;04&#x2F;09&#x2F;2019_04_09-jcifs_ng&#x2F;index.html">
+<meta property="og:title" content="Android GradientDrawable">
+<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;2018&#x2F;08&#x2F;07&#x2F;2018&#x2F;2018_08_07-gradientdrawable&#x2F;index.html">
 <meta property="og:site_name" content="Nick Blog">
-<meta property="og:description" content="Uploading or downloading file at local network between Android and Windows by using smb socket. Android app can use Jcifs library to access file which is in the Windows system. But  Jcifs only support">
+<meta property="og:description" content="We will use .9.png to set up background  in general.Besides using png, we can use shape tag to set up background.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-11T08:45:22.080Z">
+<meta property="og:updated_time" content="2019-12-23T02:38:31.617Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
 
@@ -82,7 +82,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/en/">
             
-                <img src="/en/images/logo.png" alt="Android Network Neighborhood - Jcifs-ng" height="28">
+                <img src="/en/images/logo.png" alt="Android GradientDrawable" height="28">
             
             </a>
         </div>
@@ -112,7 +112,7 @@
                 
                 
                 
-                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/2019/04/09/2019_04_09-jcifs_ng/">Chinese</a>
+                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/2018/08/07/2018/2018_08_07-gradientdrawable/">Chinese</a>
                    
             </div>
         </div>
@@ -129,7 +129,7 @@
     <div class="card-content article "> 
         
                 <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal" align="center">
-                Android Network Neighborhood - Jcifs-ng
+                Android GradientDrawable
                 </h1>
             
         
@@ -139,14 +139,14 @@
             <div class="level-left">
                 <i class="far fa-calendar-alt">&nbsp;</i>
                 <span class="level-item has-text-grey" >
-                    2019/04/09
+                    2018/08/07
                 </span>
 
                 <span class="level-item" >&#9474;</span>
 
                 
                     <i class="fas fa-edit">&nbsp</i>
-                    <time class="has-text-grey" datetime="2019-12-11T08:45:22.080Z" >2019-12-11&nbsp;</time>
+                    <time class="has-text-grey" datetime="2019-12-23T02:38:31.617Z" >2019-12-23&nbsp;</time>
                     <span class="level-item has-text-grey">&nbsp;
                        update
                     </span>
@@ -158,7 +158,7 @@
                     <i class="far fa-clock">&nbsp;</i>
                     
                     
-                    read&nbsp;&asymp;&nbsp;a minute
+                    read&nbsp;&asymp;&nbsp;2 minutes
                   </span>
                 
 
@@ -168,7 +168,7 @@
                   <span class="level-item has-text-grey">
                     <i class="far fa-file-word">&nbsp;</i>
                     
-                    words&nbsp;215
+                    words&nbsp;364
                   </span>
                 
 
@@ -190,35 +190,74 @@
             
               <hr style="height:0px;margin:1.5rem 0"/>
             
-            <p>Uploading or downloading file at local network between Android and Windows by using smb socket.</p>
-<p>Android app can use Jcifs library to access file which is in the Windows system. But  Jcifs only support smb 1.</p>
-<p>If Windows system only support smb2 or smb3, we must use other library, like smbj or jcifs-ng.</p>
+            <p>We will use .9.png to set up background  in general.<br>Besides using png, we can use shape tag to set up background.</p>
 <a id="more"></a>
 
-<p>Because smbj library just for  Android SDK Platform 26 (Android O, Android 8), so this article used jcifs-ng to implement. </p>
-<blockquote class="stepquote step1"><p>Import Jcifs -ng</p>
+<h1 id="GradientDrawable"><a href="#GradientDrawable" class="headerlink" title="GradientDrawable"></a>GradientDrawable</h1><blockquote class="colorquote infotitle"><p>Static Method</p>
 </blockquote>
 
-<p>In Jcifs-ng website，add as follow in build.gradle</p>
-<figure class="highlight xml hljs"><figcaption><span>build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>eu.agno3.jcifs<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jcifs-ng<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>Create xml file in drawable folder.</p>
+<figure class="highlight xml hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">shape</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:shape</span>=<span class="hljs-string">"rectangle"</span> &gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">size</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:width</span>=<span class="hljs-string">"200dp"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:height</span>=<span class="hljs-string">"200dp"</span>/&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">corners</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:radius</span>=<span class="hljs-string">"10dp"</span>/&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">gradient</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:startColor</span>=<span class="hljs-string">"@android:color/white"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:centerColor</span>=<span class="hljs-string">"@android:color/holo_red_light"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:endColor</span>=<span class="hljs-string">"@android:color/black"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:useLevel</span>=<span class="hljs-string">"false"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:angle</span>=<span class="hljs-string">"90"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:type</span>=<span class="hljs-string">"radial"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:centerX</span>=<span class="hljs-string">"0.5"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:centerY</span>=<span class="hljs-string">"0.5"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:gradientRadius</span>=<span class="hljs-string">"50"</span>/&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">shape</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>also change to</p>
-<figure class="highlight gradle hljs"><figcaption><span>build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">dependencies</span> &#123;</span><br><span class="line">   ...</span><br><span class="line">   <span class="hljs-keyword">compile</span> <span class="hljs-string">'eu.agno3.jcifs:jcifs-ng:2.1.2'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote class="stepquote step2"><p>Access Remote File</p>
+<blockquote class="colorquote info"><p>android:shape = [“rectangle” | “oval” | “line” | “ring”]</p>
 </blockquote>
 
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">String userName = <span class="hljs-string">"user"</span>;</span><br><span class="line">String password = <span class="hljs-string">"1234"</span>;</span><br><span class="line">String remoteFile = <span class="hljs-string">"/files/test.csv"</span>;</span><br><span class="line">String remoteURL = <span class="hljs-string">"smb://nickpublicpc"</span>;</span><br><span class="line"></span><br><span class="line">CIFSContext baseCxt = <span class="hljs-keyword">new</span> BaseContext(<span class="hljs-keyword">new</span> PropertyConfiguration(System.getProperties()));</span><br><span class="line">NtlmPasswordAuthenticator auth = <span class="hljs-keyword">new</span> NtlmPasswordAuthenticator(userName, password);</span><br><span class="line">CIFSContext ct = baseCxt.withCredentials(auth);</span><br><span class="line">SmbFile smbFile = <span class="hljs-keyword">new</span> SmbFile(remoteURL + remoteFile, ct);</span><br><span class="line"></span><br><span class="line">SmbFileInputStream inputSmbFileStream = <span class="hljs-keyword">new</span> SmbFileInputStream(smbFile);</span><br><span class="line"></span><br><span class="line">File localFile = <span class="hljs-keyword">new</span> File(filePath);</span><br><span class="line">FileOutputStream outputFileStream = <span class="hljs-keyword">new</span> FileOutputStream(localFile);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[<span class="hljs-number">4096</span>];</span><br><span class="line"><span class="hljs-keyword">int</span> length = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">while</span> ((length = inputSmbFileStream.read(buffer)) &gt; <span class="hljs-number">0</span>) &#123;</span><br><span class="line">	outputFileStream.write(buffer, <span class="hljs-number">0</span>, length);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">outputFileStream.close();</span><br><span class="line">inputSmbFileStream.close();</span><br></pre></td></tr></table></figure>
+<p>The shape type, default type is  rectangle, it can change to oval, line or ring.</p>
+<blockquote class="colorquote info"><p>android:radius </p>
+</blockquote>
 
-<p>As mentioned above, we can access file at the local network, but Jcifs-ng support smb3 partially.</p>
+<blockquote class="colorquote info"><p>Gradient Color<br>android:startColor :<br>android:centerColor :<br>android:endColor: </p>
+</blockquote>
+
+<blockquote class="colorquote info"><p>android:useLevel<br>true: no gradient color<br>false: has gradient color</p>
+</blockquote>
+
+<blockquote class="colorquote info"><p>android:angle</p>
+</blockquote>
+
+<p>The angle for the gradient, in degrees.<br>0 is left to right, 90 is bottom to top.<br>It must be a multiple of 45.<br>Default is 0.</p>
+<blockquote class="colorquote info"><p>android:type : gradient style [linear | radial | sweep]</p>
+</blockquote>
+
+<p><img src="/images/2018/08_07/linear.png" alt=" " title="Linear"><br>linear (default style)<br></p>
+<p><img src="/images/2018/08_07/radial.png" alt=" " title="Radial"><br>radial <br></p>
+<p><img src="/images/2018/08_07/sweep.png" alt=" " title="Sweep"><br>sweep <br></p>
+<blockquote class="colorquote info"><p>android:centerX,  android:centerY : The relative position</p>
+</blockquote>
+
+<p>Value is freom 0.0 to 1.0. In this case we set the point in center, so  android:centerX and android:centerY are 0.5。</p>
+<blockquote class="colorquote info"><p>android:gradientRadius</p>
+</blockquote>
+
+<blockquote class="colorquote warning"><p>When android:type=radial，it must setup this item, otherwise you will get the XmlPullParserException.</p>
+</blockquote>
+
+<blockquote class="colorquote infotitle"><p>Dynamic Method</p>
+</blockquote>
+
+<p>Setup shage in xml, it is change to GradientDrawable, not<br>ShapeDrawable or OvalShape，RoundRectShape and so on.</p>
+<p>Source code as follows (Kotlin)</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> imageView = findViewById&lt;ImageView&gt;(R.id.photo)</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">var</span> gd = GradientDrawable()</span><br><span class="line">gd.gradientType = GradientDrawable.RECTANGLE <span class="hljs-comment">//android:shape</span></span><br><span class="line">gd.cornerRadius = <span class="hljs-number">10.0F</span> <span class="hljs-comment">//android:radius </span></span><br><span class="line">gd.colors = intArrayOf(Color.WHITE, Color.RED, Color.BLACK) <span class="hljs-comment">//android:centerColor, android:startColor, android:endColor</span></span><br><span class="line">gd.useLevel = <span class="hljs-keyword">false</span> <span class="hljs-comment">//android:useLevel</span></span><br><span class="line">gd.gradientType = GradientDrawable.RADIAL_GRADIENT <span class="hljs-comment">//android:type </span></span><br><span class="line">gd.setGradientCenter(<span class="hljs-number">0.5F</span>, <span class="hljs-number">0.5F</span>) <span class="hljs-comment">//android:centerX,  android:centerY</span></span><br><span class="line">gd.gradientRadius = <span class="hljs-number">50.0F</span>  <span class="hljs-comment">//android:gradientRadius</span></span><br><span class="line"></span><br><span class="line">imageView.background = gd </span><br></pre></td></tr></table></figure>
+
+<p>android:angle is deprecated in Kotlin, you must use GradientDrawable.Orientation.* to implamemnt.</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gd.orientation = GradientDrawable.Orientation.TOP_BOTTOM</span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote infotitle"><p>RunningTime Update</p>
+</blockquote>
+
+<p>We can change background by using GradientDrawable at running time.</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> imageView = findViewById&lt;ImageView&gt;(R.id.photo)</span><br><span class="line"><span class="hljs-keyword">var</span> gd = imageView.background as GradientDrawable</span><br><span class="line">gd.colors = intArrayOf(Color.WHITE, Color.BLUE, Color.BLACK)</span><br></pre></td></tr></table></figure>
+
+
+
 
         </div>
         
         <ul class="post-copyright">
-        <li><strong>Title：</strong><a href="https://nickcarter9.github.io/en/2019/04/09/2019_04_09-jcifs_ng/">Android Network Neighborhood - Jcifs-ng</a></li>
+        <li><strong>Title：</strong><a href="https://nickcarter9.github.io/en/2018/08/07/2018/2018_08_07-gradientdrawable/">Android GradientDrawable</a></li>
         <li><strong>Post Author：</strong><a href="https://nickcarter9.github.io/en">Nick Lin</a></li>
-        <li><strong>Post Link：</strong><a href="https://nickcarter9.github.io/en/2019/04/09/2019_04_09-jcifs_ng/">https://nickcarter9.github.io/en/2019/04/09/2019_04_09-jcifs_ng/</a></li>
-        <li><strong>Publish Time：</strong>2019-04-09</li>
+        <li><strong>Post Link：</strong><a href="https://nickcarter9.github.io/en/2018/08/07/2018/2018_08_07-gradientdrawable/">https://nickcarter9.github.io/en/2018/08/07/2018/2018_08_07-gradientdrawable/</a></li>
+        <li><strong>Publish Time：</strong>2018-08-07</li>
         <li><strong>Copyright Notice：</strong>All articles in this blog are licened inless stating additionally.
         </li>
         </ul>
@@ -229,7 +268,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/en/tags/Network-Neighborhood/" rel="tag">Network Neighborhood</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/jcifs-ng/" rel="tag">jcifs-ng</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/local-network/" rel="tag">local network</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/smb/" rel="tag">smb</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/smb2/" rel="tag">smb2</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/smb3/" rel="tag">smb3</a>
+                    <a class="has-link-grey -link" href="/en/tags/GradientDrawable/" rel="tag">GradientDrawable</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/android/" rel="tag">android</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/fillet/" rel="tag">fillet</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/gradient/" rel="tag">gradient</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/radial/" rel="tag">radial</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/shape/" rel="tag">shape</a>
                 </div>
             </div>
         </div>
@@ -247,19 +286,12 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/en/2019/04/12/2019_04_12-baidu_tts/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/en/2019/03/27/2019_03_27-system_loadlibrary_linkerror/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Android Baidu Text To Speech</span>
+                <span class="level-item">Android loadLibrary - dlopen failed</span>
             </a>
         </div>
         
-        
-        <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/en/2019/04/01/2019_04_01-nanohttpd/">
-                <span class="level-item">Set up HttpServer - NanoHttpd</span>
-                <i class="level-item fas fa-chevron-right"></i>
-            </a>
-        </div>
         
     </div>
 </div>
@@ -272,8 +304,8 @@
         
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://nickcarter9.github.io/en/2019/04/09/2019_04_09-jcifs_ng/';
-        this.page.identifier = '2019/04/09/2019_04_09-jcifs_ng/';
+        this.page.url = 'https://nickcarter9.github.io/en/2018/08/07/2018/2018_08_07-gradientdrawable/';
+        this.page.identifier = '2018/08/07/2018/2018_08_07-gradientdrawable/';
     };
     (function() {
         var d = document, s = d.createElement('script');  
@@ -422,7 +454,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/en/">
                 
-                    <img src="/en/images/og_image.png" alt="Android Network Neighborhood - Jcifs-ng" height="28">
+                    <img src="/en/images/og_image.png" alt="Android GradientDrawable" height="28">
                 
                 </a>
                 <p class="is-size-7">
