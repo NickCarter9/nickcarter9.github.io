@@ -19,7 +19,7 @@
 <meta property="og:description" content="Android 5 (API 21, L) 新增加了Camera2，和之前的Camera使用起來較複雜，但是多了許多功能，支援RAW輸出、調整對焦模式、曝光模式等。">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-11-15T03:00:37.761Z">
+<meta property="og:updated_time" content="2019-12-23T03:31:10.333Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -147,7 +147,7 @@
 
                 
                     <i class="fas fa-edit">&nbsp</i>
-                    <time class="has-text-grey" datetime="2019-11-15T03:00:37.761Z" >2019-11-15</time>
+                    <time class="has-text-grey" datetime="2019-12-23T03:31:10.333Z" >2019-12-23</time>
                     <span class="level-item has-text-grey">
                       更新
                     </span>
@@ -169,7 +169,7 @@
                   <span class="level-item has-text-grey">
                     <i class="far fa-file-word">&nbsp;</i>
                     
-                    本文字數:&nbsp;997
+                    本文字數:&nbsp;1003
                   </span>
                 
 
@@ -194,7 +194,10 @@
             <p>Android 5 (API 21, L) 新增加了Camera2，和之前的Camera使用起來較複雜，但是多了許多功能，支援RAW輸出、調整對焦模式、曝光模式等。</p>
 <a id="more"></a>
 
-<h1 id="Camera2"><a href="#Camera2" class="headerlink" title="Camera2"></a>Camera2</h1><p>首先先了解幾個重要的Class</p>
+<blockquote class="colorquote infotitle"><p>Camera2</p>
+</blockquote>
+
+<p>首先先了解幾個重要的Class</p>
 <blockquote class="colorquote info"><ul>
 <li>CameraManager : 管理攝影設備，主要功用是獲取所有攝影設備和打開指定的攝影鏡頭。</li>
 <li>CameraDevice : 攝影設備，可透過CameraManager.openCamera()來取得。</li>
@@ -204,7 +207,9 @@
 </blockquote>
 
 <p>我們在畫面中加入一個TextureView，用來預覽攝影鏡頭目前捕捉到的畫面。<br>並設定Listener監聽TextureView是否已設置好。</p>
-<p><strong>程式參數</strong></p>
+<blockquote class="colorquote infotitle"><p>程式參數</p>
+</blockquote>
+
 <figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">private</span> TextureView mTextureView;</span><br><span class="line"><span class="hljs-keyword">private</span> Size mPreviewSize;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">private</span> CameraDevice mCameraDevice;</span><br><span class="line"><span class="hljs-keyword">private</span> String mCameraId;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">private</span> ImageReader mImageReader;</span><br><span class="line"><span class="hljs-keyword">private</span> CaptureRequest.Builder mCaptureRequestBuilder;</span><br><span class="line"><span class="hljs-keyword">private</span> CaptureRequest mCaptureRequest;</span><br><span class="line"><span class="hljs-keyword">private</span> CameraCaptureSession mPreviewSession;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> String[] PERMISSIONS_STORAGE = &#123;</span><br><span class="line">     Manifest.permission.READ_EXTERNAL_STORAGE,</span><br><span class="line">     Manifest.permission.WRITE_EXTERNAL_STORAGE,</span><br><span class="line">     Manifest.permission.CAMERA</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">final</span> <span class="hljs-keyword">int</span> RC_HANDLE_CAMERA_PERM = <span class="hljs-number">2</span>;</span><br></pre></td></tr></table></figure>
 
 
@@ -466,7 +471,7 @@
                 <p class="control">
                     <a class="button is-white is-large" target="_blank" title="Github" href="https://github.com/NickCarter9">
                         
-                        <i class="fab fa-github"></i>&nbsp;
+                        <img src="/images/github-icon.png"></i>&nbsp;
                         
                     </a>
                 </p>
@@ -474,7 +479,7 @@
                 <p class="control">
                     <a class="button is-white is-large" target="_blank" title="Facebook" href="https://www.facebook.com/nick.carter.52459">
                         
-                        <i class="fab fa-facebook"></i>&nbsp;
+                        <img src="/images/facebook-icon.png"></i>&nbsp;
                         
                     </a>
                 </p>
@@ -482,7 +487,7 @@
                 <p class="control">
                     <a class="button is-white is-large" target="_blank" title="Email" href="/nickthomas55@gmail.com">
                         
-                        <i class="far fa-envelope"></i>&nbsp;
+                        <img src="/images/gmail-icon.png"></i>&nbsp;
                         
                     </a>
                 </p>
@@ -613,15 +618,6 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
 </div>
-<ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-5418524234209657"
-            data-ad-slot="7917781608"
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-            <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-            </script>
 <script>
     (function (window) {
         var INSIGHT_CONFIG = {
