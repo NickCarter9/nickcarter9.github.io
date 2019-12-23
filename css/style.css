@@ -67,7 +67,7 @@ textarea {
   box-shadow: 0 4px 10px #000, 0 0 4px rgba(0,0,0,0.1);
 }
 .card:hover {
-  box-shadow: 0 4px 15px #ef6c33, 0 0 1px rgba(0,0,0,0.1);
+  box-shadow: 6px 6px 20px #ef6c33, 0 0 1px rgba(0,0,0,0.1);
 }
 .card + .card,
 .card + .column-right-shadow {
