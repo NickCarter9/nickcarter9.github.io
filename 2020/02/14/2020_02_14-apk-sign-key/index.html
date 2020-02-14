@@ -10,16 +10,16 @@
 <title>Android App Sign key - Nick Blog</title>
 
 
-    <meta name="description" content="針對需要具有系統權限的app，可以使用以下兩種方式來達成。 編譯後再使用signapk.jar來sign key編譯時sign key   編譯後再使用signapk.jar來sign key   下載signapk.jar   下載位址signapk.jar」 使用signapk.jar    假設我們還未sign key的apk為unsign.apk 指令如下 cmd12java -jar s">
+    <meta name="description" content="針對需要具有系統權限的app，可以使用以下兩種方式來達成。 編譯後再使用signapk.jar來sign key編譯時sign key">
 <meta name="keywords" content="android,sign,platform key,keystore,platform.pk8,platform.x509.pem">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android App Sign key">
 <meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;2020&#x2F;02&#x2F;14&#x2F;2020_02_14-apk-sign-key&#x2F;index.html">
 <meta property="og:site_name" content="Nick Blog">
-<meta property="og:description" content="針對需要具有系統權限的app，可以使用以下兩種方式來達成。 編譯後再使用signapk.jar來sign key編譯時sign key   編譯後再使用signapk.jar來sign key   下載signapk.jar   下載位址signapk.jar」 使用signapk.jar    假設我們還未sign key的apk為unsign.apk 指令如下 cmd12java -jar s">
+<meta property="og:description" content="針對需要具有系統權限的app，可以使用以下兩種方式來達成。 編譯後再使用signapk.jar來sign key編譯時sign key">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-02-14T02:05:09.151Z">
+<meta property="og:updated_time" content="2020-02-14T08:02:27.507Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -147,7 +147,7 @@
 
                 
                     <i class="fas fa-edit">&nbsp</i>
-                    <time class="has-text-grey" datetime="2020-02-14T02:05:09.151Z" >2020-02-14</time>
+                    <time class="has-text-grey" datetime="2020-02-14T08:02:27.507Z" >2020-02-14</time>
                     <span class="level-item has-text-grey">
                       更新
                     </span>
@@ -169,7 +169,7 @@
                   <span class="level-item has-text-grey">
                     <i class="far fa-file-word">&nbsp;</i>
                     
-                    本文字數:&nbsp;317
+                    本文字數:&nbsp;303
                   </span>
                 
 
@@ -194,6 +194,7 @@
             <p>針對需要具有系統權限的app，可以使用以下兩種方式來達成。</p>
 <blockquote class="colorquote info"><p>編譯後再使用signapk.jar來sign key<br>編譯時sign key</p>
 </blockquote>
+<a id="more"></a>
 
 <blockquote class="colorquote infotitle"><p>編譯後再使用signapk.jar來sign key</p>
 </blockquote>
@@ -201,11 +202,11 @@
 <blockquote class="stepquote step1"><p>下載signapk.jar</p>
 </blockquote>
 
-<p>下載位址<br><a href="https://github.com/appium/sign" target="_blank" rel="noopener">signapk.jar」</a></p>
+<p>下載位址<br><a href="https://github.com/appium/sign" target="_blank" rel="noopener">signapk.jar</a></p>
 <blockquote class="stepquote step2"><p>使用signapk.jar</p>
 </blockquote>
 
-<p> 假設我們還未sign key的apk為unsign.apk<br> 指令如下</p>
+<p> 指令如下</p>
 <figure class="highlight java hljs"><figcaption><span>cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -jar signapk.jar platform.x509.pem platform.pk8 unsign.apk signed.apk</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
 
  <blockquote class="colorquote infotitle"><p>編譯時sign key</p>
@@ -215,7 +216,7 @@
  <blockquote class="stepquote step1"><p>下載keytool-importkeypair</p>
 </blockquote>
 
-<p>下載位址<br><a href="https://github.com/getfatday/keytool-importkeypair" target="_blank" rel="noopener">keytool-importkeypair」</a></p>
+<p>下載位址<br><a href="https://github.com/getfatday/keytool-importkeypair" target="_blank" rel="noopener">keytool-importkeypair</a></p>
  <blockquote class="stepquote step2"><p>產生keystore 文件</p>
 </blockquote>
 
@@ -226,7 +227,7 @@
  <blockquote class="colorquote info"><p>-k : keystore 文件的名稱<br>-p :  keystore 的密碼<br>-pk8 : 導入的 platform.pk8 文件<br>-cert : 導入的platform.x509.pem<br>-alias : release.keystore 的名稱</p>
 </blockquote>
 
- <blockquote class="stepquote step3"><p>sign key</p>
+ <blockquote class="stepquote step3"><p>Sign key</p>
 </blockquote>
 
 <p>我們可透過AndroidStudio中的 Build -&gt; Generated Signed Bundle/Apk來sign key<br>或者寫入build.gradle中來自動sign key.</p>
@@ -271,6 +272,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/02/14/2020_02_14-activemq/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">ActiveMQ MQTT Server 架設</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -349,7 +357,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        80
+                        81
                     </p>
                 </div>
             </div>
@@ -359,7 +367,7 @@
                         分類
                     </p>
                     <p class="title has-text-weight-normal">
-                        4
+                        5
                     </p>
                 </div>
             </div>
@@ -369,7 +377,7 @@
                         標籤
                     </p>
                     <p class="title has-text-weight-normal">
-                        182
+                        184
                     </p>
                 </div>
             </div>
