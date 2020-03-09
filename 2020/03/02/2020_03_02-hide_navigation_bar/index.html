@@ -19,7 +19,7 @@
 <meta property="og:description" content="根據 Android官方文件可在程式中隱藏Navigation Bar MainActivity.kt1234window.decorView.apply &amp;#123;    systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN&amp;#125;   但使用滑鼠點擊後，會顯示N">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-03-02T08:55:46.516Z">
+<meta property="og:updated_time" content="2020-03-02T08:58:02.049Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -147,7 +147,7 @@
 
                 
                     <i class="fas fa-edit">&nbsp</i>
-                    <time class="has-text-grey" datetime="2020-03-02T08:55:46.516Z" >2020-03-02</time>
+                    <time class="has-text-grey" datetime="2020-03-02T08:58:02.049Z" >2020-03-02</time>
                     <span class="level-item has-text-grey">
                       更新
                     </span>
@@ -169,7 +169,7 @@
                   <span class="level-item has-text-grey">
                     <i class="far fa-file-word">&nbsp;</i>
                     
-                    本文字數:&nbsp;361
+                    本文字數:&nbsp;372
                   </span>
                 
 
@@ -208,6 +208,8 @@
 </blockquote>
 
  <figure class="highlight java hljs"><figcaption><span>MainActivity.kt</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"> class MainActivity : AppCompatActivity() &#123;</span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-keyword">var</span> mUiHandler : UiHandler? = <span class="hljs-keyword">null</span></span><br><span class="line">    <span class="hljs-keyword">private</span> val HANDLER_HIDE_NAVIGATION_BAR = <span class="hljs-number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-function">override fun <span class="hljs-title">onCreate</span><span class="hljs-params">(savedInstanceState: Bundle?)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState)</span><br><span class="line">        setContentView(R.layout.activity_main)</span><br><span class="line">        mUiHandler = UiHandler(<span class="hljs-keyword">this</span>)</span><br><span class="line"></span><br><span class="line">        <span class="hljs-keyword">var</span> relativeLayout = findViewById&lt;RelativeLayout&gt;(R.id.main_view)</span><br><span class="line">        relativeLayout.addOnLayoutChangeListener(</span><br><span class="line">            View.OnLayoutChangeListener &#123; v, left, top, right, bottom,</span><br><span class="line">                  oldLeft, oldTop, oldRight, oldBottom -&gt;</span><br><span class="line">                       <span class="hljs-keyword">if</span> (bottom &lt; oldBottom)&#123; </span><br><span class="line">                          mUiHandler!!.sendEmptyMessageDelayed(</span><br><span class="line">                              HANDLER_HIDE_NAVIGATION_BAR, <span class="hljs-number">3000</span>)</span><br><span class="line">                       &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">        hideNavigationBar()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> fun <span class="hljs-title">hideNavigationBar</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        window.decorView.apply &#123;</span><br><span class="line">            systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">private</span> inner class <span class="hljs-title">UiHandler</span><span class="hljs-params">(obj: MainActivity)</span> : <span class="hljs-title">Handler</span><span class="hljs-params">()</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">private</span> val mObj: WeakReference&lt;MainActivity&gt; = WeakReference(obj)</span><br><span class="line">        <span class="hljs-function">override fun <span class="hljs-title">handleMessage</span><span class="hljs-params">(msg: Message)</span> </span>&#123;</span><br><span class="line">            <span class="hljs-keyword">super</span>.handleMessage(msg)</span><br><span class="line">            when(msg.what) &#123;</span><br><span class="line">                HANDLER_HIDE_NAVIGATION_BAR -&gt; &#123;</span><br><span class="line">                    hideNavigationBar()</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">  </span><br></pre></td></tr></table></figure>
+
+ <figure class="highlight xml hljs"><figcaption><span>activity_main.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">RelativeLayout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">xmlns:tools</span>=<span class="hljs-string">"http://schemas.android.com/tools"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"match_parent"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"match_parent"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/main_view"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">tools:context</span>=<span class="hljs-string">".MainActivity"</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/test"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"wrap_content"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:layout_centerInParent</span>=<span class="hljs-string">"true"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:text</span>=<span class="hljs-string">"Hello World!"</span></span></span><br><span class="line"><span class="hljs-tag">         /&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">RelativeLayout</span>&gt;</span>         </span><br><span class="line">  </span><br></pre></td></tr></table></figure>
 
 
 
@@ -250,6 +252,13 @@
 
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2020/03/09/2020_03_09-change_resolution/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Android Change Resolution</span>
+            </a>
+        </div>
         
         
         <div class="level-end">
@@ -328,7 +337,7 @@
                         文章
                     </p>
                     <p class="title has-text-weight-normal">
-                        84
+                        85
                     </p>
                 </div>
             </div>
@@ -348,7 +357,7 @@
                         標籤
                     </p>
                     <p class="title has-text-weight-normal">
-                        190
+                        191
                     </p>
                 </div>
             </div>
