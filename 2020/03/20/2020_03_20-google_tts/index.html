@@ -19,7 +19,7 @@
 <meta property="og:description" content="Google TTS相對於其他TTS的使用方式來講非常的容易上手，網路上也有很多教學文章可參考。 但由於開發所使用的機器Android版本較舊，只有早期的Pico TTS可以使用，必須上網下載Google TTS apk才能使用Google文字轉語音引擎。 下載並安裝好Google TTS後，遇到以下幾種問題及解決方式。">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2020-03-20T08:56:02.674Z">
+<meta property="og:updated_time" content="2020-03-20T08:56:44.832Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -147,7 +147,7 @@
 
                 
                     <i class="fas fa-edit">&nbsp</i>
-                    <time class="has-text-grey" datetime="2020-03-20T08:56:02.674Z" >2020-03-20</time>
+                    <time class="has-text-grey" datetime="2020-03-20T08:56:44.832Z" >2020-03-20</time>
                     <span class="level-item has-text-grey">
                       更新
                     </span>
@@ -239,7 +239,7 @@
 </blockquote>
 
 <p>在呼叫speak API時必須傳入utteranceId，使用Random來產生一組utteranceId。</p>
- <figure class="highlight java hljs"><figcaption><span>MainActivity</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Random random = <span class="hljs-keyword">new</span> Random();</span><br><span class="line">random.setSeed(Calendar.getInstance().getTimeInMillis());</span><br><span class="line"></span><br><span class="line">HashMap&lt;String, String&gt; myHashAlarm = <span class="hljs-keyword">new</span> HashMap&lt;String, String&gt;();</span><br><span class="line">myHashAlarm.put(TextToSpeech.Engine.KEY_PARAM_STREAM, String.valueOf(AudioManager.STREAM_ALARM));</span><br><span class="line">myHashAlarm.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, String.valueOf(random.nextInt()));</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">int</span> result = mTextToSpeech.speak(<span class="hljs-string">"測試Google中文語音"</span>,</span><br><span class="line">          TextToSpeech.QUEUE_ADD, myHashAlarm);</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+ <figure class="highlight java hljs"><figcaption><span>MainActivity</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Random random = <span class="hljs-keyword">new</span> Random();</span><br><span class="line">random.setSeed(Calendar.getInstance().getTimeInMillis());</span><br><span class="line"></span><br><span class="line">HashMap&lt;String, String&gt; myHashAlarm = <span class="hljs-keyword">new</span> HashMap&lt;String, String&gt;();</span><br><span class="line">myHashAlarm.put(TextToSpeech.Engine.KEY_PARAM_STREAM, String.valueOf(AudioManager.STREAM_ALARM));</span><br><span class="line">myHashAlarm.put(TextToSpeech.Engine.KEY_PARAM_UTTERANCE_ID, String.valueOf(random.nextInt()));</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">int</span> result = mTextToSpeech.speak(<span class="hljs-string">"測試Google中文語音"</span>, TextToSpeech.QUEUE_ADD, myHashAlarm);</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
 
 <p> 執行後就會在UtteranceProgressListener中的onStart與onDone中，看見返回結果。</p>
 
