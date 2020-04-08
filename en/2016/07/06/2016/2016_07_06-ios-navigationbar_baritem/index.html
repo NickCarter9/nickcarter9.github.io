@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Android Network Neighborhood - Jcifs-ng - Nick Blog</title>
+<title>iOS - NavigationItem - Bar Button Item - Nick Blog</title>
 
 
-    <meta name="description" content="Uploading or downloading file at local network between Android and Windows by using smb socket. Android app can use Jcifs library to access file which is in the Windows system. But  Jcifs only support">
-<meta name="keywords" content="smb,jcifs-ng,Network Neighborhood,local network,smb2,smb3">
+    <meta name="description" content="When developing bluetooth project, we use a button at NavigationItem to control start and stop searching bluetooth device.">
+<meta name="keywords" content="iOS,NavigationItem,Bar Button Item">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Network Neighborhood - Jcifs-ng">
-<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;2019&#x2F;04&#x2F;09&#x2F;2019&#x2F;2019_04_09-jcifs_ng&#x2F;index.html">
+<meta property="og:title" content="iOS - NavigationItem - Bar Button Item">
+<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;2016&#x2F;07&#x2F;06&#x2F;2016&#x2F;2016_07_06-ios-navigationbar_baritem&#x2F;index.html">
 <meta property="og:site_name" content="Nick Blog">
-<meta property="og:description" content="Uploading or downloading file at local network between Android and Windows by using smb socket. Android app can use Jcifs library to access file which is in the Windows system. But  Jcifs only support">
+<meta property="og:description" content="When developing bluetooth project, we use a button at NavigationItem to control start and stop searching bluetooth device.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-11T08:45:22.080Z">
+<meta property="og:updated_time" content="2020-04-08T07:55:47.420Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
 
@@ -82,7 +82,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/en/">
             
-                <img src="/en/images/logo.png" alt="Android Network Neighborhood - Jcifs-ng" height="28">
+                <img src="/en/images/logo.png" alt="iOS - NavigationItem - Bar Button Item" height="28">
             
             </a>
         </div>
@@ -112,7 +112,7 @@
                 
                 
                 
-                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/2019/04/09/2019/2019_04_09-jcifs_ng/">Chinese</a>
+                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/">Chinese</a>
                    
             </div>
         </div>
@@ -129,7 +129,7 @@
     <div class="card-content article "> 
         
                 <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal" align="center">
-                Android Network Neighborhood - Jcifs-ng
+                iOS - NavigationItem - Bar Button Item
                 </h1>
             
         
@@ -139,7 +139,7 @@
             <div class="level-left">
                 <i class="far fa-calendar-alt">&nbsp;</i>
                 <span class="level-item has-text-grey" >
-                    2019/04/09
+                    2016/07/06
                 </span>
 
                 <span class="level-item" >&#9474;</span>
@@ -149,7 +149,7 @@
                     <span class="level-item has-text-grey">&nbsp;
                       Update:
                     </span>
-                    <time class="has-text-grey" datetime="2019-12-11T08:45:22.080Z" >2019-12-11&nbsp;</time>
+                    <time class="has-text-grey" datetime="2020-04-08T07:55:47.420Z" >2020-04-08&nbsp;</time>
                     <span class="level-item" >&#9474;</span>
                 
                 
@@ -168,7 +168,7 @@
                   <span class="level-item has-text-grey">
                     <i class="far fa-file-word">&nbsp;</i>
                     
-                    Words:&nbsp;215
+                    Words:&nbsp;189
                   </span>
                 
 
@@ -190,35 +190,36 @@
             
               <hr style="height:0px;margin:1.5rem 0"/>
             
-            <p>Uploading or downloading file at local network between Android and Windows by using smb socket.</p>
-<p>Android app can use Jcifs library to access file which is in the Windows system. But  Jcifs only support smb 1.</p>
-<p>If Windows system only support smb2 or smb3, we must use other library, like smbj or jcifs-ng.</p>
+            <p>When developing bluetooth project, we use a button at NavigationItem to control start and stop searching bluetooth device.</p>
 <a id="more"></a>
 
-<p>Because smbj library just for  Android SDK Platform 26 (Android O, Android 8), so this article used jcifs-ng to implement. </p>
-<blockquote class="stepquote step1"><p>Import Jcifs -ng</p>
+<blockquote class="stepquote step1"><p>Add Bar Button Item</p>
 </blockquote>
 
-<p>In Jcifs-ng website，add as follow in build.gradle</p>
-<figure class="highlight xml hljs"><figcaption><span>build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>eu.agno3.jcifs<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>jcifs-ng<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>2.1.2<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>also change to</p>
-<figure class="highlight gradle hljs"><figcaption><span>build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">dependencies</span> &#123;</span><br><span class="line">   ...</span><br><span class="line">   <span class="hljs-keyword">compile</span> <span class="hljs-string">'eu.agno3.jcifs:jcifs-ng:2.1.2'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote class="stepquote step2"><p>Access Remote File</p>
+<p>Add Bar Button Item at Navigation Item and set the System item is Search.</p>
+<p><img src="/images/2016/07/barbutton.png" alt=" " title="Add Bar Button"></p>
+<blockquote class="stepquote step2"><p>Link UI and source code</p>
+</blockquote>
+<p><img src="/images/2016/07/barbutton_2.png" alt=" " title="Link"></p>
+<blockquote class="stepquote step3"><p>Control BarButtonItem Icon</p>
 </blockquote>
 
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">String userName = <span class="hljs-string">"user"</span>;</span><br><span class="line">String password = <span class="hljs-string">"1234"</span>;</span><br><span class="line">String remoteFile = <span class="hljs-string">"/files/test.csv"</span>;</span><br><span class="line">String remoteURL = <span class="hljs-string">"smb://nickpublicpc"</span>;</span><br><span class="line"></span><br><span class="line">CIFSContext baseCxt = <span class="hljs-keyword">new</span> BaseContext(<span class="hljs-keyword">new</span> PropertyConfiguration(System.getProperties()));</span><br><span class="line">NtlmPasswordAuthenticator auth = <span class="hljs-keyword">new</span> NtlmPasswordAuthenticator(userName, password);</span><br><span class="line">CIFSContext ct = baseCxt.withCredentials(auth);</span><br><span class="line">SmbFile smbFile = <span class="hljs-keyword">new</span> SmbFile(remoteURL + remoteFile, ct);</span><br><span class="line"></span><br><span class="line">SmbFileInputStream inputSmbFileStream = <span class="hljs-keyword">new</span> SmbFileInputStream(smbFile);</span><br><span class="line"></span><br><span class="line">File localFile = <span class="hljs-keyword">new</span> File(filePath);</span><br><span class="line">FileOutputStream outputFileStream = <span class="hljs-keyword">new</span> FileOutputStream(localFile);</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[<span class="hljs-number">4096</span>];</span><br><span class="line"><span class="hljs-keyword">int</span> length = <span class="hljs-number">0</span>;</span><br><span class="line"><span class="hljs-keyword">while</span> ((length = inputSmbFileStream.read(buffer)) &gt; <span class="hljs-number">0</span>) &#123;</span><br><span class="line">	outputFileStream.write(buffer, <span class="hljs-number">0</span>, length);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">outputFileStream.close();</span><br><span class="line">inputSmbFileStream.close();</span><br></pre></td></tr></table></figure>
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">changeToStopButton</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> stopScanningButton = <span class="hljs-type">UIBarButtonItem</span>( barButtonSystemItem: <span class="hljs-type">UIBarButtonSystemItem</span>.<span class="hljs-type">Stop</span>, target: <span class="hljs-keyword">self</span>, action: #selector(<span class="hljs-type">ViewController</span>.stopScan));</span><br><span class="line">        <span class="hljs-keyword">self</span>.navigationItem.rightBarButtonItem = stopScanningButton;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">changeToScanButton</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> scanButton = <span class="hljs-type">UIBarButtonItem</span>( barButtonSystemItem: <span class="hljs-type">UIBarButtonSystemItem</span>.<span class="hljs-type">Search</span>, target: <span class="hljs-keyword">self</span>, action: #selector(<span class="hljs-type">ViewController</span>.startScan));</span><br><span class="line">        <span class="hljs-keyword">self</span>.navigationItem.rightBarButtonItem = scanButton;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>As mentioned above, we can access file at the local network, but Jcifs-ng support smb3 partially.</p>
+<blockquote class="colorquote infotitle"><p>Source Code</p>
+</blockquote>
+
+<figure class="highlight swift hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> UIKit</span><br><span class="line"></span><br><span class="line"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">ViewController</span>: <span class="hljs-title">UIViewController</span> </span>&#123;</span><br><span class="line">    <span class="hljs-keyword">var</span> mBtManager : <span class="hljs-type">BtManager!</span>;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">viewDidLoad</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>.viewDidLoad()</span><br><span class="line">        mBtManager = <span class="hljs-type">BtManager</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">override</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">didReceiveMemoryWarning</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>.didReceiveMemoryWarning()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@IBAction</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">prepareScan</span><span class="hljs-params">(sender: AnyObject)</span></span> &#123;</span><br><span class="line">        startScan();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">startScan</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        mBtManager.startToScan();</span><br><span class="line">        changeToStopButton();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">stopScan</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        mBtManager.stopScanning();</span><br><span class="line">        changeToScanButton();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">changeToStopButton</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> stopScanningButton = <span class="hljs-type">UIBarButtonItem</span>( barButtonSystemItem: <span class="hljs-type">UIBarButtonSystemItem</span>.<span class="hljs-type">Stop</span>, target: <span class="hljs-keyword">self</span>, action: #selector(<span class="hljs-type">ViewController</span>.stopScan));</span><br><span class="line">        <span class="hljs-keyword">self</span>.navigationItem.rightBarButtonItem = stopScanningButton;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-keyword">private</span> <span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">changeToScanButton</span><span class="hljs-params">()</span></span> &#123;</span><br><span class="line">        <span class="hljs-keyword">let</span> scanButton = <span class="hljs-type">UIBarButtonItem</span>( barButtonSystemItem: <span class="hljs-type">UIBarButtonSystemItem</span>.<span class="hljs-type">Search</span>, target: <span class="hljs-keyword">self</span>, action: #selector(<span class="hljs-type">ViewController</span>.startScan));</span><br><span class="line">        <span class="hljs-keyword">self</span>.navigationItem.rightBarButtonItem = scanButton;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
 
         </div>
         
         <ul class="post-copyright">
-        <li><strong>Title：</strong><a href="https://nickcarter9.github.io/en/2019/04/09/2019/2019_04_09-jcifs_ng/">Android Network Neighborhood - Jcifs-ng</a></li>
+        <li><strong>Title：</strong><a href="https://nickcarter9.github.io/en/2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/">iOS - NavigationItem - Bar Button Item</a></li>
         <li><strong>Post Author：</strong><a href="https://nickcarter9.github.io/en">Nick Lin</a></li>
-        <li><strong>Post Link：</strong><a href="https://nickcarter9.github.io/en/2019/04/09/2019/2019_04_09-jcifs_ng/">https://nickcarter9.github.io/en/2019/04/09/2019/2019_04_09-jcifs_ng/</a></li>
-        <li><strong>Publish Time：</strong>2019-04-09</li>
+        <li><strong>Post Link：</strong><a href="https://nickcarter9.github.io/en/2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/">https://nickcarter9.github.io/en/2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/</a></li>
+        <li><strong>Publish Time：</strong>2016-07-06</li>
         <li><strong>Copyright Notice：</strong>All articles in this blog are licened inless stating additionally.
         </li>
         </ul>
@@ -229,7 +230,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/en/tags/Network-Neighborhood/" rel="tag">Network Neighborhood</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/jcifs-ng/" rel="tag">jcifs-ng</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/local-network/" rel="tag">local network</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/smb/" rel="tag">smb</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/smb2/" rel="tag">smb2</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/smb3/" rel="tag">smb3</a>
+                    <a class="has-link-grey -link" href="/en/tags/Bar-Button-Item/" rel="tag">Bar Button Item</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/NavigationItem/" rel="tag">NavigationItem</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/iOS/" rel="tag">iOS</a>
                 </div>
             </div>
         </div>
@@ -251,16 +252,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/en/2019/04/10/2019/2019_04_10-tensorflow_lite_object_recognition/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/en/2016/10/13/2016/2016_10_13-spinner/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Android TensorFlow Lite Object Recognition</span>
+                <span class="level-item">iOS - Spinner</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/en/2019/04/01/2019/2019_04_01-nanohttpd/">
-                <span class="level-item">Set up HttpServer - NanoHttpd</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/en/2016/05/25/2016/2016_05_25-android-elevation_shadows/">
+                <span class="level-item">Android Elevation and shadows</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -276,8 +277,8 @@
         
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://nickcarter9.github.io/en/2019/04/09/2019/2019_04_09-jcifs_ng/';
-        this.page.identifier = '2019/04/09/2019/2019_04_09-jcifs_ng/';
+        this.page.url = 'https://nickcarter9.github.io/en/2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/';
+        this.page.identifier = '2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/';
     };
     (function() {
         var d = document, s = d.createElement('script');  
@@ -426,7 +427,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/en/">
                 
-                    <img src="/en/images/og_image.png" alt="Android Network Neighborhood - Jcifs-ng" height="28">
+                    <img src="/en/images/og_image.png" alt="iOS - NavigationItem - Bar Button Item" height="28">
                 
                 </a>
                 <p class="is-size-7">
