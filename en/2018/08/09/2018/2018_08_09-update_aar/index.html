@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Android ImageView Transparent Background - Nick Blog</title>
+<title>Android Update .aar File - Nick Blog</title>
 
 
-    <meta name="description" content="The source bitmap for ImageView has transparent color, we must set the background color of  this ImageView to transparent color.  If not, an ImageView will overlap with another ImageView.   Those are">
-<meta name="keywords" content="android,imageview,transparent,background">
+    <meta name="description" content="Sometime we use 3rd library to develop application.In previous article, we introduce how to use .jar file or .aar file.  When updating .aar file, it isn’t update successfully.">
+<meta name="keywords" content="android,aar,update aar">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android ImageView Transparent Background">
-<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;2019&#x2F;12&#x2F;26&#x2F;2019&#x2F;2019_12_26-imageview-transparent-background&#x2F;index.html">
+<meta property="og:title" content="Android Update .aar File">
+<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;2018&#x2F;08&#x2F;09&#x2F;2018&#x2F;2018_08_09-update_aar&#x2F;index.html">
 <meta property="og:site_name" content="Nick Blog">
-<meta property="og:description" content="The source bitmap for ImageView has transparent color, we must set the background color of  this ImageView to transparent color.  If not, an ImageView will overlap with another ImageView.   Those are">
+<meta property="og:description" content="Sometime we use 3rd library to develop application.In previous article, we introduce how to use .jar file or .aar file.  When updating .aar file, it isn’t update successfully.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-26T15:39:16.812Z">
+<meta property="og:updated_time" content="2020-04-08T08:33:11.349Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
 
@@ -82,7 +82,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/en/">
             
-                <img src="/en/images/logo.png" alt="Android ImageView Transparent Background" height="28">
+                <img src="/en/images/logo.png" alt="Android Update .aar File" height="28">
             
             </a>
         </div>
@@ -112,7 +112,7 @@
                 
                 
                 
-                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/2019/12/26/2019/2019_12_26-imageview-transparent-background/">Chinese</a>
+                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/2018/08/09/2018/2018_08_09-update_aar/">Chinese</a>
                    
             </div>
         </div>
@@ -129,7 +129,7 @@
     <div class="card-content article "> 
         
                 <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal" align="center">
-                Android ImageView Transparent Background
+                Android Update .aar File
                 </h1>
             
         
@@ -139,7 +139,7 @@
             <div class="level-left">
                 <i class="far fa-calendar-alt">&nbsp;</i>
                 <span class="level-item has-text-grey" >
-                    2019/12/26
+                    2018/08/09
                 </span>
 
                 <span class="level-item" >&#9474;</span>
@@ -149,7 +149,7 @@
                     <span class="level-item has-text-grey">&nbsp;
                       Update:
                     </span>
-                    <time class="has-text-grey" datetime="2019-12-26T15:39:16.812Z" >2019-12-26&nbsp;</time>
+                    <time class="has-text-grey" datetime="2020-04-08T08:33:11.349Z" >2020-04-08&nbsp;</time>
                     <span class="level-item" >&#9474;</span>
                 
                 
@@ -168,7 +168,7 @@
                   <span class="level-item has-text-grey">
                     <i class="far fa-file-word">&nbsp;</i>
                     
-                    Words:&nbsp;127
+                    Words:&nbsp;115
                   </span>
                 
 
@@ -190,40 +190,32 @@
             
               <hr style="height:0px;margin:1.5rem 0"/>
             
-            <p>The source bitmap for ImageView has transparent color, we must set the background color of  this ImageView to transparent color. </p>
-<p>If not, an ImageView will overlap with another ImageView.</p>
-<p> <img src="/images/2019/12/imageview_t1.png" alt title="ImageView"></p>
-<p>Those are some methods to set transparent color.<br> <a id="more"></a></p>
- <blockquote class="colorquote infotitle"><p>Static Setting</p>
+            <p>Sometime we use 3rd library to develop application.<br>In previous article, we introduce how to use .jar file or .aar file. </p>
+<p>When updating .aar file, it isn’t update successfully.</p>
+<a id="more"></a>
+
+<p>We replace the existing .aar file with the new one and use some method like rebuild / sync gradle / File -&gt; Invalidate Caches and Restart to rebuild.</p>
+<p>But all method are failed. </p>
+<p>Finally, we use this method that can update successfully.</p>
+<blockquote class="stepquote step1"><p>Show All Hidden File</p>
 </blockquote>
 
-<p> In xml, set background “#00000000”</p>
- <figure class="highlight xml hljs"><figcaption><span>activity.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ImageView</span></span></span><br><span class="line"><span class="hljs-tag">       <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"218dp"</span></span></span><br><span class="line"><span class="hljs-tag">       <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"247dp"</span></span></span><br><span class="line"><span class="hljs-tag">       <span class="hljs-attr">android:src</span>=<span class="hljs-string">"@drawable/test2"</span></span></span><br><span class="line"><span class="hljs-tag">       <span class="hljs-attr">android:background</span>=<span class="hljs-string">"#00000000"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p> Also can use android color : transparent</p>
-  <figure class="highlight xml hljs"><figcaption><span>activity.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">ImageView</span></span></span><br><span class="line"><span class="hljs-tag">       <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"218dp"</span></span></span><br><span class="line"><span class="hljs-tag">       <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"247dp"</span></span></span><br><span class="line"><span class="hljs-tag">       <span class="hljs-attr">android:src</span>=<span class="hljs-string">"@drawable/test2"</span></span></span><br><span class="line"><span class="hljs-tag">       <span class="hljs-attr">aandroid:background</span>=<span class="hljs-string">"@android:color/transparent"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
-
-  <blockquote class="colorquote infotitle"><p>Dynamic Setting</p>
+<blockquote class="stepquote step2"><p>Go to /.idea/libraries folder</p>
 </blockquote>
 
-<p>In program, we could use API: setBackgroundColor.</p>
- <figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> imageView = findViewById&lt;ImageView&gt;(R.id.test1)</span><br><span class="line">imageView.setBackgroundColor(Color.parseColor(<span class="hljs-string">"#00000000"</span>))</span><br></pre></td></tr></table></figure>
-
-<p> Or use Color.TRANSPARENT</p>
-  <figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">var</span> imageView = findViewById&lt;ImageView&gt;(R.id.test1)</span><br><span class="line">imageView.setBackgroundColor(Color.TRANSPARENT)</span><br></pre></td></tr></table></figure>
-
- <blockquote class="colorquote exec"><p>Result</p>
+<blockquote class="stepquote step3"><p>Find the xnl file : Gradle__artifacts_[aar_name].xml and delete it.</p>
 </blockquote>
 
-<p>  <img src="/images/2019/12/imageview_t2.png" alt title="ImageView"></p>
+<blockquote class="stepquote step4"><p>Back to Android Studio，Run File -&gt; Sync Projech with Gradle Files</p>
+</blockquote>
 
         </div>
         
         <ul class="post-copyright">
-        <li><strong>Title：</strong><a href="https://nickcarter9.github.io/en/2019/12/26/2019/2019_12_26-imageview-transparent-background/">Android ImageView Transparent Background</a></li>
+        <li><strong>Title：</strong><a href="https://nickcarter9.github.io/en/2018/08/09/2018/2018_08_09-update_aar/">Android Update .aar File</a></li>
         <li><strong>Post Author：</strong><a href="https://nickcarter9.github.io/en">Nick Lin</a></li>
-        <li><strong>Post Link：</strong><a href="https://nickcarter9.github.io/en/2019/12/26/2019/2019_12_26-imageview-transparent-background/">https://nickcarter9.github.io/en/2019/12/26/2019/2019_12_26-imageview-transparent-background/</a></li>
-        <li><strong>Publish Time：</strong>2019-12-26</li>
+        <li><strong>Post Link：</strong><a href="https://nickcarter9.github.io/en/2018/08/09/2018/2018_08_09-update_aar/">https://nickcarter9.github.io/en/2018/08/09/2018/2018_08_09-update_aar/</a></li>
+        <li><strong>Publish Time：</strong>2018-08-09</li>
         <li><strong>Copyright Notice：</strong>All articles in this blog are licened inless stating additionally.
         </li>
         </ul>
@@ -234,7 +226,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/en/tags/android/" rel="tag">android</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/background/" rel="tag">background</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/imageview/" rel="tag">imageview</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/transparent/" rel="tag">transparent</a>
+                    <a class="has-link-grey -link" href="/en/tags/aar/" rel="tag">aar</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/android/" rel="tag">android</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/update-aar/" rel="tag">update aar</a>
                 </div>
             </div>
         </div>
@@ -255,10 +247,17 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/en/2019/03/27/2019/2019_03_27-system_loadlibrary_linkerror/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Android loadLibrary - dlopen failed</span>
+            </a>
+        </div>
+        
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/en/2019/11/21/2019/2019_11_21-reverselandscape-event/">
-                <span class="level-item">Android onConfigurationChanged not called for Landscape and Reverselandscape</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/en/2018/08/07/2018/2018_08_07-gradientdrawable/">
+                <span class="level-item">Android GradientDrawable</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -274,8 +273,8 @@
         
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://nickcarter9.github.io/en/2019/12/26/2019/2019_12_26-imageview-transparent-background/';
-        this.page.identifier = '2019/12/26/2019/2019_12_26-imageview-transparent-background/';
+        this.page.url = 'https://nickcarter9.github.io/en/2018/08/09/2018/2018_08_09-update_aar/';
+        this.page.identifier = '2018/08/09/2018/2018_08_09-update_aar/';
     };
     (function() {
         var d = document, s = d.createElement('script');  
@@ -424,7 +423,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/en/">
                 
-                    <img src="/en/images/og_image.png" alt="Android ImageView Transparent Background" height="28">
+                    <img src="/en/images/og_image.png" alt="Android Update .aar File" height="28">
                 
                 </a>
                 <p class="is-size-7">
