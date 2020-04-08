@@ -7,19 +7,19 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
-<title>Set up HttpServer - NanoHttpd - Nick Blog</title>
+<title>Android package and import aar file - Nick Blog</title>
 
 
-    <meta name="description" content="NanoHttp is a light-weight HTTP server designed for embedding system, released under a BSD licence.">
-<meta name="keywords" content="http server,nonohttpd">
+    <meta name="description" content="We can import 3rd library in Android project with .jar or .aar file. But .jar file only contains .class files, can’t use resource files.For this reason, we use .aar file that can use resource file.">
+<meta name="keywords" content="android,aar,import aar,package aar">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Set up HttpServer - NanoHttpd">
-<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;2019&#x2F;04&#x2F;01&#x2F;2019&#x2F;2019_04_01-nanohttpd&#x2F;index.html">
+<meta property="og:title" content="Android package and import aar file">
+<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;2018&#x2F;08&#x2F;03&#x2F;2018&#x2F;2018_08_03-aar_packaged_import&#x2F;index.html">
 <meta property="og:site_name" content="Nick Blog">
-<meta property="og:description" content="NanoHttp is a light-weight HTTP server designed for embedding system, released under a BSD licence.">
+<meta property="og:description" content="We can import 3rd library in Android project with .jar or .aar file. But .jar file only contains .class files, can’t use resource files.For this reason, we use .aar file that can use resource file.">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2019-12-13T01:32:09.709Z">
+<meta property="og:updated_time" content="2020-04-08T07:45:25.879Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
 
@@ -82,7 +82,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/en/">
             
-                <img src="/en/images/logo.png" alt="Set up HttpServer - NanoHttpd" height="28">
+                <img src="/en/images/logo.png" alt="Android package and import aar file" height="28">
             
             </a>
         </div>
@@ -112,7 +112,7 @@
                 
                 
                 
-                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/2019/04/01/2019/2019_04_01-nanohttpd/">Chinese</a>
+                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/2018/08/03/2018/2018_08_03-aar_packaged_import/">Chinese</a>
                    
             </div>
         </div>
@@ -129,7 +129,7 @@
     <div class="card-content article "> 
         
                 <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal" align="center">
-                Set up HttpServer - NanoHttpd
+                Android package and import aar file
                 </h1>
             
         
@@ -139,7 +139,7 @@
             <div class="level-left">
                 <i class="far fa-calendar-alt">&nbsp;</i>
                 <span class="level-item has-text-grey" >
-                    2019/04/01
+                    2018/08/03
                 </span>
 
                 <span class="level-item" >&#9474;</span>
@@ -149,7 +149,7 @@
                     <span class="level-item has-text-grey">&nbsp;
                       Update:
                     </span>
-                    <time class="has-text-grey" datetime="2019-12-13T01:32:09.709Z" >2019-12-13&nbsp;</time>
+                    <time class="has-text-grey" datetime="2020-04-08T07:45:25.879Z" >2020-04-08&nbsp;</time>
                     <span class="level-item" >&#9474;</span>
                 
                 
@@ -168,7 +168,7 @@
                   <span class="level-item has-text-grey">
                     <i class="far fa-file-word">&nbsp;</i>
                     
-                    Words:&nbsp;276
+                    Words:&nbsp;261
                   </span>
                 
 
@@ -190,55 +190,61 @@
             
               <hr style="height:0px;margin:1.5rem 0"/>
             
-            <p>NanoHttp is a light-weight HTTP server designed for embedding system, released under a BSD licence.</p>
+            <p>We can import 3rd library in Android project with .jar or .aar file.</p>
+<p>But .jar file only contains .class files, can’t use resource files.<br>For this reason, we use .aar file that can use resource file.</p>
 <a id="more"></a>
 
-<blockquote class="stepquote step1"><p>Download  .jar </p>
+<blockquote class="colorquote infotitle"><p>Package .aar file </p>
 </blockquote>
 
-<p><a href="https://github.com/NanoHttpd/nanohttpd/releases" target="_blank" rel="noopener">NanoHttpd Github</a></p>
-<blockquote class="stepquote step2"><p>Import .jar</p>
+<p> Choose non-activity module.</p>
+<p><img src="/images/2018/08_03/choose_no_activity.png" alt=" " title="Choose No Activity"></p>
+<p>If this module show cann’t run or build.</p>
+<p> <img src="/images/2018/08_03/can_not_build.png" alt=" " title="Unuse Build"></p>
+<p> In Edit Configurations, change Launch Options is Nothing.</p>
+<p>  <img src="/images/2018/08_03/launch_nothing.png" alt=" " title="LaunchOption Nothing"></p>
+<blockquote class="stepquote step1"><p>Setup Output Mode</p>
 </blockquote>
 
-<p>Unzip file and copy .jar file to your project/libs folder.</p>
-<blockquote class="stepquote step3"><p>Add info in build.gradle</p>
+<p>The gradle definition of apply plugin is</p>
+<figure class="highlight groovy hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apply <span class="hljs-string">plugin:</span> <span class="hljs-string">'com.android.application'</span>  <span class="hljs-comment">//output mode : apk</span></span><br><span class="line">apply <span class="hljs-string">plugin:</span> <span class="hljs-string">'com.android.library'</span>  <span class="hljs-comment">//output mode :  library</span></span><br></pre></td></tr></table></figure>
+
+<p>In build.gradle, setup output mode.</p>
+<figure class="highlight groovy hljs"><figcaption><span>build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apply <span class="hljs-string">plugin:</span> <span class="hljs-string">'com.android.library'</span> </span><br></pre></td></tr></table></figure>
+
+<blockquote class="stepquote step2"><p>delete applicationId**</p>
 </blockquote>
 
-<figure class="highlight gradle hljs"><figcaption><span>build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">dependencies</span> &#123;</span><br><span class="line">   ...</span><br><span class="line">    <span class="hljs-keyword">compile</span> files(<span class="hljs-string">'libs/nanohttpd-2.3.1.jar'</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight jboss-cli hljs"><figcaption><span>build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">defaultConfig &#123;</span><br><span class="line">    <span class="hljs-string">//applicationId</span> <span class="hljs-string">"com.nickthomas55gmail.testaar"</span></span><br><span class="line">    <span class="hljs-string">...</span></span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
 
-<blockquote class="stepquote step4"><p>Create custom class</p>
+<blockquote class="stepquote step3"><p>generate .aar file</p>
 </blockquote>
 
-<p>Create a custom class and extends NanoHTTPD.</p>
-<figure class="highlight java hljs"><figcaption><span>NanoHttpServer.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">NanoHttpServer</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">NanoHTTPD</span> </span>&#123;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">NanoHttpServer</span><span class="hljs-params">(<span class="hljs-keyword">int</span> port)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>(port);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<blockquote class="stepquote step5"><p>Create NanoHttpServer</p>
+<p>Open Gradle Projects <strong>(View -&gt; Tool Windows -&gt; Gradle)</strong> or click gradle button.</p>
+<p>   <img src="/images/2018/08_03/gradle_projects.png" alt=" " title="Gradle Projects"></p>
+<p> In projects root folder, click assemble.</p>
+<p>  <img src="/images/2018/08_03/output_aar.png" alt=" " title="Build AAR"></p>
+<p> After build, We can get the .aar file in build -&gt; outputs -&gt; aar folder.</p>
+<blockquote class="colorquote info"><p>module_name-debug.aar<br>module_name-release.aar</p>
 </blockquote>
 
-<p>Created  NanoHttpServer and start http server and set up a custom port to communicate with client.</p>
-<figure class="highlight java hljs"><figcaption><span>MainActivity.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mHttpServer = <span class="hljs-keyword">new</span> NanoHttpServer(<span class="hljs-number">6600</span>);</span><br><span class="line">mHttpServer.start();</span><br></pre></td></tr></table></figure>
-
-<blockquote class="stepquote step6"><p>Receive message from client</p>
+ <blockquote class="colorquote infotitle"><p>Import  .aar file </p>
 </blockquote>
 
-<p>When client is connected, we can receive the message and return response to client. </p>
-<figure class="highlight java hljs"><figcaption><span>NanoHttpServer.java</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> Response <span class="hljs-title">serve</span><span class="hljs-params">(IHTTPSession session)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        String uri = session.getUri();</span><br><span class="line">        String method = session.getMethod().name();</span><br><span class="line">        String remoteIp = session.getRemoteIpAddress();</span><br><span class="line"></span><br><span class="line">        NxLog.e(TAG, <span class="hljs-string">"uri: "</span> + uri);</span><br><span class="line">        NxLog.e(TAG, <span class="hljs-string">"method: "</span> + method);</span><br><span class="line">        NxLog.e(TAG, <span class="hljs-string">"remoteIp: "</span> + remoteIp);</span><br><span class="line">        </span><br><span class="line">        InputStream is = session.getInputStream();</span><br><span class="line">        ...</span><br><span class="line">        </span><br><span class="line"></span><br><span class="line">        String msg = <span class="hljs-string">"Send response to client"</span>;</span><br><span class="line">        <span class="hljs-keyword">return</span> newFixedLengthResponse(msg);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<p>In Project Structure, choose Import Jar/Aar Package to import .aar file.</p>
+<p>  <img src="/images/2018/08_03/import_aar.png" alt=" " title="Import AAR"></p>
+<p>At dependencies in build.gradle, add the line : compile project <strong>* :module_name*</strong></p>
+<figure class="highlight gradle hljs"><figcaption><span>build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">dependencies</span> &#123;</span><br><span class="line">    <span class="hljs-keyword">compile</span> <span class="hljs-keyword">project</span>(<span class="hljs-string">':module_name-release'</span>)</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
 
-<blockquote class="colorquote warning"><p>It should be noted that IHTTPSession.getInputStream will never return -1 as end of stream. </p>
-</blockquote>
-
-<p>But we could use a buffer to control loop. When the length of reading stream less than buffer size, than we break this loop.</p>
-<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">try</span> &#123;</span><br><span class="line">	InputStream is = session.getInputStream();</span><br><span class="line"></span><br><span class="line">	<span class="hljs-keyword">int</span> buffer_szie = <span class="hljs-number">1024</span>;</span><br><span class="line">	<span class="hljs-keyword">byte</span>[] buffer = <span class="hljs-keyword">new</span> <span class="hljs-keyword">byte</span>[buffer_szie];</span><br><span class="line">	<span class="hljs-keyword">int</span> length = <span class="hljs-number">0</span>;</span><br><span class="line">        </span><br><span class="line">	<span class="hljs-keyword">do</span> &#123;</span><br><span class="line">		length = is.read(buffer);</span><br><span class="line">		<span class="hljs-comment">//...</span></span><br><span class="line">	&#125; <span class="hljs-keyword">while</span>(length &gt;= buffer_szie );</span><br><span class="line">&#125; <span class="hljs-keyword">catch</span> (IOException e) &#123;</span><br><span class="line">	e.printStackTrace();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
+<p>After that, we can use all classes and resources.</p>
 
         </div>
         
         <ul class="post-copyright">
-        <li><strong>Title：</strong><a href="https://nickcarter9.github.io/en/2019/04/01/2019/2019_04_01-nanohttpd/">Set up HttpServer - NanoHttpd</a></li>
+        <li><strong>Title：</strong><a href="https://nickcarter9.github.io/en/2018/08/03/2018/2018_08_03-aar_packaged_import/">Android package and import aar file</a></li>
         <li><strong>Post Author：</strong><a href="https://nickcarter9.github.io/en">Nick Lin</a></li>
-        <li><strong>Post Link：</strong><a href="https://nickcarter9.github.io/en/2019/04/01/2019/2019_04_01-nanohttpd/">https://nickcarter9.github.io/en/2019/04/01/2019/2019_04_01-nanohttpd/</a></li>
-        <li><strong>Publish Time：</strong>2019-04-01</li>
+        <li><strong>Post Link：</strong><a href="https://nickcarter9.github.io/en/2018/08/03/2018/2018_08_03-aar_packaged_import/">https://nickcarter9.github.io/en/2018/08/03/2018/2018_08_03-aar_packaged_import/</a></li>
+        <li><strong>Publish Time：</strong>2018-08-03</li>
         <li><strong>Copyright Notice：</strong>All articles in this blog are licened inless stating additionally.
         </li>
         </ul>
@@ -249,7 +255,7 @@
             <div class="level-start">
                 <div class="level-item">
                     <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                    <a class="has-link-grey -link" href="/en/tags/http-server/" rel="tag">http server</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/nonohttpd/" rel="tag">nonohttpd</a>
+                    <a class="has-link-grey -link" href="/en/tags/aar/" rel="tag">aar</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/android/" rel="tag">android</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/import-aar/" rel="tag">import aar</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/package-aar/" rel="tag">package aar</a>
                 </div>
             </div>
         </div>
@@ -271,16 +277,16 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/en/2019/04/09/2019/2019_04_09-jcifs_ng/">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/en/2018/08/07/2018/2018_08_07-gradientdrawable/">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">Android Network Neighborhood - Jcifs-ng</span>
+                <span class="level-item">Android GradientDrawable</span>
             </a>
         </div>
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/en/2019/03/27/2019/2019_03_27-system_loadlibrary_linkerror/">
-                <span class="level-item">Android loadLibrary - dlopen failed</span>
+            <a class="level level-item has-link-grey  article-nav-next" href="/en/2018/07/17/2018/2018_07_17-camera2/">
+                <span class="level-item">Android Camera2</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
         </div>
@@ -296,8 +302,8 @@
         
 <script>
     var disqus_config = function () {
-        this.page.url = 'https://nickcarter9.github.io/en/2019/04/01/2019/2019_04_01-nanohttpd/';
-        this.page.identifier = '2019/04/01/2019/2019_04_01-nanohttpd/';
+        this.page.url = 'https://nickcarter9.github.io/en/2018/08/03/2018/2018_08_03-aar_packaged_import/';
+        this.page.identifier = '2018/08/03/2018/2018_08_03-aar_packaged_import/';
     };
     (function() {
         var d = document, s = d.createElement('script');  
@@ -446,7 +452,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/en/">
                 
-                    <img src="/en/images/og_image.png" alt="Set up HttpServer - NanoHttpd" height="28">
+                    <img src="/en/images/og_image.png" alt="Android package and import aar file" height="28">
                 
                 </a>
                 <p class="is-size-7">
