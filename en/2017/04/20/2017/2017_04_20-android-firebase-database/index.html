@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html  lang="en">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.0.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Android - Develope Firebase Project - Database - Nick Blog</title>
+
+
+    <meta name="description" content="We need register Firebase account and setup AndroidStudio tools first. Android - Firebase RegisterationAndroid - Firebase Initialization">
+<meta name="keywords" content="android,Firebase,Database">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android - Develope Firebase Project - Database">
+<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;2017&#x2F;04&#x2F;20&#x2F;2017&#x2F;2017_04_20-android-firebase-database&#x2F;index.html">
+<meta property="og:site_name" content="Nick Blog">
+<meta property="og:description" content="We need register Firebase account and setup AndroidStudio tools first. Android - Firebase RegisterationAndroid - Firebase Initialization">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2020-04-15T07:43:27.988Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;en&#x2F;images&#x2F;og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/en/images/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/androidstudio.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/en/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/en/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+<link rel="stylesheet" href="/en/css/style.css">
+    <script data-ad-client="ca-pub-5418524234209657" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="google-site-verification" content="wONvV1Oo51k5DsvNnSpe6EEwpaYJTbWAyVvQGdIJHa0" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/en/">
+            
+                <img src="/en/images/logo.png" alt="Android - Develope Firebase Project - Database" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/en/">Home</a>
+                
+                <a class="navbar-item"
+                href="/en/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/en/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/en/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/en/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                
+                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/2017/04/20/2017/2017_04_20-android-firebase-database/">Chinese</a>
+                   
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article "> 
+        
+                <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal" align="center">
+                Android - Develope Firebase Project - Database
+                </h1>
+            
+        
+
+        
+            <div class="level-item has-text-centered article-meta is-size-7 is-mobile is-overflow-x-auto" style="flex-shrink: 1">
+            <div class="level-left">
+                <i class="far fa-calendar-alt">&nbsp;</i>
+                <span class="level-item has-text-grey" >
+                    2017/04/20
+                </span>
+
+                <span class="level-item" >&#9474;</span>
+
+                
+                    <i class="fas fa-edit">&nbsp</i>
+                    <span class="level-item has-text-grey">&nbsp;
+                      Update:
+                    </span>
+                    <time class="has-text-grey" datetime="2020-04-15T07:43:27.988Z" >2020-04-15&nbsp;</time>
+                    <span class="level-item" >&#9474;</span>
+                
+                
+                
+                  <span class="level-item has-text-grey">
+                    <i class="far fa-clock">&nbsp;</i>
+                    
+                    
+                    Read&nbsp;&asymp;&nbsp;4 minutes
+                  </span>
+                
+
+                <span class="level-item" >&#9474;</span>
+
+                
+                  <span class="level-item has-text-grey">
+                    <i class="far fa-file-word">&nbsp;</i>
+                    
+                    Words:&nbsp;630
+                  </span>
+                
+
+                <span class="level-item" >&#9474;</span>
+
+                
+                  <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-user">&nbsp;</i>
+                    <span id="busuanzi_value_page_pv"> 0 </span> visits
+                  </span>
+                
+                </div>
+            </div>
+        
+
+        
+        
+        <div class="content">
+            
+              <hr style="height:0px;margin:1.5rem 0"/>
+            
+            <p>We need register Firebase account and setup AndroidStudio tools first.</p>
+<p><a href="https://nickcarter9.github.io/en/2017/04/19/2017_04_19-android-firebase-register/">Android - Firebase Registeration</a><br><a href="https://nickcarter9.github.io/en/2017/04/19/2017_04_19-android-firebase-install/">Android - Firebase Initialization</a></p>
+<a id="more"></a>
+
+<blockquote class="stepquote step1"><p>New Firebase Product</p>
+</blockquote>
+
+<p>Click the button「Go to console」 at upper right corner in Firebase homepage.<br><img src="/images/2017/04_20/firebase_settings.png" alt=" " title="Settings"></p>
+<p>Click「New Project」<br><img src="/images/2017/04_20/firebase_new.png" alt=" " title="Settings"></p>
+<blockquote class="stepquote step2"><p>Import Firebase</p>
+</blockquote>
+
+<p>Add a new module in AndroidStudio, then choose Tools -&gt; Firebase<br><img src="/images/2017/04_20/firebase_import.png" alt=" " title="Import"></p>
+<p> Choose Realtime Database<br><img src="/images/2017/04_20/firebase_choose_realtime.png" alt=" " title="Realtime DB"></p>
+<p>  Connect to Firebase &amp; Select your app<br><img src="/images/2017/04_20/firebase_connect_app.png" alt=" " title="Connect"><br><img src="/images/2017/04_20/firebase_connect_app_2.png" alt=" " title="Connect"><br><img src="/images/2017/04_20/firebase_connect_app_3.png" alt=" " title="Connect"></p>
+<blockquote class="stepquote step3"><p>Import Realtime Database</p>
+</blockquote>
+
+<p> Choose「Add the Realtime Database to your app」<br><img src="/images/2017/04_20/firebase_add.png" alt=" " title="Add"><br><img src="/images/2017/04_20/firebase_add_2.png" alt=" " title="Add"></p>
+<p>Import Success<br><img src="/images/2017/04_20/firebase_success.png" alt=" " title="Import Success"></p>
+<blockquote class="stepquote step4"><p>Create Database</p>
+</blockquote> 
+<p> Back to Firebase homepage, choose 「Database」in menu.<br> <img src="/images/2017/04_20/firebase_settings_db.png" alt=" " title="Database"></p>
+<p> Click button 「+」and add data.<br>  <img src="/images/2017/04_20/firebase_settings_db_add.png" alt=" " title="Database"></p>
+<blockquote class="colorquote warning"><p>Firebase is not a relational database, it uses 「JSON」format to store data and uses JSON tree structure.</p>
+</blockquote>
+
+<p>We take contact for an example.<br>In database, fill in 「Contact/01/name」and  valus is 「Nick」, than click add.</p>
+<p>  <img src="/images/2017/04_20/firebase_db_example.png" alt=" " title="Database Example"><br>Add a new contact「02/name」, and  valus is 「Curry」</p>
+<p>We can export JSON format.</p>
+<p>JSON tree as follow,</p>
+<p><img src="/images/2017/04_20/firebase_db_example_2.png" alt=" " title="Database Example"><br><img src="/images/2017/04_20/firebase_db_example_3.png" alt=" " title="Database Example"></p>
+<p>Export File:<br><img src="/images/2017/04_20/firebase_db_example_4.png" alt=" " title="Firebase Json format"></p>
+<blockquote class="stepquote step5"><p>Security</p>
+</blockquote> 
+
+<p>Firebase can be read/wrote by verified user. In this example, we let any user could read/write.</p>
+<blockquote class="colorquote warning"><p>Please don’t change default settings when releasing product.</p>
+</blockquote>
+
+<p>Choose 「Rule」tab, the default read/write permission is 「auth != null」.<br><img src="/images/2017/04_20/firebase_auth_null.png" alt=" " title="Auth Null"></p>
+<p>We change the value to true.<br><img src="/images/2017/04_20/firebase_auth_null_post.png" alt=" " title="Auth Null Post"></p>
+<blockquote class="stepquote step6"><p>Get Firebase Data</p>
+</blockquote> 
+
+<p> Back to AndroidStudio, We add a ListView in our layout and setup ListView and ArrayAdapter.</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AppCompatActivity</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    ArrayAdapter&lt;String&gt; fileDBAdapter;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        ListView list = (ListView) findViewById(R.id.listView);</span><br><span class="line">        fileDBAdapter =</span><br><span class="line">                <span class="hljs-keyword">new</span> ArrayAdapter&lt;&gt;(<span class="hljs-keyword">this</span>,</span><br><span class="line">                        android.R.layout.simple_list_item_1,</span><br><span class="line">                        android.R.id.text1);</span><br><span class="line">        list.setAdapter(fileDBAdapter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>MainActivity Implements  ChildEventListener and functions.</p>
+<p>In onChildAdded and onChildRemoved function, setup data into ArrayAdapter. </p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">@Override</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onChildAdded</span><span class="hljs-params">(DataSnapshot dataSnapshot, String s)</span> </span>&#123;</span><br><span class="line">    fileDBAdapter.add(</span><br><span class="line">            String.valueOf(dataSnapshot.child(<span class="hljs-string">"name"</span>).getValue()));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="hljs-meta">@Override</span></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onChildRemoved</span><span class="hljs-params">(DataSnapshot dataSnapshot)</span> </span>&#123;</span><br><span class="line">    fileDBAdapter.remove(</span><br><span class="line">            String.valueOf(dataSnapshot.child(<span class="hljs-string">"name"</span>).getValue()));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>At OnCreate, setup FirebaseDatabase.</p>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">FirebaseDatabase fireDB = FirebaseDatabase.getInstance();</span><br><span class="line">DatabaseReference myRef = fireDB.getReference(<span class="hljs-string">"Contact"</span>);</span><br><span class="line">myRef.addChildEventListener(<span class="hljs-keyword">this</span>);</span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote exec"><p>Result</p>
+</blockquote>
+<p><img src="/images/2017/04_20/firebase.png" alt=" " title="Result"></p>
+<blockquote class="colorquote infotitle"><p>Source Code</p>
+</blockquote>
+
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">MainActivity</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">AppCompatActivity</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ChildEventListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    ArrayAdapter&lt;String&gt; fileDBAdapter;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">protected</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCreate</span><span class="hljs-params">(Bundle savedInstanceState)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line"></span><br><span class="line">        ListView list = (ListView) findViewById(R.id.listView);</span><br><span class="line">        fileDBAdapter =</span><br><span class="line">                <span class="hljs-keyword">new</span> ArrayAdapter&lt;&gt;(<span class="hljs-keyword">this</span>,</span><br><span class="line">                        android.R.layout.simple_list_item_1,</span><br><span class="line">                        android.R.id.text1);</span><br><span class="line">        list.setAdapter(fileDBAdapter);</span><br><span class="line"></span><br><span class="line">        FirebaseDatabase fireDB = FirebaseDatabase.getInstance();</span><br><span class="line">        DatabaseReference myRef = fireDB.getReference(<span class="hljs-string">"聯絡人"</span>);</span><br><span class="line">        myRef.addChildEventListener(<span class="hljs-keyword">this</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onChildAdded</span><span class="hljs-params">(DataSnapshot dataSnapshot, String s)</span> </span>&#123;</span><br><span class="line">        fileDBAdapter.add(</span><br><span class="line">                String.valueOf(dataSnapshot.child(<span class="hljs-string">"name"</span>).getValue()));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onChildRemoved</span><span class="hljs-params">(DataSnapshot dataSnapshot)</span> </span>&#123;</span><br><span class="line">        fileDBAdapter.remove(</span><br><span class="line">                String.valueOf(dataSnapshot.child(<span class="hljs-string">"name"</span>).getValue()));</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onChildChanged</span><span class="hljs-params">(DataSnapshot dataSnapshot, String s)</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onChildMoved</span><span class="hljs-params">(DataSnapshot dataSnapshot, String s)</span> </span>&#123; &#125;</span><br><span class="line"></span><br><span class="line">    <span class="hljs-meta">@Override</span></span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">onCancelled</span><span class="hljs-params">(DatabaseError databaseError)</span> </span>&#123; &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+        </div>
+        
+        <ul class="post-copyright">
+        <li><strong>Title：</strong><a href="https://nickcarter9.github.io/en/2017/04/20/2017/2017_04_20-android-firebase-database/">Android - Develope Firebase Project - Database</a></li>
+        <li><strong>Post Author：</strong><a href="https://nickcarter9.github.io/en">Nick Lin</a></li>
+        <li><strong>Post Link：</strong><a href="https://nickcarter9.github.io/en/2017/04/20/2017/2017_04_20-android-firebase-database/">https://nickcarter9.github.io/en/2017/04/20/2017/2017_04_20-android-firebase-database/</a></li>
+        <li><strong>Publish Time：</strong>2017-04-20</li>
+        <li><strong>Copyright Notice：</strong>All articles in this blog are licened inless stating additionally.
+        </li>
+        </ul>
+    
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/en/tags/Database/" rel="tag">Database</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/Firebase/" rel="tag">Firebase</a>,&nbsp;<a class="has-link-grey -link" href="/en/tags/android/" rel="tag">android</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/en/2018/07/09/2018/2018_07_09-facedetect/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Android Face Detector</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/en/2017/04/19/2017/2017_04_19-android-firebase-install/">
+                <span class="level-item">Android - Firebase Tools</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">Comments</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://nickcarter9.github.io/en/2017/04/20/2017/2017_04_20-android-firebase-database/';
+        this.page.identifier = '2017/04/20/2017/2017_04_20-android-firebase-database/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'nick-code-cars' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/en/images/avatar.jpg" alt="">
+                    </figure>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Programming is like sex. One mistake and you have to support it for the rest of your life.
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Taiwan</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        20
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        3
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        50
+                    </p>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://www.facebook.com/nick.carter.52459" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/NickCarter9">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Facebook" href="https://www.facebook.com/nick.carter.52459">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Email" href="/en/nickthomas55@gmail.com">
+                
+                <i class="far fa-envelope"></i>
+                
+            </a>
+            
+        </div>
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 方形廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5418524234209657"
+     data-ad-slot="6117614777"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+
+                
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/en/">
+                
+                    <img src="/en/images/og_image.png" alt="Android - Develope Firebase Project - Database" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2020 Nick Lin&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Github" href="https://github.com/NickCarter9">
+                        
+                        <img src="/images/github-icon.png"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Facebook" href="https://www.facebook.com/nick.carter.52459">
+                        
+                        <img src="/images/facebook-icon.png"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Email" href="/en/nickthomas55@gmail.com">
+                        
+                        <img src="/images/gmail-icon.png"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 橫式廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5418524234209657"
+     data-ad-slot="7917781608"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+<script src="/en/js/animation.js"></script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/en/js/gallery.js" defer></script>
+
+    
+    
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+    
+    
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/en/js/back-to-top.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<script src="/en/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/en/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/en/js/insight.js" defer></script>
+<link rel="stylesheet" href="/en/css/search.css">
+<link rel="stylesheet" href="/en/css/insight.css">
+
+    
+</body>
+</html>
