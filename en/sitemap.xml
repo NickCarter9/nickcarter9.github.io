@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://nickcarter9.github.io/en/about/index.html</loc>
+    
+    <lastmod>2021-03-08T00:46:51.666Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/en/2017/04/20/2017/2017_04_20-android-firebase-database/</loc>
     
     <lastmod>2020-04-15T07:43:27.988Z</lastmod>
@@ -68,13 +75,6 @@
     <loc>https://nickcarter9.github.io/en/2016/05/25/2016/2016_05_25-android-elevation_shadows/</loc>
     
     <lastmod>2020-04-07T05:31:51.842Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/en/about/index.html</loc>
-    
-    <lastmod>2020-02-26T06:21:53.444Z</lastmod>
     
   </url>
   
