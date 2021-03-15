@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html  lang="zh">
+<head>
+    <meta charset="utf-8" />
+
+<meta name="generator" content="Hexo 4.0.0" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+<title>Android AutoSize TextView - Nick Blog</title>
+
+
+    <meta name="description" content="當一個元件所顯示的內容過長時，可能會顯得不完整。在Android 8 (Oreo, SDK 26)增加了自動調整字體大小，讓TextView文字大小自動擴展或收縮，使得輸入時可以看到完整內容。">
+<meta name="keywords" content="android,autosize,autosize textview">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android AutoSize TextView">
+<meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;2020&#x2F;06&#x2F;15&#x2F;2020&#x2F;2020_06_15-autosize_textview&#x2F;index.html">
+<meta property="og:site_name" content="Nick Blog">
+<meta property="og:description" content="當一個元件所顯示的內容過長時，可能會顯得不完整。在Android 8 (Oreo, SDK 26)增加了自動調整字體大小，讓TextView文字大小自動擴展或收縮，使得輸入時可以看到完整內容。">
+<meta property="og:locale" content="zh-TW">
+<meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
+<meta property="og:updated_time" content="2020-06-15T08:33:49.092Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
+
+
+
+
+
+
+
+<link rel="icon" href="/images/favicon.png">
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/androidstudio.css">
+
+
+    
+    
+<style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+
+    
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
+
+    
+    
+    
+    
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+    
+    
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+    
+    <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
+    <script data-ad-client="ca-pub-5418524234209657" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <meta name="google-site-verification" content="wONvV1Oo51k5DsvNnSpe6EEwpaYJTbWAyVvQGdIJHa0" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+<body class="is-2-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.png" alt="Android AutoSize TextView" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/categories">Categories</a>
+                
+                <a class="navbar-item"
+                href="/tags">Tags</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+
+                
+                    <a class="navbar-item-lang-2" href="https://nickcarter9.github.io/en/2020/06/15/2020/2020_06_15-autosize_textview/">English</a>
+                  
+            </div>
+        </div>
+    </div>
+</nav>
+
+    
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-9-widescreen has-order-2 column-main">
+<div class="card">
+    
+    <div class="card-content article "> 
+        
+                <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal" align="center">
+                Android AutoSize TextView
+                </h1>
+            
+        
+
+        
+            <div class="level-item has-text-centered article-meta is-size-7 is-mobile is-overflow-x-auto" style="flex-shrink: 1">
+            <div class="level-left">
+                <i class="far fa-calendar-alt">&nbsp;</i>
+                <span class="level-item has-text-grey" >
+                    2020/06/15
+                </span>
+
+                <span class="level-item" >&#9474;</span>
+
+                
+                    <i class="fas fa-edit">&nbsp</i>
+                    <time class="has-text-grey" datetime="2020-06-15T08:33:49.092Z" >2020-06-15</time>
+                    <span class="level-item has-text-grey">
+                      更新
+                    </span>
+                    <span class="level-item" >&#9474;</span>
+                
+                
+                
+                  <span class="level-item has-text-grey">
+                    <i class="far fa-clock">&nbsp;</i>
+                    
+                    
+                    閱讀時長&nbsp;&asymp;&nbsp;2 分鐘
+                  </span>
+                
+
+                <span class="level-item" >&#9474;</span>
+
+                
+                  <span class="level-item has-text-grey">
+                    <i class="far fa-file-word">&nbsp;</i>
+                    
+                    本文字數:&nbsp;284
+                  </span>
+                
+
+                <span class="level-item" >&#9474;</span>
+
+                
+                  <span class="level-item has-text-grey" id="busuanzi_container_page_pv">
+                    <i class="far fa-user">&nbsp;</i>
+                    <span id="busuanzi_value_page_pv"> 0 </span> visits
+                  </span>
+                
+                </div>
+            </div>
+        
+
+        
+        
+        <div class="content">
+            
+              <hr style="height:0px;margin:1.5rem 0"/>
+            
+            <p>當一個元件所顯示的內容過長時，可能會顯得不完整。在Android 8 (Oreo, SDK 26)增加了自動調整字體大小，讓TextView文字大小自動擴展或收縮，使得輸入時可以看到完整內容。<br> <a id="more"></a></p>
+<blockquote class="stepquote step1"><p>畫面布局</p>
+</blockquote>
+
+<p>首先我們先設定一個輸入框及所要顯示的內容，並且限制TextView的大小為100dp並且使用單行顯示。</p>
+<figure class="highlight xml hljs"><figcaption><span>activity_main.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span> <span class="hljs-attr">xmlns:android</span>=<span class="hljs-string">"http://schemas.android.com/apk/res/android"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">xmlns:app</span>=<span class="hljs-string">"http://schemas.android.com/apk/res-auto"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">xmlns:tools</span>=<span class="hljs-string">"http://schemas.android.com/tools"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"match_parent"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"match_parent"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:background</span>=<span class="hljs-string">"#FF97BFFF"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">tools:context</span>=<span class="hljs-string">".MainActivity"</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">TextView</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/textView"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"100dp"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:layout_marginTop</span>=<span class="hljs-string">"88dp"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:text</span>=<span class="hljs-string">"Hello"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:textSize</span>=<span class="hljs-string">"18sp"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:maxLines</span>=<span class="hljs-string">"1"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">"parent"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">"parent"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">"parent"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="hljs-tag">&lt;<span class="hljs-name">EditText</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/editText"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"wrap_content"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:layout_marginTop</span>=<span class="hljs-string">"28dp"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:ems</span>=<span class="hljs-string">"10"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:hint</span>=<span class="hljs-string">"Enter..."</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">android:inputType</span>=<span class="hljs-string">"textPersonName"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">"parent"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">app:layout_constraintHorizontal_bias</span>=<span class="hljs-string">"0.537"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">"parent"</span></span></span><br><span class="line"><span class="hljs-tag">        <span class="hljs-attr">app:layout_constraintTop_toBottomOf</span>=<span class="hljs-string">"@+id/textView"</span> /&gt;</span></span><br><span class="line"><span class="hljs-tag">&lt;/<span class="hljs-name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<p> 在Android 8之前，如果我們輸入的文字超過此TextView的寬度時，會無法顯示完整內容。<br> <img src="/images/2020/06/non_auto_size.png" alt=" " title="Non Auto Size"></p>
+ <blockquote class="stepquote step2"><p>設定AutoSize</p>
+</blockquote>
+
+<p> 在TextView的元件上增加android:autoSizeTextType=”uniform”， autoSizeTextType有兩種參數可設定，預設值為 none。</p>
+ <blockquote class="colorquote info"><p>AUTO_SIZE_TEXT_TYPE_NONE (none)：關閉自動調整功能。<br>AUTO_SIZE_TEXT_TYPE_UNIFORM (uniform)：開啟自動調整功能。</p>
+</blockquote>
+
+<figure class="highlight xml hljs"><figcaption><span>activity_main.xml</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-tag">&lt;<span class="hljs-name">TextView</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:id</span>=<span class="hljs-string">"@+id/textView"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:layout_width</span>=<span class="hljs-string">"100dp"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:layout_height</span>=<span class="hljs-string">"wrap_content"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:layout_marginTop</span>=<span class="hljs-string">"88dp"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:text</span>=<span class="hljs-string">"Hello"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:textSize</span>=<span class="hljs-string">"18sp"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:maxLines</span>=<span class="hljs-string">"1"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">android:autoSizeTextType</span>=<span class="hljs-string">"uniform"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintEnd_toEndOf</span>=<span class="hljs-string">"parent"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintStart_toStartOf</span>=<span class="hljs-string">"parent"</span></span></span><br><span class="line"><span class="hljs-tag">    <span class="hljs-attr">app:layout_constraintTop_toTopOf</span>=<span class="hljs-string">"parent"</span> /&gt;</span></span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote exec"><p>執行結果</p>
+</blockquote>
+
+<p>當輸入文字超過顯示框時，會自動調整字體大小<br> <img src="/images/2020/06/auto_size_1.png" alt=" " title="Auto Size"></p>
+<p> <img src="/images/2020/06/auto_size_2.png" alt=" " title="Auto Size"></p>
+
+        </div>
+        
+        <ul class="post-copyright">
+        <li><strong>本文標題：</strong><a href="https://nickcarter9.github.io/2020/06/15/2020/2020_06_15-autosize_textview/">Android AutoSize TextView</a></li>
+        <li><strong>本文作者：</strong><a href="https://nickcarter9.github.io">Nick Lin</a></li>
+        <li><strong>本文連接：</strong><a href="https://nickcarter9.github.io/2020/06/15/2020/2020_06_15-autosize_textview/">https://nickcarter9.github.io/2020/06/15/2020/2020_06_15-autosize_textview/</a></li>
+        <li><strong>發布時間：</strong>2020-06-15</li>
+        <li><strong>版權聲明：</strong>本Blog所有文章除特別聲明外，皆可轉載，轉載請註明出處！
+        </li>
+        </ul>
+    
+        
+        <hr style="height:1px;margin:1rem 0"/>
+        <div class="level is-size-7">
+            <div class="level-start">
+                <div class="level-item">
+                    <i class="fas fa-tags has-text-grey"></i>&nbsp;
+                    <a class="has-link-grey -link" href="/tags/android/" rel="tag">android</a>,&nbsp;<a class="has-link-grey -link" href="/tags/autosize/" rel="tag">autosize</a>,&nbsp;<a class="has-link-grey -link" href="/tags/autosize-textview/" rel="tag">autosize textview</a>
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        <div class="social-share"></div>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/css/share.min.css">
+<script src="https://cdn.jsdelivr.net/npm/social-share.js@1.0.16/dist/js/social-share.min.js"></script>
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="card card-transparent">
+    <div class="level post-navigation is-flex-wrap is-mobile">
+        
+        <div class="level-start">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/2021/03/05/2021_03_05-ipa_process_failed/">
+                <i class="level-item fas fa-chevron-left"></i>
+                <span class="level-item">Xcode - 發佈遇到IPA processing failed</span>
+            </a>
+        </div>
+        
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/2020/05/21/2020/2020_05_21-autofill/">
+                <span class="level-item">Android 自動填入 Autofill Framework</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="card">
+    <div class="card-content">
+        <h3 class="title is-5 has-text-weight-normal">評論</h3>
+        
+<script>
+    var disqus_config = function () {
+        this.page.url = 'https://nickcarter9.github.io/2020/06/15/2020/2020_06_15-autosize_textview/';
+        this.page.identifier = '2020/06/15/2020/2020_06_15-autosize_textview/';
+    };
+    (function() {
+        var d = document, s = d.createElement('script');  
+        s.src = '//' + 'nick-code-cars' + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+
+<div id="disqus_thread">
+    
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </div>
+</div>
+
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered" style="flex-shrink: 1">
+                <div>
+                    
+                    <figure class="image is-128x128 has-mb-6">
+                        <img class="" src="/images/avatar.jpg" alt="">
+                    </figure>
+                    
+                    
+                    <p class="is-size-6 is-block">
+                        Programming is like sex. One mistake and you have to support it for the rest of your life.
+                    </p>
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>Taiwan</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        文章
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        90
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        分類
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        5
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        標籤
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        202
+                    </p>
+                </div>
+            </div>
+        </nav>
+        
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://www.facebook.com/nick.carter.52459" target="_blank">
+                追蹤</a>
+        </div>
+        
+        
+        
+        <div class="level is-mobile">
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Github" href="https://github.com/NickCarter9">
+                
+                <i class="fab fa-github"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Facebook" href="https://www.facebook.com/nick.carter.52459">
+                
+                <i class="fab fa-facebook"></i>
+                
+            </a>
+            
+            <a class="level-item button is-white is-marginless" target="_blank"
+                title="Email" href="/nickthomas55@gmail.com">
+                
+                <i class="far fa-envelope"></i>
+                
+            </a>
+            
+        </div>
+        
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 方形廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5418524234209657"
+     data-ad-slot="6117614777"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+    </div>
+</div>
+
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+        </div>
+    
+</div>
+
+
+                
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/og_image.png" alt="Android AutoSize TextView" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2021 Nick Lin&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                <br>
+                <span id="busuanzi_container_site_uv">
+                Visited by <span id="busuanzi_value_site_uv">0</span> users
+                </span>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+                <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Github" href="https://github.com/NickCarter9">
+                        
+                        <img src="/images/github-icon.png"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Facebook" href="https://www.facebook.com/nick.carter.52459">
+                        
+                        <img src="/images/facebook-icon.png"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                <p class="control">
+                    <a class="button is-white is-large" target="_blank" title="Email" href="/nickthomas55@gmail.com">
+                        
+                        <img src="/images/gmail-icon.png"></i>&nbsp;
+                        
+                    </a>
+                </p>
+                
+                </div>
+            
+            </div>
+        </div>
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 橫式廣告 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5418524234209657"
+     data-ad-slot="7917781608"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("zh-TW");</script>
+
+<script>
+var IcarusThemeSettings = {
+    article: {
+        highlight: {
+            clipboard: true,
+            fold: 'unfolded'
+        }
+    }
+};
+</script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+
+
+
+    
+    
+<script src="/js/animation.js"></script>
+
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+<script src="/js/gallery.js" defer></script>
+
+    
+    
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="noopener">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
+</script>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
+        }
+    });
+});
+</script>
+    
+    
+<a id="back-to-top" title="回到頁首" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+<script src="/js/main.js" defer></script>
+
+    
+    <div class="searchbox ins-search">
+    <!-- 橫式廣告 -->
+
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="請輸入關鍵字..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: '文章',
+                PAGES: '頁面',
+                CATEGORIES: '分類',
+                TAGS: '標籤',
+                UNTITLED: '(無標題)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+
+    
+</body>
+</html>

@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://nickcarter9.github.io/2021/03/05/2021_03_05-ipa_process_failed/</loc>
+    
+    <lastmod>2021-03-15T06:38:24.370Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/about/index.html</loc>
     
     <lastmod>2021-03-08T00:45:34.364Z</lastmod>
@@ -9,21 +16,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/07/09/2020_07_09-jobscheduler/</loc>
-    
-    <lastmod>2020-07-09T01:43:07.264Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2020/06/15/2020_06_15-autosize_textview/</loc>
+    <loc>https://nickcarter9.github.io/2020/06/15/2020/2020_06_15-autosize_textview/</loc>
     
     <lastmod>2020-06-15T08:33:49.092Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/05/21/2020_05_21-autofill/</loc>
+    <loc>https://nickcarter9.github.io/2020/05/21/2020/2020_05_21-autofill/</loc>
     
     <lastmod>2020-05-22T05:25:46.093Z</lastmod>
     
@@ -37,56 +37,56 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/03/20/2020_03_20-google_tts/</loc>
+    <loc>https://nickcarter9.github.io/2020/03/20/2020/2020_03_20-google_tts/</loc>
     
     <lastmod>2020-03-20T08:56:44.832Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/03/18/2020_03_18-gif_imageview/</loc>
+    <loc>https://nickcarter9.github.io/2020/03/18/2020/2020_03_18-gif_imageview/</loc>
     
     <lastmod>2020-03-18T09:34:31.786Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/03/09/2020_03_09-change_resolution/</loc>
+    <loc>https://nickcarter9.github.io/2020/03/09/2020/2020_03_09-change_resolution/</loc>
     
     <lastmod>2020-03-09T07:04:59.951Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/03/02/2020_03_02-hide_navigation_bar/</loc>
+    <loc>https://nickcarter9.github.io/2020/03/02/2020/2020_03_02-hide_navigation_bar/</loc>
     
     <lastmod>2020-03-02T08:58:02.049Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/02/27/2020_02_27-ethernet_chipset/</loc>
+    <loc>https://nickcarter9.github.io/2020/02/27/2020/2020_02_27-ethernet_chipset/</loc>
     
     <lastmod>2020-02-27T01:21:54.162Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/02/14/2020_02_14-android_mqtt_client/</loc>
+    <loc>https://nickcarter9.github.io/2020/02/14/2020/2020_02_14-android_mqtt_client/</loc>
     
     <lastmod>2020-02-25T07:20:16.594Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/02/14/2020_02_14-activemq/</loc>
+    <loc>https://nickcarter9.github.io/2020/02/14/2020/2020_02_14-activemq/</loc>
     
     <lastmod>2020-02-14T08:49:39.314Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/02/14/2020_02_14-apk-sign-key/</loc>
+    <loc>https://nickcarter9.github.io/2020/02/14/2020/2020_02_14-apk-sign-key/</loc>
     
     <lastmod>2020-02-14T08:02:27.507Z</lastmod>
     
@@ -275,77 +275,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2018/07/24/2018/2018_07_24-adb_no_permissions/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2018/08/03/2018/2018_08_03-aar_packaged_import/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2018/08/07/2018/2018_08_07-gradientdrawable/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2018/08/31/2018/2018_08_31-non_zero_exit_value_2/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2018/08/09/2018/2018_08_09-update_aar/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2017/04/19/2017/2017_04_19-android-firebase-register/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2017/04/19/2017/2017_04_19-android-firebase-install/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2017/04/20/2017/2017_04_20-android-firebase-database-auth/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2017/04/25/2017/2017_04_25_android_constraintlayout/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2017/04/25/2017/2017_04_25-android_constraintlayout_relative_position/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2017/05/17/2017/2017_05_17-ubuntu-androidstudio-shortcut/</loc>
+    <loc>https://nickcarter9.github.io/2016/05/26/2016/2016_05_26-android-button_design/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -359,20 +289,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/05/25/2016/2016_05_25-android-elevation_shadows/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2016/05/26/2016/2016_05_26-android-button_design/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2016/05/26/2016/2016_05_26-android-rippledrawable/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -380,7 +296,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/06/22/2016/2016_06_22-android-call_system_lockscreen/</loc>
+    <loc>https://nickcarter9.github.io/2016/05/25/2016/2016_05_25-android-elevation_shadows/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -388,6 +304,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2016/06/06/2016/2016_06_06-modal_bottom_sheets/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2016/06/22/2016/2016_06_22-android-call_system_lockscreen/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -436,13 +359,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-instrumented_test/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2016/07/07/2016/2016_07_07-ios-tableview_diff_group/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -450,7 +366,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-app_test_basic/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-instrumented_test/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -458,6 +374,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-unit_test/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-app_test_basic/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -478,6 +401,13 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2016/08/01/2016/2016_08_01-android-app_instrumentation_test_2/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-adb_install/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -486,13 +416,6 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2016/08/16/2016/2016_08_16-android-provider-test/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2016/08/01/2016/2016_08_01-android-app_instrumentation_test_2/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -541,7 +464,84 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2017/04/19/2017/2017_04_19-android-firebase-install/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2016/10/31/2016/2016_10_31-ios-uitextfidle/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2017/04/19/2017/2017_04_19-android-firebase-register/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2017/04/20/2017/2017_04_20-android-firebase-database-auth/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2017/04/25/2017/2017_04_25-android_constraintlayout_relative_position/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2017/04/25/2017/2017_04_25_android_constraintlayout/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2017/05/17/2017/2017_05_17-ubuntu-androidstudio-shortcut/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2018/07/24/2018/2018_07_24-adb_no_permissions/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2018/08/03/2018/2018_08_03-aar_packaged_import/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2018/08/31/2018/2018_08_31-non_zero_exit_value_2/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2018/08/07/2018/2018_08_07-gradientdrawable/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2018/08/09/2018/2018_08_09-update_aar/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -604,14 +604,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-icarus-google-adsense/</loc>
+    <loc>https://nickcarter9.github.io/2019/10/16/2019/2019_10_16-bootanimation/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/10/16/2019/2019_10_16-bootanimation/</loc>
+    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-icarus-google-adsense/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
