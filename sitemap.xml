@@ -296,14 +296,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/05/25/2016/2016_05_25-android-elevation_shadows/</loc>
+    <loc>https://nickcarter9.github.io/2016/05/25/2016/2016_05_25-android-cardview/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/05/25/2016/2016_05_25-android-cardview/</loc>
+    <loc>https://nickcarter9.github.io/2016/05/25/2016/2016_05_25-android-elevation_shadows/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -324,13 +324,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/06/22/2016/2016_06_22-android-call_system_lockscreen/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2016/06/06/2016/2016_06_06-modal_bottom_sheets/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -345,14 +338,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/06/24/2016/2016_06_24-listview_footview/</loc>
+    <loc>https://nickcarter9.github.io/2016/06/22/2016/2016_06_22-android-call_system_lockscreen/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/05/2016/2016_07_05-ios-open_bluetooth/</loc>
+    <loc>https://nickcarter9.github.io/2016/06/24/2016/2016_06_24-listview_footview/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -373,14 +366,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-instrumented_test/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-app_test_basic/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/05/2016/2016_07_05-ios-open_bluetooth/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -394,14 +380,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-app_instrumentation_test/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-instrumented_test/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-adb_install/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-app_instrumentation_test/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -415,14 +401,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/08/01/2016/2016_08_01-android-app_instrumentation_test_2/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-app_test_basic/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-single_launch_activity_unit_test/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-adb_install/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -436,14 +422,21 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/08/15/2016/2016_08_25-ios-loading_view/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-single_launch_activity_unit_test/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/08/14/2016/2016_08_14-android-service_test_case/</loc>
+    <loc>https://nickcarter9.github.io/2016/08/01/2016/2016_08_01-android-app_instrumentation_test_2/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2016/08/15/2016/2016_08_25-ios-loading_view/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -457,14 +450,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/08/25/2016/2016_08_25-ios-search_bluetooth_devices_2/</loc>
+    <loc>https://nickcarter9.github.io/2016/08/14/2016/2016_08_14-android-service_test_case/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/08/25/2016/2016_08_25-ios-show_bluetooth_devices/</loc>
+    <loc>https://nickcarter9.github.io/2016/08/25/2016/2016_08_25-ios-search_bluetooth_devices_2/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -478,7 +471,21 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2016/08/25/2016/2016_08_25-ios-show_bluetooth_devices/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2016/10/31/2016/2016_10_31-ios-uibutton_change_icon_pos/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2017/04/19/2017/2017_04_19-android-firebase-install/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -499,7 +506,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2017/04/19/2017/2017_04_19-android-firebase-install/</loc>
+    <loc>https://nickcarter9.github.io/2017/04/25/2017/2017_04_25_android_constraintlayout/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -514,13 +521,6 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2017/05/17/2017/2017_05_17-ubuntu-androidstudio-shortcut/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2017/04/25/2017/2017_04_25_android_constraintlayout/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -555,13 +555,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2018/08/07/2018/2018_08_07-gradientdrawable/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2018/08/31/2018/2018_08_31-non_zero_exit_value_2/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
@@ -570,6 +563,20 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2019/04/01/2019/2019_04_01-nanohttpd/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2019/04/03/2019/2019_04_03-build_gstreamer/</loc>
+    
+    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2018/08/07/2018/2018_08_07-gradientdrawable/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -590,7 +597,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/04/03/2019/2019_04_03-build_gstreamer/</loc>
+    <loc>https://nickcarter9.github.io/2019/04/29/2019/2019_04_29-multi_displays/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -598,13 +605,6 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2019/04/12/2019/2019_04_12-baidu_tts/</loc>
-    
-    <lastmod>2019-11-01T01:02:48.680Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2019/04/29/2019/2019_04_29-multi_displays/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -625,14 +625,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-icarus-google-adsense/</loc>
+    <loc>https://nickcarter9.github.io/2019/10/16/2019/2019_10_16-bootanimation/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/10/16/2019/2019_10_16-bootanimation/</loc>
+    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-imageview-over-button/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     
@@ -646,7 +646,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-imageview-over-button/</loc>
+    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-icarus-google-adsense/</loc>
     
     <lastmod>2019-11-01T01:02:48.680Z</lastmod>
     

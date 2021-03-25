@@ -999,7 +999,7 @@
     <div class="card-content article "> 
         
                 <h1 class="is-size-3 is-size-4-mobile has-text-weight-normal">  
-                <a class="has-link-black-ter" href="/2016/07/28/2016/2016_07_28-android-single_launch_activity_unit_test/">Android SingleLaunchActivityTestCase</a>
+                <a class="has-link-black-ter" href="/2016/07/28/2016/2016_07_28-android-activity_unit_test/">Android ActivityUnitTestCase</a>
                 </h1>
             
         
@@ -1029,7 +1029,7 @@
                     <i class="far fa-clock">&nbsp;</i>
                     
                     
-                    閱讀時長&nbsp;&asymp;&nbsp;6 分鐘
+                    閱讀時長&nbsp;&asymp;&nbsp;5 分鐘
                   </span>
                 
 
@@ -1039,7 +1039,7 @@
                   <span class="level-item has-text-grey">
                     <i class="far fa-file-word">&nbsp;</i>
                     
-                    本文字數:&nbsp;931
+                    本文字數:&nbsp;767
                   </span>
                 
                 </div>
@@ -1052,12 +1052,9 @@
             
               <hr style="height:0px;margin:0.3rem 0"/>
             
-            <p>對於Android 單元測試來說, 若滿足以下測試條件, 可選用 SingleActivityTestCase 來測試</p>
-<p>(1) 針對單一Activity 測試, 不涉及其他Activity交互作用.<br>       如startActivityForResult 的返回結果做測試.<br>(2) 對UI進行自動化測試<br>(3) 只需要一次初始化 (setUp()) 與結束 (tearDown()), 亦即每個測試項目不會重複執行 setUp() 與 tearDown()</p>
-<p>此測試類別和 ActivityUnitTestCase 相似, 只差在 ActivityUnitTestCase的每個測試項目會重複執行 setUp() 與 tearDown()</p>
-<p>請參閱 <a href="https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-activity_unit_test/">Android ActivityUnitTestCase</a></p>
-<blockquote class="colorquote info"><p>@UiThreadTest 的順序會根據命名來決定順序</p>
-</blockquote>
+            <p>對於Android 單元測試來說, 若滿足以下測試條件, 可選用 ActivityUnitTestCase 來測試</p>
+<p>(1) 針對單一Activity 測試, 不涉及其他Activity交互作用.<br>       如startActivityForResult 的返回結果做測試.<br>(2) 對UI進行自動化測試</p>
+<p>(祖父類別 InstrumentationTestCase 參考資料: <a href="https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-app_instrumentation_test/">Android InstrumentationTestCase</a>)</p>
         </div>
         
         
@@ -1068,13 +1065,13 @@
                     
                     <div class="level-item is-size-7">
                         <i class="fas fa-tags has-text-grey"></i>&nbsp;
-                        <a class="has-link-grey -link" href="/tags/InstrumentationTestCase/" rel="tag">InstrumentationTestCase</a>,&nbsp;<a class="has-link-grey -link" href="/tags/SingleLaunchActivityTestCase/" rel="tag">SingleLaunchActivityTestCase</a>,&nbsp;<a class="has-link-grey -link" href="/tags/android/" rel="tag">android</a>,&nbsp;<a class="has-link-grey -link" href="/tags/function-test/" rel="tag">function test</a>,&nbsp;<a class="has-link-grey -link" href="/tags/integration-test/" rel="tag">integration test</a>,&nbsp;<a class="has-link-grey -link" href="/tags/unit-test/" rel="tag">unit test</a>
+                        <a class="has-link-grey -link" href="/tags/ActivityUnitTestCase/" rel="tag">ActivityUnitTestCase</a>,&nbsp;<a class="has-link-grey -link" href="/tags/InstrumentationTestCase/" rel="tag">InstrumentationTestCase</a>,&nbsp;<a class="has-link-grey -link" href="/tags/android/" rel="tag">android</a>,&nbsp;<a class="has-link-grey -link" href="/tags/function-test/" rel="tag">function test</a>,&nbsp;<a class="has-link-grey -link" href="/tags/integration-test/" rel="tag">integration test</a>,&nbsp;<a class="has-link-grey -link" href="/tags/unit-test/" rel="tag">unit test</a>
                      </div>
                      
             </div>
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2016/07/28/2016/2016_07_28-android-single_launch_activity_unit_test/#more">繼續閱讀</a>
+                <a class="button is-size-7 is-light" href="/2016/07/28/2016/2016_07_28-android-activity_unit_test/#more">繼續閱讀</a>
                 </div>
             </div>
         </div>
