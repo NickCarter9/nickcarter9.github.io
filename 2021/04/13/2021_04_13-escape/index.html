@@ -10,16 +10,16 @@
 <title>Escaping 跳脫符號 - Nick Blog</title>
 
 
-    <meta name="description" content="範例中，使用兩層的closure，將closure作為callback function，當完成事件時，需要透過callback function將執行結果傳遞至畫面上呈現． 使用時遇到了以下的錯誤訊息．“Escaping closure captures non-escaping parmeter”">
+    <meta name="description" content="此文章已被加密，需要輸入密碼訪問。">
 <meta name="keywords" content="escaping,closure">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Escaping 跳脫符號">
 <meta property="og:url" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;2021&#x2F;04&#x2F;13&#x2F;2021_04_13-escape&#x2F;index.html">
 <meta property="og:site_name" content="Nick Blog">
-<meta property="og:description" content="範例中，使用兩層的closure，將closure作為callback function，當完成事件時，需要透過callback function將執行結果傳遞至畫面上呈現． 使用時遇到了以下的錯誤訊息．“Escaping closure captures non-escaping parmeter”">
+<meta property="og:description" content="此文章已被加密，需要輸入密碼訪問。">
 <meta property="og:locale" content="zh-TW">
 <meta property="og:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
-<meta property="og:updated_time" content="2021-04-13T08:47:36.092Z">
+<meta property="og:updated_time" content="2021-04-21T06:01:00.865Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nickcarter9.github.io&#x2F;images&#x2F;og_image.png">
 
@@ -147,7 +147,7 @@
 
                 
                     <i class="fas fa-edit">&nbsp</i>
-                    <time class="has-text-grey" datetime="2021-04-13T08:47:36.092Z" >2021-04-13</time>
+                    <time class="has-text-grey" datetime="2021-04-21T06:01:00.865Z" >2021-04-21</time>
                     <span class="level-item has-text-grey">
                       更新
                     </span>
@@ -191,16 +191,15 @@
             
               <hr style="height:0px;margin:1.5rem 0"/>
             
-            <p>範例中，使用兩層的closure，將closure作為callback function，當完成事件時，需要透過callback function將執行結果傳遞至畫面上呈現．</p>
-<p>使用時遇到了以下的錯誤訊息．<br>“Escaping closure captures non-escaping parmeter”</p>
-<p> <img src="/images/2021/04/non_escaping.png" alt title="Error: non-escaping"></p>
-<a id="more"></a>
-<p>原因是因為callback這個closure的生命週期只在getCustomerConfig中，當結束後，SwiftUI就會將此callback closure釋放．</p>
-<p>因此在session!.request的closure中，是不存在callback這個物件．</p>
-<p>解決方式，在callback closure宣告時，加入跳脫符號 “@escaping”．</p>
-<p>@escaping可讓物件跳脫生命週期，function執行完後可繼續使用．</p>
-<p> <img src="/images/2021/04/escaping.png" alt title="Error: non-escaping"></p>
-
+            <div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <div class="hbe-input-container">
+  <input type="password" id="hbePass" placeholder="請輸入密碼以閱讀此篇私密文章。">
+    <label for="hbePass">請輸入密碼以閱讀此篇私密文章。</label>
+    <div class="bottom-line"></div>
+  </div>
+  <script id="hbeData" type="hbeData" data-hmacdigest="0d017676656904b436b11132f4970e397a0b9d73c63aaa284fe719ce4106f20c">342b7238c32361978347f39413d0bbf691a4e8b8914546581e76b53eb2e5a14e8186316a14b20196c8b395df4ab9b950e4d5a686c17c044a789f303b982484e70b38beea36d6451392a7806ce1bf1888129f3ea8ba8639ee4a3381e075aad7f85ed5b67bd503176d71dd2be974ffe1a4f0468f4bdf892f9d2fb095f0df57de17898012065710832ae07076c4d3def977d9aaabac3b180088683d4dd56718470b3a3b2ccfc02b2b4620c63b0a55735749eff157c695db234e2ebce9e356e3a107fbc6173bd03cef8844ebb0f2b4cd0e31ba1a10631c730b269a72d5f518c608ef6169eed8aa7a337a8e18aff7a64838cd1fb5b4c76d6d8e1fb61f0d88026c5c126d048801b02e1eb49bf6f5cd9b59dab87aef489dc669e5ca054a849d86dc4a0c64d360e18454f09780cb6a9ed8e16733e91f77e657afd3150e2b93db4397d7bb5b60cfe9fcf2bd5e769843b9d084c78eebc37513a3c9cd07205605c1c959c53741d00cd4791e0f9df7ee45461b9d59c1ce45b0b3864f13dd868657002cd2402b29a53d2c6d255ca4cd4a5069cee6de036ea70f5d64654c0c4e6773ad275d6567074afd8e05b09c9f17d813bf9dca569d441b06afe3090491d9c053cd5421d4983030a75be1c2a20b74129e75e90de3a9aabfea4a7c9cc9adc599f29a5d8b67a351d839face5bcdb7601d8d7857af9fbb7f554bcd2e06687431b70aa786ce83efb8684aa85b01563f858f5764da699b119d2e8b7c31c1f35217c21629157d42046bf48aa372d444b596c4135949e9065fac0c7d9378dda529b8521bd5fe8663089c5718632d54c6f509d15a80a68c45020182f373096b8f758f490d81c2ec04ec15eafda9a7e8670b206edffac3cc6cb0f31ea5710bdeae72ec9517a982f3233f1fd9dd555e6a4878ee733f6996e8963d779b550dbb7c286653b4fc2c9c669bf110a6e98794d64bde664c031bbc6da8fa8ef5507ae096dc3da345576183b9d0b1706e231d92a14afab007788102d58ca3cf150894ee36c28970d87332f20f1f11ae0b8a6e521ef64ffb1f9d8ae97506e7ad865cbdb2385e75d9d24ebbcf8bf8f76f2d5dcda53b0d1c438af449ccf193383c004e4fc12d0e6dce7080e0bf5c47e195f211fa37846117bd2aaccd67123f1771fd0bf361a9a2c61429fd4f87c6cd4cc7074ce24eae69e77711f85aa1b8ab1b8749adf0a171f5ca210ee0eea8c21c21a65632176b769b576ea81d70a8d01f42</script>
+</div>
+<script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">
         </div>
         
         <ul class="post-copyright">
