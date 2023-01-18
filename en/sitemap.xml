@@ -9,14 +9,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-icarus-google-adsense/</loc>
+    <loc>https://nickcarter9.github.io/2019/11/21/2019/2019_11_21-reverselandscape-event/</loc>
     
     <lastmod>2023-01-18</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/11/21/2019/2019_11_21-reverselandscape-event/</loc>
+    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-icarus-google-adsense/</loc>
     
     <lastmod>2023-01-18</lastmod>
     
@@ -37,14 +37,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/03/27/2019/2019_03_27-system_loadlibrary_linkerror/</loc>
+    <loc>https://nickcarter9.github.io/2019/04/09/2019/2019_04_09-jcifs_ng/</loc>
     
     <lastmod>2023-01-18</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/04/09/2019/2019_04_09-jcifs_ng/</loc>
+    <loc>https://nickcarter9.github.io/2019/04/01/2019/2019_04_01-nanohttpd/</loc>
     
     <lastmod>2023-01-18</lastmod>
     
@@ -58,7 +58,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/04/01/2019/2019_04_01-nanohttpd/</loc>
+    <loc>https://nickcarter9.github.io/2019/03/27/2019/2019_03_27-system_loadlibrary_linkerror/</loc>
     
     <lastmod>2023-01-18</lastmod>
     
@@ -86,14 +86,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2018/08/07/2018/2018_08_07-gradientdrawable/</loc>
+    <loc>https://nickcarter9.github.io/2018/08/09/2018/2018_08_09-update_aar/</loc>
     
     <lastmod>2023-01-18</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2018/08/09/2018/2018_08_09-update_aar/</loc>
+    <loc>https://nickcarter9.github.io/2018/08/07/2018/2018_08_07-gradientdrawable/</loc>
     
     <lastmod>2023-01-18</lastmod>
     
@@ -107,21 +107,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/05/25/2016/2016_05_25-android-elevation_shadows/</loc>
-    
-    <lastmod>2023-01-18</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/</loc>
-    
-    <lastmod>2023-01-18</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2016/10/13/2016/2016_10_13-spinner/</loc>
     
     <lastmod>2023-01-18</lastmod>
     
@@ -135,7 +121,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2017/04/19/2017/2017_04_19-android-firebase-register/</loc>
+    <loc>https://nickcarter9.github.io/2016/10/13/2016/2016_10_13-spinner/</loc>
     
     <lastmod>2023-01-18</lastmod>
     
@@ -143,6 +129,20 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2017/04/19/2017/2017_04_19-android-firebase-install/</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2016/05/25/2016/2016_05_25-android-elevation_shadows/</loc>
+    
+    <lastmod>2023-01-18</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2017/04/19/2017/2017_04_19-android-firebase-register/</loc>
     
     <lastmod>2023-01-18</lastmod>
     
@@ -158,21 +158,7 @@
 
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/shadow/</loc>
-    <lastmod>2023-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/tags/NavigationBar/</loc>
-    <lastmod>2023-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/tags/%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -186,14 +172,21 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/dlopen-failed/</loc>
+    <loc>https://nickcarter9.github.io/tags/JCIFS/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/JCIFS/</loc>
+    <loc>https://nickcarter9.github.io/tags/NanoHttpd/</loc>
+    <lastmod>2023-01-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/tags/TensorFlow/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -207,7 +200,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/TensorFlow/</loc>
+    <loc>https://nickcarter9.github.io/tags/onConfigurationChanged/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -228,14 +221,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/NanoHttpd/</loc>
+    <loc>https://nickcarter9.github.io/tags/ImageView/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/onConfigurationChanged/</loc>
+    <loc>https://nickcarter9.github.io/tags/dlopen-failed/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -256,14 +249,21 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/ImageView/</loc>
+    <loc>https://nickcarter9.github.io/tags/Camera/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/Camera/</loc>
+    <loc>https://nickcarter9.github.io/tags/%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE/</loc>
+    <lastmod>2023-01-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/tags/Firebase/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -277,20 +277,13 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/Firebase/</loc>
+    <loc>https://nickcarter9.github.io/tags/shadow/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
 
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/Android/</loc>
-    <lastmod>2023-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
   <url>
     <loc>https://nickcarter9.github.io/categories/iOS/</loc>
@@ -300,14 +293,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/Z-Order/</loc>
-    <lastmod>2023-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/Android/JCIFS/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -321,21 +307,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/TTS/</loc>
-    <lastmod>2023-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/Android/TensorFlow/</loc>
-    <lastmod>2023-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/Spinner/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/PageViewController/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -349,21 +321,21 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/categories/Android/JCIFS/</loc>
+    <lastmod>2023-01-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/Android/ImageView/</loc>
+    <lastmod>2023-01-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/categories/Android/NanoHttpd/</loc>
-    <lastmod>2023-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/PageViewController/</loc>
-    <lastmod>2023-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/Android/onConfigurationChanged/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -384,13 +356,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/ImageView/</loc>
-    <lastmod>2023-01-18</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/categories/Android/Camera/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
@@ -398,7 +363,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/GradientDrawable/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/Spinner/</loc>
+    <lastmod>2023-01-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/Android/TensorFlow/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -412,7 +384,35 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/categories/Android/TTS/</loc>
+    <lastmod>2023-01-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/Android/GradientDrawable/</loc>
+    <lastmod>2023-01-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/Android/onConfigurationChanged/</loc>
+    <lastmod>2023-01-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/categories/Hexo/Icarus/</loc>
+    <lastmod>2023-01-18</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/Android/Z-Order/</loc>
     <lastmod>2023-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
