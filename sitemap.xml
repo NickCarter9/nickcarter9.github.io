@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://nickcarter9.github.io/2021/12/01/2021/2021_12_01_Google_SSO_Settings/</loc>
+    <loc>https://nickcarter9.github.io/2024/06/20/2024/2024_06_20-mac_app_analyze_ips/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -16,7 +16,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2021/12/09/2021/2021_12_09-GAIA_FORM_Design_3%20-%20%E8%A4%87%E8%A3%BD/</loc>
+    <loc>https://nickcarter9.github.io/2021/12/01/2021/2021_12_01_Google_SSO_Settings/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -30,7 +30,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2021/12/09/2021/2021_12_09_GAIA_FORM_Design_2/</loc>
+    <loc>https://nickcarter9.github.io/2021/12/09/2021/2021_12_09-GAIA_FORM_Design_3%20-%20%E8%A4%87%E8%A3%BD/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -44,21 +44,14 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2021/12/09/2021/2021_12_09_GAIA_FORM_Design_2/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2022/03/04/2022/2022_03_04-JS_Ajax_Download_File/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2023/01/19/2023/2023_01_19-XIB_LINK_FAILED/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2023/01/19/2023/2023_01_19-xib_not_close_window/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -72,7 +65,21 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2023/01/19/2023/2023_01_19-XIB_LINK_FAILED/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2023/03/23/2023/2023_03_24-mac_system_url/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2023/01/19/2023/2023_01_19-xib_not_close_window/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -93,13 +100,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/05/26/2016/2016_05_26-android-button_design/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2016/05/25/2016/2016_05_25-android-elevation_shadows/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -108,6 +108,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2016/05/25/2016/2016_05_25-android-cardview/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2016/05/26/2016/2016_05_26-android-button_design/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -170,13 +177,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2016/07/05/2016/2016_07_05-ios-open_bluetooth/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -198,14 +198,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-app_test_basic/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-unit_test/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-app_test_basic/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -219,7 +219,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-single_launch_activity_unit_test/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/27/2016/2016_07_27-android-unit_test/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -233,14 +233,21 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/08/01/2016/2016_08_01-android-app_instrumentation_test_2/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-single_launch_activity_unit_test/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/08/14/2016/2016_08_14-android-service_test_case/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-adb_install/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2016/08/01/2016/2016_08_01-android-app_instrumentation_test_2/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -254,7 +261,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-adb_install/</loc>
+    <loc>https://nickcarter9.github.io/2016/08/14/2016/2016_08_14-android-service_test_case/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -275,21 +282,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/09/30/2016/2016_09_30-ios-custom_dialog/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2016/10/13/2016/2016_10_13-ios-adjust_dialog_height/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2016/08/25/2016/2016_08_25-ios-search_bluetooth_devices_2/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2016/09/30/2016/2016_09_30-ios-custom_dialog/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -303,14 +303,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/10/13/2016/2016_10_13-ios-next_textfield/</loc>
+    <loc>https://nickcarter9.github.io/2016/10/13/2016/2016_10_13-ios-adjust_dialog_height/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/10/13/2016/2016_10_13-spinner/</loc>
+    <loc>https://nickcarter9.github.io/2016/10/13/2016/2016_10_13-ios-next_textfield/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -324,21 +324,14 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2016/10/13/2016/2016_10_13-spinner/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2016/10/27/2016/2016_10_27-ios-uiblureffect/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2016/10/27/2016/2016_10_27-ios-uiimage-scale/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2016/10/31/2016/2016_10_31-ios-uibutton_change_icon_pos/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -352,7 +345,21 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2016/10/27/2016/2016_10_27-ios-uiimage-scale/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2016/10/31/2016/2016_10_31-ios-uitextfidle/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2016/10/31/2016/2016_10_31-ios-uibutton_change_icon_pos/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -387,13 +394,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2017/04/25/2017/2017_04_25-android_constraintlayout_relative_position/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2017/04/25/2017/2017_04_25_android_constraintlayout/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -408,14 +408,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2017/05/17/2017/2017_05_17-ubuntu-androidstudio-shortcut/</loc>
+    <loc>https://nickcarter9.github.io/2017/04/25/2017/2017_04_25-android_constraintlayout_relative_position/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2018/07/17/2018/2018_07_17-camera2/</loc>
+    <loc>https://nickcarter9.github.io/2017/05/17/2017/2017_05_17-ubuntu-androidstudio-shortcut/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -429,6 +429,13 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2018/07/24/2018/2018_07_24-adb_no_permissions/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2018/07/12/2018/2018_07_12-permission/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -436,7 +443,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2018/07/24/2018/2018_07_24-adb_no_permissions/</loc>
+    <loc>https://nickcarter9.github.io/2018/07/17/2018/2018_07_17-camera2/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -450,14 +457,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2018/08/09/2018/2018_08_09-update_aar/</loc>
+    <loc>https://nickcarter9.github.io/2018/08/07/2018/2018_08_07-gradientdrawable/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2018/08/07/2018/2018_08_07-gradientdrawable/</loc>
+    <loc>https://nickcarter9.github.io/2018/08/09/2018/2018_08_09-update_aar/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -471,13 +478,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/04/01/2019/2019_04_01-nanohttpd/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2019/03/27/2019/2019_03_27-system_loadlibrary_linkerror/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -485,14 +485,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/04/08/2019/2019_04_08-jcifs/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2019/04/09/2019/2019_04_09-jcifs_ng/</loc>
+    <loc>https://nickcarter9.github.io/2019/04/01/2019/2019_04_01-nanohttpd/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -506,6 +499,13 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2019/04/08/2019/2019_04_08-jcifs/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2019/04/10/2019/2019_04_10-tensorflow_lite_object_recognition/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -513,7 +513,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/04/12/2019/2019_04_12-baidu_tts/</loc>
+    <loc>https://nickcarter9.github.io/2019/04/09/2019/2019_04_09-jcifs_ng/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -527,7 +527,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/05/10/2019/2019_05_10-movie-screenshot/</loc>
+    <loc>https://nickcarter9.github.io/2019/04/12/2019/2019_04_12-baidu_tts/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -535,6 +535,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2019/04/29/2019/2019_04_29-multi_displays/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2019/05/23/2019/2019_05_23-image_base64_tostring/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -555,7 +562,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/05/23/2019/2019_05_23-image_base64_tostring/</loc>
+    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-icarus-google-adsense/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -569,13 +576,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-icarus-google-adsense/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-imageview-over-button/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -583,7 +583,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/11/13/2019/2019_11_13-sql-query-null-item/</loc>
+    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-text-click-color/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -597,7 +597,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2019/10/25/2019/2019_10_25-text-click-color/</loc>
+    <loc>https://nickcarter9.github.io/2019/11/13/2019/2019_11_13-sql-query-null-item/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2019/05/10/2019/2019_05_10-movie-screenshot/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -639,13 +646,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/02/14/2020/2020_02_14-activemq/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2019/12/26/2019/2019_12_26-imageview-transparent-background/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -653,7 +653,21 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2020/02/14/2020/2020_02_14-activemq/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2020/02/14/2020/2020_02_14-android_mqtt_client/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2020/02/27/2020/2020_02_27-ethernet_chipset/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -674,13 +688,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/02/27/2020/2020_02_27-ethernet_chipset/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2020/03/09/2020/2020_03_09-change_resolution/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -688,7 +695,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2020/05/21/2020/2020_05_21-autofill/</loc>
+    <loc>https://nickcarter9.github.io/2020/03/18/2020/2020_03_18-gif_imageview/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -709,28 +716,14 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2020/05/21/2020/2020_05_21-autofill/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2021/03/05/2021/2021_03_05-ipa_process_failed/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2020/03/18/2020/2020_03_18-gif_imageview/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2021/03/25/2021/2021_03_25-statusbar_background/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2021/03/25/2021/2021_03_25-object_z_order/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -744,7 +737,28 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/2021/03/25/2021/2021_03_25-object_z_order/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/2021/04/07/2021/2021_04_07-view_error/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2021/03/25/2021/2021_03_25-statusbar_background/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2021/04/13/2021/2021_04_13-escape/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -758,13 +772,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2021/04/21/2021/2021_04_21-guru_gaia_add_new_page/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2021/04/09/2021/2021_04_09-alamofire_error/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -772,7 +779,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2021/04/13/2021/2021_04_13-escape/</loc>
+    <loc>https://nickcarter9.github.io/2021/04/21/2021/2021_04_21-guru_gaia_add_new_page/</loc>
+    
+    <lastmod>2024-06-21</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2021/11/10/2021/2021_11_10-generate_insert_scripts/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -787,13 +801,6 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2021/12/01/2021/2021_12_01_GAIA_Google_SSO_Settings/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2021/11/10/2021/2021_11_10-generate_insert_scripts/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -823,13 +830,6 @@
 
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/button/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/tags/shadow/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -838,6 +838,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/tags/cardview/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/tags/button/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -886,13 +893,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/NavigationBar/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/tags/Tabview/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -901,6 +901,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/tags/TestCase/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/tags/NavigationBar/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -942,14 +949,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE/</loc>
+    <loc>https://nickcarter9.github.io/tags/PageView/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/PageView/</loc>
+    <loc>https://nickcarter9.github.io/tags/%E4%B8%8B%E6%8B%89%E5%BC%8F%E9%81%B8%E5%96%AE/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1005,13 +1012,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/Camera/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/tags/%E4%BA%BA%E8%87%89%E5%81%B5%E6%B8%AC/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1020,6 +1020,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/tags/Permission/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/tags/Camera/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1047,13 +1054,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/NanoHttpd/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/tags/dlopen-failed/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1061,7 +1061,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/JCIFS/</loc>
+    <loc>https://nickcarter9.github.io/tags/NanoHttpd/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1069,6 +1069,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/tags/GStreamer/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/tags/JCIFS/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1089,14 +1096,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/%E5%BD%B1%E7%89%87%E6%88%AA%E5%9C%96/</loc>
+    <loc>https://nickcarter9.github.io/tags/Display/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/Display/</loc>
+    <loc>https://nickcarter9.github.io/tags/image/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1117,13 +1124,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/image/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/tags/hexo/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1138,6 +1138,13 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/tags/RecyclerView/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/tags/SQL/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1145,7 +1152,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/RecyclerView/</loc>
+    <loc>https://nickcarter9.github.io/tags/%E5%BD%B1%E7%89%87%E6%88%AA%E5%9C%96/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1187,6 +1194,13 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/tags/ethernet/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/tags/android/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1194,7 +1208,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/ethernet/</loc>
+    <loc>https://nickcarter9.github.io/tags/GifImageView/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1215,20 +1229,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/GifImageView/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/tags/StatusBar/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/tags/Z-Order/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1243,7 +1243,21 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/tags/StatusBar/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/tags/gaia/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/tags/Visual-Studio/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1257,13 +1271,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/google-sso/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/tags/Java-Script/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1271,7 +1278,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/Visual-Studio/</loc>
+    <loc>https://nickcarter9.github.io/tags/google-sso/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1326,6 +1333,13 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://nickcarter9.github.io/tags/ips/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -1343,7 +1357,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/Button/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/Z-Order/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1364,7 +1378,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/Z-Order/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/CardView/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1378,7 +1392,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/CardView/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/Button/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1413,7 +1427,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/Spinner/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/PageViewController/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1427,7 +1441,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/PageViewController/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/Spinner/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1441,7 +1455,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/NavigationBar/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/UIVibrancyEffect/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1455,14 +1469,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/UIButton/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/UIVibrancyEffect/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/Tabview/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1476,7 +1483,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/Tabview/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/UIButton/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1484,6 +1491,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/categories/Android/Firebase/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/iOS/NavigationBar/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1511,13 +1525,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/Camera/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/categories/Android/FaceDetector/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1526,6 +1533,13 @@
   
   <url>
     <loc>https://nickcarter9.github.io/categories/Android/Permission/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/Android/Camera/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1553,14 +1567,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/JCIFS/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/GStreamer/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/GStreamer/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/JCIFS/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1588,13 +1602,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/ScreenShot/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/categories/Android/Display/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1602,7 +1609,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/Dialog/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/Image/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1623,14 +1630,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/Image/</loc>
+    <loc>https://nickcarter9.github.io/categories/Hexo/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Hexo/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/Dialog/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1644,7 +1651,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/SQL/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/Text/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1658,6 +1665,13 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/categories/Android/SQL/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/categories/iOS/TextField/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1665,7 +1679,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/Text/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/ScreenShot/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1700,13 +1714,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/NavigationBar/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/categories/Android/Ethernet/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1714,21 +1721,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/Autofill/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/Android/TextView/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/XCode/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/NavigationBar/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1742,7 +1735,21 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/StatusBar/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/TextView/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/Android/Autofill/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/iOS/XCode/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1763,7 +1770,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/BenQ/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/StatusBar/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/iOS/Escaping/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1777,7 +1791,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/Escaping/</loc>
+    <loc>https://nickcarter9.github.io/categories/BenQ/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/SQL/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1792,13 +1813,6 @@
   
   <url>
     <loc>https://nickcarter9.github.io/categories/Google/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/SQL/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1840,6 +1854,13 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/categories/Crash/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/categories/Hexo/Icarus/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1854,13 +1875,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Google/SSO/</loc>
-    <lastmod>2024-06-21</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/categories/SQL/Visual-Studio/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
@@ -1868,7 +1882,21 @@
   </url>
   
   <url>
+    <loc>https://nickcarter9.github.io/categories/Google/SSO/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://nickcarter9.github.io/categories/Qisda/ITG/</loc>
+    <lastmod>2024-06-21</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/categories/Crash/ips/</loc>
     <lastmod>2024-06-21</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
