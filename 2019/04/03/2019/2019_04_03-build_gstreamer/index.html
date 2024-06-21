@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>How to build GStreamer - Nick Blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Nick Blog"><meta name="msapplication-TileImage" content="/img/favicon.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Nick Blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Step 1: 下載GStreamer   先到官網下載GStreamer source codehttps:&amp;#x2F;&amp;#x2F;gstreamer.freedesktop.org&amp;#x2F;data&amp;#x2F;pkg&amp;#x2F;android&amp;#x2F;"><meta property="og:type" content="blog"><meta property="og:title" content="How to build GStreamer"><meta property="og:url" content="https://nickcarter9.github.io/2019/04/03/2019/2019_04_03-build_gstreamer/"><meta property="og:site_name" content="Nick Blog"><meta property="og:description" content="Step 1: 下載GStreamer   先到官網下載GStreamer source codehttps:&amp;#x2F;&amp;#x2F;gstreamer.freedesktop.org&amp;#x2F;data&amp;#x2F;pkg&amp;#x2F;android&amp;#x2F;"><meta property="og:locale" content="zh_TW"><meta property="og:image" content="https://nickcarter9.github.io/img/og_image.png"><meta property="article:published_time" content="2019-04-03T04:00:00.000Z"><meta property="article:modified_time" content="2024-06-21T06:25:41.199Z"><meta property="article:author" content="Nick Lin"><meta property="article:tag" content="GStreamer"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://nickcarter9.github.io/2019/04/03/2019/2019_04_03-build_gstreamer/"},"headline":"How to build GStreamer","image":["https://nickcarter9.github.io/img/og_image.png"],"datePublished":"2019-04-03T04:00:00.000Z","dateModified":"2024-06-21T06:25:41.199Z","author":{"@type":"Person","name":"Nick Lin"},"publisher":{"@type":"Organization","name":"Nick Blog","logo":{"@type":"ImageObject","url":"https://nickcarter9.github.io/img/logo.png"}},"description":"Step 1: 下載GStreamer   先到官網下載GStreamer source codehttps:&#x2F;&#x2F;gstreamer.freedesktop.org&#x2F;data&#x2F;pkg&#x2F;android&#x2F;"}</script><link rel="canonical" href="https://nickcarter9.github.io/2019/04/03/2019/2019_04_03-build_gstreamer/"><link rel="icon" href="/img/favicon.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-dark.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script><!--!--><!--!--><script data-ad-client="ca-pub-5418524234209657" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" async></script><meta name="google-site-verification" content="wONvV1Oo51k5DsvNnSpe6EEwpaYJTbWAyVvQGdIJHa0"><meta name="generator" content="Hexo 5.4.2"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.png" alt="Nick Blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item search" title="搜尋" href="javascript:;"><i class="fas fa-search"></i></a><a class="navbar-item" href="https://nickcarter9.github.io/en/"> English</a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><h1 class="title has-text-centered is-size-3 is-size-4-mobile has-text-weight-normal">How to build GStreamer</h1><div class="article-meta is-size-7 is-uppercase level-item is-mobile has-text-centered"><div class="level-left"><span class="level-item"><i class="far fa-calendar-alt"> </i><time dateTime="2019-04-03T04:00:00.000Z" title="2019-04-03T04:00:00.000Z">2019-04-03</time></span><span class="level-item">│</span><span class="level-item"><i class="far fa-edit">&nbsp;</i>&nbsp;</i><time dateTime="2024-06-21T06:25:41.199Z" title="2024-6-21 2:25:41 ├F10: PM┤">2024-06-21</time>更新</span><span class="level-item">│</span><span class="level-item"><i class="far fa-clock"> </i>閱讀時長 ≈ 2 分鐘</span><span class="level-item">│</span><span class="level-item"><i class="far fa-file-word"> </i>本文字數 ≈ 329個字</span></div></div><div class="content"><blockquote class="colorquote step"><p>Step 1: 下載GStreamer</p>
+</blockquote>
+
+<p>先到官網下載GStreamer source code<br><a target="_blank" rel="noopener" href="https://gstreamer.freedesktop.org/data/pkg/android/">https://gstreamer.freedesktop.org/data/pkg/android/</a></p>
+<span id="more"></span>
+
+<blockquote class="colorquote step"><p>Step 2: 下載gst-docs</p>
+</blockquote>
+
+<figure class="highlight plaintext"><figcaption><span>cmd</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git://anongit.freedesktop.org/gstreamer/gst-docs </span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote step"><p>Step 3: 在AndroidStudio新增Project</p>
+</blockquote>
+
+<p>在此我們選擇android-tutorial-3<br>(gst-docs&#x2F;examples&#x2F;tutorials&#x2F;android-tutorial-3)</p>
+<blockquote class="colorquote step"><p>Step 4: 增加 GSTREAMER_ROOT_ANDROID 路徑</p>
+</blockquote>
+
+<p>在&#x2F;examples&#x2F;tutorials&#x2F;android&#x2F;android-tutorial-3&#x2F;jni&#x2F;Android.mk中<br>增加GSTREAMER_ROOT_ANDROID 路徑, 路徑為剛剛在步驟一所下載的GStreamer</p>
+<figure class="highlight plaintext"><figcaption><span>Android.mk</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">include $(BUILD_SHARED_LIBRARY)</span><br><span class="line"></span><br><span class="line">GSTREAMER_ROOT_ANDROID := /home/nick/Git/gstreamer</span><br><span class="line"></span><br><span class="line">ifndef GSTREAMER_ROOT_ANDROID</span><br><span class="line">$(error GSTREAMER_ROOT_ANDROID is not defined!)</span><br><span class="line">endif</span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote step"><p>Step 5: 修改GSTREAMER_ROOT的判斷</p>
+</blockquote>
+
+<p>根據支援的cpu 架構，刪除其餘的判斷式<br>以armv7為例</p>
+<figure class="highlight plaintext"><figcaption><span>Android.mk</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GSTREAMER_ROOT:= $(GSTREAMER_ROOT_ANDROID)/armv7</span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote step"><p>Step 6: 修改build.grade</p>
+</blockquote>
+
+<p>在&#x2F;examples&#x2F;tutorials&#x2F;android&#x2F;android-tutorial-3&#x2F;build.gradle中刪除gstRoot的code</p>
+<p>刪除以下程式碼</p>
+<figure class="highlight plaintext"><figcaption><span>android-tutorial-3/build.gradle</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">def gstRoot</span><br><span class="line"></span><br><span class="line">if (project.hasProperty(&#x27;gstAndroidRoot&#x27;))</span><br><span class="line">	gstRoot = project.gstAndroidRoot</span><br><span class="line">else</span><br><span class="line">	gstRoot = System.env.GSTREAMER_ROOT_ANDROID</span><br><span class="line"></span><br><span class="line">if (gstRoot == null)</span><br><span class="line">    throw new GradleException...</span><br><span class="line"></span><br><span class="line">arguments &quot;NDK_APPLICATION_MK=jni/Application.mk&quot;, &quot;GSTREAMER_JAVA_SRC_DIR=src&quot;, &quot;GSTREAMER_ROOT_ANDROID=$gstRoot&quot;, &quot;GSTREAMER_ASSETS_DIR=src/assets&quot;</span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote step"><p>Step 7: 過濾ABI</p>
+</blockquote>
+
+<p>修改build.grade</p>
+<figure class="highlight plaintext"><figcaption><span>build.grade</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">externalNativeBuild &#123;</span><br><span class="line">            ndkBuild &#123;</span><br><span class="line">                targets &quot;tutorial-3&quot;</span><br><span class="line">                abiFilters  &#x27;armeabi-v7a&#x27;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote class="colorquote step"><p>Step 8:<br>更改&#x2F;examples&#x2F;tutorials&#x2F;android&#x2F;settings.gradle</p>
+</blockquote>
+
+<p>將include ‘:android-tutorial-1’, include ‘:android-tutorial-2’<br>include ‘:android-tutorial-4’, include ‘:android-tutorial-5’ 刪除</p>
+<blockquote class="colorquote step"><p>Step 9: 重新編譯</p>
+</blockquote>
+
+<blockquote class="colorquote info"><p>編譯後，可在&#x2F;examples&#x2F;tutorials&#x2F;android&#x2F;android-tutorial-3&#x2F;gst-build-armeabi-v7a中取得libgstreamer_android.so</p>
+</blockquote>
+
+</div><div class="article-licensing box"><div class="licensing-title"><p>How to build GStreamer</p><p><a href="https://nickcarter9.github.io/2019/04/03/2019/2019_04_03-build_gstreamer/">https://nickcarter9.github.io/2019/04/03/2019/2019_04_03-build_gstreamer/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Nick Lin</p></div></div><div class="level-item is-narrow"><div><h6>發表於</h6><p>2019-04-03</p></div></div><div class="level-item is-narrow"><div><h6>更新於</h6><p>2024-06-21</p></div></div><div class="level-item is-narrow"><div><h6>許可協議</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><hr style="height:1px;margin:1rem 0"><div class="level is-mobile is-flex"><div class="article-tags is-size-7 is-uppercase"><i class="fas fa-tags has-text-grey"></i> <a class="link-muted" rel="tag" href="/tags/GStreamer/">GStreamer </a></div></div><!--!--></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2019/04/08/2019/2019_04_08-jcifs/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Android 區域網路 - JCIFS Library</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2019/04/01/2019/2019_04_01-nanohttpd/"><span class="level-item">架設HttpServer - NanoHttpd</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">評論</h3><div id="disqus_thread"><noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript></div><script>var disqus_config = function () {
+            this.page.url = 'https://nickcarter9.github.io/2019/04/03/2019/2019_04_03-build_gstreamer/';
+            this.page.identifier = '2019/04/03/2019/2019_04_03-build_gstreamer/';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');  
+            s.src = '//' + 'nick-code-cars' + '.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();</script></div></div></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.jpg" alt="Nick Lin"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Nick Lin</p><p class="is-size-6 is-block">Just Code It!</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Taiwan</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">115</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分類</p><a href="/categories"><p class="title">78</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">標籤</p><a href="/tags"><p class="title">72</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://www.facebook.com/nick.carter.52459" target="_blank" rel="noopener">追蹤</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/NickCarter9"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://www.facebook.com/nick.carter.52459"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Email" href="/nickthomas55@gmail.com"><i class="far fa-envelope"></i></a></div></div></div><!--!--><div class="card widget" data-type="adsense"><div class="card-content"><div class="menu"><h3 class="menu-label">廣告</h3><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script><ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5418524234209657" data-ad-slot="6117614777" data-ad-format="auto" data-full-width-responsive="true"></ins><script>(adsbygoogle = window.adsbygoogle || []).push({});</script></div></div></div><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">連結</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Icarus</span></span><span class="level-right"><span class="level-item tag">github.com</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen"></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.png" alt="Nick Blog" height="28"></a><p class="is-size-7"><span>&copy; 2024 Nick Lin</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><i></i></a></p></div><p class="is-size-7">Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo 5.4.0</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus 4.4.0</a></p></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-TW");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到頁首" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此網站使用Cookie來改善您的體驗。",
+          dismiss: "知道了！",
+          allow: "允許使用Cookie",
+          deny: "拒絕",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="請輸入關鍵字..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"請輸入關鍵字...","untitled":"(無標題)","posts":"文章","pages":"頁面","categories":"分類","tags":"標籤"});
+        });</script></body></html>
