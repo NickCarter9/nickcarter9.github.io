@@ -2,7 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://nickcarter9.github.io/2024/07/02/2024/2024_07_02-textfield_limited-length/</loc>
+    <loc>https://nickcarter9.github.io/2022/03/04/2022/2022_03_04-JS_Ajax_Download_File/</loc>
+    
+    <lastmod>2024-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2023/03/23/2023/2023_03_24-mac_system_url/</loc>
     
     <lastmod>2024-07-02</lastmod>
     
@@ -11,7 +18,14 @@
   <url>
     <loc>https://nickcarter9.github.io/2024/06/20/2024/2024_06_20-mac_app_analyze_ips/</loc>
     
-    <lastmod>2024-06-21</lastmod>
+    <lastmod>2024-07-02</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://nickcarter9.github.io/2024/07/02/2024/2024_07_02-textfield_limited-length/</loc>
+    
+    <lastmod>2024-07-02</lastmod>
     
   </url>
   
@@ -65,13 +79,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2022/03/04/2022/2022_03_04-JS_Ajax_Download_File/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/2023/01/19/2023/2023_01_19-XIB_LINK_FAILED/</loc>
     
     <lastmod>2024-06-21</lastmod>
@@ -87,13 +94,6 @@
   
   <url>
     <loc>https://nickcarter9.github.io/2023/01/30/2023/2023_01_30-ITG_Work/</loc>
-    
-    <lastmod>2024-06-21</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/2023/03/23/2023/2023_03_24-mac_system_url/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -156,7 +156,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/06/22/2016/2016_06_22-android-call_system_lockscreen/</loc>
+    <loc>https://nickcarter9.github.io/2016/06/24/2016/2016_06_24-listview_footview/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -170,7 +170,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/06/24/2016/2016_06_24-listview_footview/</loc>
+    <loc>https://nickcarter9.github.io/2016/06/22/2016/2016_06_22-android-call_system_lockscreen/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -191,14 +191,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/07/2016/2016_07_07-ios-tableview_diff_group/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/07/2016/2016_07_07-ios-tableview_diff_group/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/06/2016/2016_07_06-ios-navigationbar_baritem/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -233,14 +233,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-activity_unit_test/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-adb_install/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-adb_install/</loc>
+    <loc>https://nickcarter9.github.io/2016/07/28/2016/2016_07_28-android-activity_unit_test/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -814,14 +814,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2017/04/20/2017/2017_04_20-android-firebase-database-auth/</loc>
+    <loc>https://nickcarter9.github.io/2021/11/30/2021/2021_11-30-Hexo_Icarus_change_list/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/2021/11/30/2021/2021_11-30-Hexo_Icarus_change_list/</loc>
+    <loc>https://nickcarter9.github.io/2017/04/20/2017/2017_04_20-android-firebase-database-auth/</loc>
     
     <lastmod>2024-06-21</lastmod>
     
@@ -879,14 +879,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/LockScreen/</loc>
+    <loc>https://nickcarter9.github.io/tags/ListView/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/ListView/</loc>
+    <loc>https://nickcarter9.github.io/tags/LockScreen/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -900,14 +900,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/NavigationBar/</loc>
+    <loc>https://nickcarter9.github.io/tags/Tabview/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/Tabview/</loc>
+    <loc>https://nickcarter9.github.io/tags/NavigationBar/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1313,13 +1313,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/JAVA-SCRIPT/</loc>
-    <lastmod>2024-07-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/tags/XCode/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
@@ -1334,7 +1327,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/tags/Object-C/</loc>
+    <loc>https://nickcarter9.github.io/tags/mac-system-page/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1406,7 +1399,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/LockScreen/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/ListView/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1420,7 +1413,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Android/ListView/</loc>
+    <loc>https://nickcarter9.github.io/categories/Android/LockScreen/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1490,7 +1483,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/NavigationBar/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/Tabview/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1511,7 +1504,7 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/iOS/Tabview/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/NavigationBar/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1847,13 +1840,6 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/JAVA-SCRIPT/</loc>
-    <lastmod>2024-07-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://nickcarter9.github.io/categories/XCode/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
@@ -1868,14 +1854,14 @@
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/System-Page/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/System-Page/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://nickcarter9.github.io/categories/Crash/</loc>
+    <loc>https://nickcarter9.github.io/categories/iOS/Crash/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
@@ -1918,13 +1904,6 @@
   
   <url>
     <loc>https://nickcarter9.github.io/categories/Qisda/ITG/</loc>
-    <lastmod>2024-07-02</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://nickcarter9.github.io/categories/Crash/ips/</loc>
     <lastmod>2024-07-02</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
